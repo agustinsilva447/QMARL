@@ -1,0 +1,128 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue Apr 26 22:57:09 2022
+| Host         : agustin-Lenovo-G50-80 running 64-bit Ubuntu 20.04.4 LTS
+| Command      : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+| Design       : design_1_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 18
++--------+----------+------------------------+------------+
+| Rule   | Severity | Description            | Violations |
++--------+----------+------------------------+------------+
+| DPIP-1 | Warning  | Input pipelining       | 10         |
+| DPOP-1 | Warning  | PREG Output pipelining | 4          |
+| DPOP-2 | Warning  | MREG Output pipelining | 4          |
++--------+----------+------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIP-1#1 Warning
+Input pipelining  
+DSP design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_add_temp input design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_add_temp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_add_temp input design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_add_temp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_add_temp input design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_add_temp/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#4 Warning
+Input pipelining  
+DSP design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_mul_temp input design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_mul_temp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#5 Warning
+Input pipelining  
+DSP design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_mul_temp input design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_mul_temp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#6 Warning
+Input pipelining  
+DSP design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_mul_temp_2 input design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_mul_temp_2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#7 Warning
+Input pipelining  
+DSP design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_mul_temp_2 input design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_mul_temp_2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#8 Warning
+Input pipelining  
+DSP design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_sub_temp input design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_sub_temp/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#9 Warning
+Input pipelining  
+DSP design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_sub_temp input design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_sub_temp/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#10 Warning
+Input pipelining  
+DSP design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_sub_temp input design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_sub_temp/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPOP-1#1 Warning
+PREG Output pipelining  
+DSP design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_add_temp output design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_add_temp/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#2 Warning
+PREG Output pipelining  
+DSP design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_mul_temp output design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_mul_temp/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#3 Warning
+PREG Output pipelining  
+DSP design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_mul_temp_2 output design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_mul_temp_2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-1#4 Warning
+PREG Output pipelining  
+DSP design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_sub_temp output design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_sub_temp/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+Related violations: <none>
+
+DPOP-2#1 Warning
+MREG Output pipelining  
+DSP design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_add_temp multiplier stage design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_add_temp/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#2 Warning
+MREG Output pipelining  
+DSP design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_mul_temp multiplier stage design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_mul_temp/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#3 Warning
+MREG Output pipelining  
+DSP design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_mul_temp_2 multiplier stage design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_mul_temp_2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+DPOP-2#4 Warning
+MREG Output pipelining  
+DSP design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_sub_temp multiplier stage design_1_i/complex_mult_fixpt_0/U0/complex_mult_fixpt_sub_temp/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+Related violations: <none>
+
+

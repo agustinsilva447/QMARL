@@ -1,0 +1,2 @@
+input  -> [(rx0, ry0, rz0), (rx1, ry1, rz1)]
+output -> [reward_0, reward_1]

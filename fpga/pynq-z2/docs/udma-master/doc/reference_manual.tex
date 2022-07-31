@@ -1,0 +1,174 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{listings}
+\usepackage[table,xcdraw]{xcolor}
+
+
+\title{PC commands and UDMA instructions guide \footnote{This document is based on "Commands for PC Parallel Port – FPGA Communication " Crespo Maria Liz and Cicuttin Andres. It is a work in progess.} }
+\author{Cicuttin Andres, Crespo Maria, Garcia Luis, Mannatunga Kasun, Valinoti Bruno}
+\date{November 2018}
+%\date{\today}
+
+\begin{document}
+\maketitle
+\newpage
+
+\section{Introduction}
+
+This document defines a command structure and a communication method, regardless of the physical layer or the type of networks over 
+which they communicate.
+
+
+\section{Scope of document}
+To describe all commands implemented in the next table:
+
+\begin{table}[h!]
+\begin{tabular}{|l|l|}
+\hline
+\rowcolor[HTML]{C0C0C0} 
+\multicolumn{1}{|c|}{\cellcolor[HTML]{C0C0C0}\textbf{Command}} & \textbf{Description}                               \\ \hline
+x\_read                                                        & reads a single 32 bits data from memory             \\ \hline
+x\_write                                                       & writes a single 32 bits data to memory              \\ \hline
+x\_read\_reg                                                   & reads the N 32 bits Comblock register               \\ \hline
+x\_write\_reg                                                  & writes the N 32 bits Comblock register              \\ \hline
+x\_read\_fifo                                                  & reads N 32 bits data from Comblock fifo             \\ \hline
+x\_write\_fifo                                                 & writes N 32 bits data to Comblock fifo              \\ \hline
+x\_read\_mem                                                   & reads N 32 bits data words from memory              \\ \hline
+x\_write\_mem                                                  & writes N 32 bits data words to memory               \\ \hline
+x\_udma                                                        & executes a DMA transfer between hardware resources \\ \hline
+\end{tabular}
+\caption{Command reference.}
+\label{table:cmdRef}
+\end{table}
+
+\section{Commands}
+
+\subsection{Read single data (x\_read command)}
+Reads a single 32 bits data mapped in memory, the only parameter the commnad uses is a 32 bits address, 
+this address is intrepreted as an hexadecimal as default, but can be interpreted as a decimal or binary.
+The command accept one option argument $<-r>$ to select the return value radix, as default is an ASCII value.
+
+As is shown below, the command reads the address <addr> and returns its value to the standard output as the $<-r>$ modifier 
+imposes.
+
+\vspace{5mm}
+
+\textbf{x\_read} $<addr> [-r] [<output format>]$
+
+\vspace{5mm}
+
+where $<addr>$: address value, is a 32 bits address and can be written as an hexadecimal value as 0x00000012 or 0x12, like a 
+binary values as 0b00000000000000000000000000010010 and like a decimal value as 0d18.
+
+\textbf{output format}
+\begin{itemize}
+    \item d: decimal radix
+    \item h: hexadecimal radix
+    \item b: binary radix
+    \item a: ascii value 
+\end{itemize}
+
+\subsection{Write single data (x\_write command)}
+Writes a single 32 bits data mapped in memory, the commnad takes two parameters, a 32 bits address and the
+data to be written. The address is intrepreted as an hexadecimal as default, but can be a decimal or binary.
+The data can be expressed in hexadecimal, binary, decimal or as an ASCII value.
+
+As is shown below, the command writes in the address <addr> a 32 bits data value.
+
+\vspace{5mm}
+
+\textbf{x\_write} $<addr>  <data>$
+
+\vspace{5mm}
+
+where $<addr>$: address value, is a 32 bits address and can be written as an hexadecimal value as 0x00000012 or 0x12, like a 
+binary values as 0b00000000000000000000000000010010 and like a decimal value as 0d18.
+
+\vspace{2mm}
+
+And $<data>$: is a 32 bits data value that can be written as an hexadecimal value as 0x00000012 or 0x12, like a 
+binary values as 0b00000000000000000000000000010010, like a decimal value as 0d18 or like an ASCII as "DOCE".
+
+
+\subsection{Read data block (x\_read\_mem command)}
+Reads a block of 32 bits width data mapped in memory, the commnad can accept four arguments, a 32 bits address, the number
+of words to read, the radix of the return data and the increment in words after each memory reading.
+
+The address is intrepreted as an hexadecimal as default, but can be a decimal or a binary value.
+
+The numbers of words to be read is 1 as default, if 0 means infinit reading, other value the quantity desired.
+
+The increment as default is 1, means that reads one word after the other, but can be set as any other natural number. 
+
+
+The radix argument $<-r>$ to select the return value representation, as default is an ASCII value.
+
+As is shown below, the command reads the data block starting in the address <addr>, as a N words length incrementing the 
+"pointer" by an $<inc>$ between sucesive data words and returns its value to the standard output as the $<-r>$ modifier 
+imposes.
+
+\vspace{5mm}
+
+\textbf{x\_read\_mem} $<addr> <N> <inc> [-r] [<output format>]$
+
+\vspace{5mm}
+
+where $<addr>$: address value, is a 32 bits address and can be written as an hexadecimal value as 0x00000012 or 0x12, like a 
+binary values as 0b00000000000000000000000000010010 and like a decimal value as 0d18.
+
+\vspace{2mm}
+$<N>$: is an integer value
+\vspace{2mm}
+
+$<inc>$: a natural value
+\vspace{2mm}
+
+\textbf{output format}
+\begin{itemize}
+    \item d: decimal radix
+    \item h: hexadecimal radix
+    \item b: binary radix
+    \item a: ascii value 
+\end{itemize}
+
+
+\subsection{Write data block (x\_write\_mem command)}
+Writes a block of 32 bits width data mapped in memory form a file, the commnad can accept four arguments, a 32 bits address, 
+the number of words to write, the data radix and the increment in words after each memory writting.
+
+The address is intrepreted as an hexadecimal as default, but can be a decimal or a binary value.
+
+The numbers of words to be read is 1 as default, if 0 means infinit reading, other value the quantity desired.
+
+The increment as default is 1, means that reads one word after the other, but can be set as any other natural number. 
+
+
+The radix argument $<-r>$ to select the input value representation, as default is an ASCII value.
+
+As is shown below, the command writes the data block starting in the address <addr>, as a N words length incrementing the 
+"pointer" by an $<inc>$ between sucesive data words and reads the input file as the $<-r>$ modifier imposes.
+
+\vspace{5mm}
+
+\textbf{x\_write\_mem} $<addr> <N> <inc> [-r] [<input file>]$
+
+\vspace{5mm}
+
+\subsection{Universal Direct Memory Access (x\_udma command)}
+Moves data between memory mapped resources, nowadays, from RAM to RAM, FIFO to RAM, FIFO to fifo, RAM to FIFO. The command 
+must be followed by five arguments, a 32bits source addres, 32 bits destiny address, step increment source address, step
+increment destiny address and the numbers of words to be moved.
+
+The address is intrepreted as an hexadecimal as default, but can be a decimal or a binary value.
+
+The increment as default is 1, means that moves one word after the other, but can be set as any other natural number, if 0. 
+
+The number of words, if 0 means an infinite number any other means the quantity axpresed as a natural number.
+
+\vspace{5mm}
+
+\textbf{x\_udma} $<src\_addr> <dst\_addr> <src\_inc> <dst\_inc> <N> $
+
+\vspace{5mm}
+
+\end{document}

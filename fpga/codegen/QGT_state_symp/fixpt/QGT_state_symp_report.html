@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Fixed-Point Report for QGT_state_symp</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+	body { font-family: monospace; }
+	h2 { font-family: Arial, Helvetica, sans-serif; color: #990000; margin-top: 50px; }
+	table,th,td { border: 1px solid black; }
+	table { margin-top: 30px; }
+	th { align: center; font-weight: bold; }
+	tr.h { background-color: #99CCFF; }
+	tr.a { background-color: #EEEEFF; }
+	tr.b { background-color: #FFFFFF; }
+	tr.c { background-color: #FFA500; }
+	tr.a td, tr.b td { border-style: none; }
+	td.left { text-align: left; }
+	td.right { text-align: right; }
+	td.center { text-align: center; }
+	td.bold { font-weight: bold; }
+	pre { padding: 0px; margin: 0px; }
+	span { font-style: italic; }
+	.code, .code tr, .code th, .code td { border: none; border-collapse: collapse; }
+	.padd { padding-left: 5px; }
+	td.cov, th.cov { width: 50px; height: 20px; text-align: center; font-weight: bold; border-right: 2px solid black; cell-spacing: 0px; }
+	td.cov { vertical-align: top; }
+	td.black { color: #000000; font-weight: bold; padding-top: 4px; }
+	td.white { color: #FFFFFF; font-weight: bold; padding-top: 4px; }
+	.code th { font-weight: bold; border-bottom: 2px solid black; }
+</style>
+</head>
+<body>
+<h3>Generated on  2022-04-29 12:39:07</h3>
+<p>The following table shows fixed point instrumentation results</p>
+<h2>Fixed-Point Report <span>QGT_state_symp<span></h2>
+<TABLE class="code">
+<TR>
+<TH class="cov padd">Simulation Coverage</TH>
+<TH>Code</TH>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>function [p00, p01, p10, p11] = QGT_state_symp(rotAx1, rotAy2, rotAx3, rotBx1, rotBy2, rotBx3)
+
+s_00 = 0.125*(cos_rot(-rotAx1 - rotAx3 + rotAy2 + rotBx1 + rotBx3 + rotBy2) - cos_rot(-rotAx1 + rotAx3 - rotAy2 + rotBx1 + rotBx3 + rotBy2) - cos_rot(-rotAx1 + rotAx3 + rotAy2 - rotBx1 + rotBx3 + rotBy2) + cos_rot(-rotAx1 + rotAx3 + rotAy2 + rotBx1 - rotBx3 + rotBy2) + cos_rot(-rotAx1 + rotAx3 + rotAy2 + rotBx1 + rotBx3 - rotBy2) + cos_rot(-rotAx1 + rotAx3 + rotAy2 + rotBx1 + rotBx3 + rotBy2) - cos_rot(rotAx1 - rotAx3 - rotAy2 - rotBx1 + rotBx3 + rotBy2) + cos_rot(rotAx1 - rotAx3 - rotAy2 + rotBx1 - rotBx3 + rotBy2) - cos_rot(rotAx1 - rotAx3 - rotAy2 + rotBx1 + rotBx3 - rotBy2) - cos_rot(rotAx1 - rotAx3 - rotAy2 + rotBx1 + rotBx3 + rotBy2) - cos_rot(rotAx1 - rotAx3 + rotAy2 - rotBx1 - rotBx3 + rotBy2) - cos_rot(rotAx1 - rotAx3 + rotAy2 - rotBx1 + rotBx3 - rotBy2) + cos_rot(rotAx1 - rotAx3 + rotAy2 - rotBx1 + rotBx3 + rotBy2) + cos_rot(rotAx1 - rotAx3 + rotAy2 + rotBx1 - rotBx3 - rotBy2) - cos_rot(rotAx1 - rotAx3 + rotAy2 + rotBx1 - rotBx3 + rotBy2) + cos_rot(rotAx1 - rotAx3 + rotAy2 + rotBx1 + rotBx3 - rotBy2) + cos_rot(rotAx1 - rotAx3 + rotAy2 + rotBx1 + rotBx3 + rotBy2) + cos_rot(rotAx1 + rotAx3 - rotAy2 - rotBx1 - rotBx3 + rotBy2) - cos_rot(rotAx1 + rotAx3 - rotAy2 - rotBx1 + rotBx3 - rotBy2) + cos_rot(rotAx1 + rotAx3 - rotAy2 - rotBx1 + rotBx3 + rotBy2) - cos_rot(rotAx1 + rotAx3 - rotAy2 + rotBx1 - rotBx3 - rotBy2) + cos_rot(rotAx1 + rotAx3 - rotAy2 + rotBx1 - rotBx3 + rotBy2) + cos_rot(rotAx1 + rotAx3 - rotAy2 + rotBx1 + rotBx3 - rotBy2) + cos_rot(rotAx1 + rotAx3 - rotAy2 + rotBx1 + rotBx3 + rotBy2) + cos_rot(rotAx1 + rotAx3 + rotAy2 - rotBx1 - rotBx3 - rotBy2) + cos_rot(rotAx1 + rotAx3 + rotAy2 - rotBx1 - rotBx3 + rotBy2) - cos_rot(rotAx1 + rotAx3 + rotAy2 - rotBx1 + rotBx3 - rotBy2) + cos_rot(rotAx1 + rotAx3 + rotAy2 - rotBx1 + rotBx3 + rotBy2) - cos_rot(rotAx1 + rotAx3 + rotAy2 + rotBx1 - rotBx3 - rotBy2) + cos_rot(rotAx1 + rotAx3 + rotAy2 + rotBx1 - rotBx3 + rotBy2) + cos_rot(rotAx1 + rotAx3 + rotAy2 + rotBx1 + rotBx3 - rotBy2) + cos_rot(rotAx1 + rotAx3 + rotAy2 + rotBx1 + rotBx3 + rotBy2));
+s_01 = 0.125*(-sin_rot(-rotAx1 - rotAx3 + rotAy2 + rotBx1 + rotBx3 + rotBy2) + sin_rot(-rotAx1 + rotAx3 - rotAy2 + rotBx1 + rotBx3 + rotBy2) + sin_rot(-rotAx1 + rotAx3 + rotAy2 - rotBx1 + rotBx3 + rotBy2) + sin_rot(-rotAx1 + rotAx3 + rotAy2 + rotBx1 - rotBx3 + rotBy2) - sin_rot(-rotAx1 + rotAx3 + rotAy2 + rotBx1 + rotBx3 - rotBy2) - sin_rot(-rotAx1 + rotAx3 + rotAy2 + rotBx1 + rotBx3 + rotBy2) + sin_rot(rotAx1 - rotAx3 - rotAy2 - rotBx1 + rotBx3 + rotBy2) + sin_rot(rotAx1 - rotAx3 - rotAy2 + rotBx1 - rotBx3 + rotBy2) + sin_rot(rotAx1 - rotAx3 - rotAy2 + rotBx1 + rotBx3 - rotBy2) + sin_rot(rotAx1 - rotAx3 - rotAy2 + rotBx1 + rotBx3 + rotBy2) - sin_rot(rotAx1 - rotAx3 + rotAy2 - rotBx1 - rotBx3 + rotBy2) + sin_rot(rotAx1 - rotAx3 + rotAy2 - rotBx1 + rotBx3 - rotBy2) - sin_rot(rotAx1 - rotAx3 + rotAy2 - rotBx1 + rotBx3 + rotBy2) + sin_rot(rotAx1 - rotAx3 + rotAy2 + rotBx1 - rotBx3 - rotBy2) - sin_rot(rotAx1 - rotAx3 + rotAy2 + rotBx1 - rotBx3 + rotBy2) - sin_rot(rotAx1 - rotAx3 + rotAy2 + rotBx1 + rotBx3 - rotBy2) - sin_rot(rotAx1 - rotAx3 + rotAy2 + rotBx1 + rotBx3 + rotBy2) + sin_rot(rotAx1 + rotAx3 - rotAy2 - rotBx1 - rotBx3 + rotBy2) + sin_rot(rotAx1 + rotAx3 - rotAy2 - rotBx1 + rotBx3 - rotBy2) - sin_rot(rotAx1 + rotAx3 - rotAy2 - rotBx1 + rotBx3 + rotBy2) - sin_rot(rotAx1 + rotAx3 - rotAy2 + rotBx1 - rotBx3 - rotBy2) + sin_rot(rotAx1 + rotAx3 - rotAy2 + rotBx1 - rotBx3 + rotBy2) - sin_rot(rotAx1 + rotAx3 - rotAy2 + rotBx1 + rotBx3 - rotBy2) - sin_rot(rotAx1 + rotAx3 - rotAy2 + rotBx1 + rotBx3 + rotBy2) + sin_rot(rotAx1 + rotAx3 + rotAy2 - rotBx1 - rotBx3 - rotBy2) + sin_rot(rotAx1 + rotAx3 + rotAy2 - rotBx1 - rotBx3 + rotBy2) + sin_rot(rotAx1 + rotAx3 + rotAy2 - rotBx1 + rotBx3 - rotBy2) - sin_rot(rotAx1 + rotAx3 + rotAy2 - rotBx1 + rotBx3 + rotBy2) - sin_rot(rotAx1 + rotAx3 + rotAy2 + rotBx1 - rotBx3 - rotBy2) + sin_rot(rotAx1 + rotAx3 + rotAy2 + rotBx1 - rotBx3 + rotBy2) - sin_rot(rotAx1 + rotAx3 + rotAy2 + rotBx1 + rotBx3 - rotBy2) - sin_rot(rotAx1 + rotAx3 + rotAy2 + rotBx1 + rotBx3 + rotBy2));
+s_10 = 0.125*(sin_rot(-rotAx1 - rotAx3 + rotAy2 + rotBx1 + rotBx3 + rotBy2) + sin_rot(-rotAx1 + rotAx3 - rotAy2 + rotBx1 + rotBx3 + rotBy2) + sin_rot(-rotAx1 + rotAx3 + rotAy2 - rotBx1 + rotBx3 + rotBy2) - sin_rot(-rotAx1 + rotAx3 + rotAy2 + rotBx1 - rotBx3 + rotBy2) - sin_rot(-rotAx1 + rotAx3 + rotAy2 + rotBx1 + rotBx3 - rotBy2) - sin_rot(-rotAx1 + rotAx3 + rotAy2 + rotBx1 + rotBx3 + rotBy2) - sin_rot(rotAx1 - rotAx3 - rotAy2 - rotBx1 + rotBx3 + rotBy2) + sin_rot(rotAx1 - rotAx3 - rotAy2 + rotBx1 - rotBx3 + rotBy2) - sin_rot(rotAx1 - rotAx3 - rotAy2 + rotBx1 + rotBx3 - rotBy2) - sin_rot(rotAx1 - rotAx3 - rotAy2 + rotBx1 + rotBx3 + rotBy2) - sin_rot(rotAx1 - rotAx3 + rotAy2 - rotBx1 - rotBx3 + rotBy2) - sin_rot(rotAx1 - rotAx3 + rotAy2 - rotBx1 + rotBx3 - rotBy2) + sin_rot(rotAx1 - rotAx3 + rotAy2 - rotBx1 + rotBx3 + rotBy2) + sin_rot(rotAx1 - rotAx3 + rotAy2 + rotBx1 - rotBx3 - rotBy2) - sin_rot(rotAx1 - rotAx3 + rotAy2 + rotBx1 - rotBx3 + rotBy2) + sin_rot(rotAx1 - rotAx3 + rotAy2 + rotBx1 + rotBx3 - rotBy2) + sin_rot(rotAx1 - rotAx3 + rotAy2 + rotBx1 + rotBx3 + rotBy2) - sin_rot(rotAx1 + rotAx3 - rotAy2 - rotBx1 - rotBx3 + rotBy2) + sin_rot(rotAx1 + rotAx3 - rotAy2 - rotBx1 + rotBx3 - rotBy2) - sin_rot(rotAx1 + rotAx3 - rotAy2 - rotBx1 + rotBx3 + rotBy2) + sin_rot(rotAx1 + rotAx3 - rotAy2 + rotBx1 - rotBx3 - rotBy2) - sin_rot(rotAx1 + rotAx3 - rotAy2 + rotBx1 - rotBx3 + rotBy2) - sin_rot(rotAx1 + rotAx3 - rotAy2 + rotBx1 + rotBx3 - rotBy2) - sin_rot(rotAx1 + rotAx3 - rotAy2 + rotBx1 + rotBx3 + rotBy2) - sin_rot(rotAx1 + rotAx3 + rotAy2 - rotBx1 - rotBx3 - rotBy2) - sin_rot(rotAx1 + rotAx3 + rotAy2 - rotBx1 - rotBx3 + rotBy2) + sin_rot(rotAx1 + rotAx3 + rotAy2 - rotBx1 + rotBx3 - rotBy2) - sin_rot(rotAx1 + rotAx3 + rotAy2 - rotBx1 + rotBx3 + rotBy2) + sin_rot(rotAx1 + rotAx3 + rotAy2 + rotBx1 - rotBx3 - rotBy2) - sin_rot(rotAx1 + rotAx3 + rotAy2 + rotBx1 - rotBx3 + rotBy2) - sin_rot(rotAx1 + rotAx3 + rotAy2 + rotBx1 + rotBx3 - rotBy2) - sin_rot(rotAx1 + rotAx3 + rotAy2 + rotBx1 + rotBx3 + rotBy2));
+s_11 = sin_rot(rotAx1)*sin_rot(rotAx3)*sin_rot(rotBy2)*sin_rot(rotAy2 - rotBx1 + rotBx3) - sin_rot(rotAx1)*sin_rot(rotBx3)*cos_rot(rotAx3)*cos_rot(rotBy2)*cos_rot(rotAy2 - rotBx1) - sin_rot(rotAx3)*sin_rot(rotAy2 + rotBx1)*cos_rot(rotAx1)*cos_rot(rotBx3)*cos_rot(rotBy2) + sin_rot(rotAy2)*sin_rot(rotAx1 + rotBy2)*cos_rot(rotAx3)*cos_rot(rotBx1)*cos_rot(rotBx3) - sin_rot(rotBx1)*sin_rot(rotAx1 - rotBy2)*cos_rot(rotAx3)*cos_rot(rotAy2)*cos_rot(rotBx3) - sin_rot(rotBx3)*sin_rot(rotAx3 + rotBy2)*cos_rot(rotAx1)*cos_rot(rotAy2 + rotBx1);
+
+p00 = (s_00)^2;
+p01 = (s_01)^2;
+p10 = (s_10)^2;
+p11 = (s_11)^2;
+end</pre></TD>
+</TR>
+</TABLE>
+<TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th><th>Static Min</th><th>Static Max</th><th>Whole Number</th><th>ProposedType <BR /> (Best For WL = 16)</th></TR><TR class="a">
+<TD class="left">p00</TD><TD class="left">double</TD><TD class="right">0.005361644340562496</TD><TD class="right">1</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 15)</TD></TR>
+<TR class="b">
+<TD class="left bold">p01*</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">0.4580267693405624</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 15)</TD></TR>
+<TR class="a">
+<TD class="left bold">p10*</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">0.4580267693405626</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 15)</TD></TR>
+<TR class="b">
+<TD class="left bold">p11*</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">0.42677668322733747</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 15)</TD></TR>
+<TR class="a">
+<TD class="left">rotAx1</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">7</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 3, 0)</TD></TR>
+<TR class="b">
+<TD class="left">rotAx3</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">7</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 3, 0)</TD></TR>
+<TR class="a">
+<TD class="left">rotAy2</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">7</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 3, 0)</TD></TR>
+<TR class="b">
+<TD class="left">rotBx1</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">7</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 3, 0)</TD></TR>
+<TR class="a">
+<TD class="left">rotBx3</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">7</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 3, 0)</TD></TR>
+<TR class="b">
+<TD class="left">rotBy2</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">7</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 3, 0)</TD></TR>
+<TR class="a">
+<TD class="left">s_00</TD><TD class="left">double</TD><TD class="right">-0.9238800000000003</TD><TD class="right">1</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">s_01*</TD><TD class="left">double</TD><TD class="right">-0.2705985000000001</TD><TD class="right">0.6767767499999999</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">s_10*</TD><TD class="left">double</TD><TD class="right">-0.6532815000000001</TD><TD class="right">0.67677675</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">s_11*</TD><TD class="left">double</TD><TD class="right">-0.28033002598873036</TD><TD class="right">0.6532814732007464</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+</TABLE>
+
+<h2>Fixed-Point Report <span>cos_rot<span></h2>
+<TABLE class="code">
+<TR>
+<TH class="cov padd">Simulation Coverage</TH>
+<TH>Code</TH>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>function result = cos_rot(a)
+c_rot = [1 0.92388 0.707107 0.382683 0 -0.382683 -0.707107 -0.92388 -1 -0.92388 -0.707107 -0.382683 0 0.382683 0.707107 0.92388];
+b = mod(a,16) + 1;
+result = c_rot(b);
+end</pre></TD>
+</TR>
+</TABLE>
+<TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th><th>Static Min</th><th>Static Max</th><th>Whole Number</th><th>ProposedType <BR /> (Best For WL = 16)</th></TR><TR class="a">
+<TD class="left">a</TD><TD class="left">double</TD><TD class="right">-9</TD><TD class="right">42</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(1, 7, 0)</TD></TR>
+<TR class="b">
+<TD class="left">b</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">16</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 5, 0)</TD></TR>
+<TR class="a">
+<TD class="left">c_rot</TD><TD class="left">double 1 x 16 </TD><TD class="right">-1</TD><TD class="right">1</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left">result</TD><TD class="left">double</TD><TD class="right">-1</TD><TD class="right">1</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+</TABLE>
+
+<h2>Fixed-Point Report <span>sin_rot<span></h2>
+<TABLE class="code">
+<TR>
+<TH class="cov padd">Simulation Coverage</TH>
+<TH>Code</TH>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>function result = sin_rot(a)
+s_rot = [0 0.382683 0.707107 0.92388 1 0.92388 0.707107 0.382683 0 -0.382683 -0.707107 -0.92388 -1 -0.92388 -0.707107 -0.382683];
+b = mod(a,16) + 1;
+result = s_rot(b);
+end</pre></TD>
+</TR>
+</TABLE>
+<TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th><th>Static Min</th><th>Static Max</th><th>Whole Number</th><th>ProposedType <BR /> (Best For WL = 16)</th></TR><TR class="a">
+<TD class="left">a</TD><TD class="left">double</TD><TD class="right">-9</TD><TD class="right">42</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(1, 7, 0)</TD></TR>
+<TR class="b">
+<TD class="left">b</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">16</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 5, 0)</TD></TR>
+<TR class="a">
+<TD class="left">result</TD><TD class="left">double</TD><TD class="right">-1</TD><TD class="right">1</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left">s_rot</TD><TD class="left">double 1 x 16 </TD><TD class="right">-1</TD><TD class="right">1</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+</TABLE>
+
+</body>
+</html>

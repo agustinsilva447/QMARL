@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Fixed-Point Report for QGT_state</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+	body { font-family: monospace; }
+	h2 { font-family: Arial, Helvetica, sans-serif; color: #990000; margin-top: 50px; }
+	table,th,td { border: 1px solid black; }
+	table { margin-top: 30px; }
+	th { align: center; font-weight: bold; }
+	tr.h { background-color: #99CCFF; }
+	tr.a { background-color: #EEEEFF; }
+	tr.b { background-color: #FFFFFF; }
+	tr.c { background-color: #FFA500; }
+	tr.a td, tr.b td { border-style: none; }
+	td.left { text-align: left; }
+	td.right { text-align: right; }
+	td.center { text-align: center; }
+	td.bold { font-weight: bold; }
+	pre { padding: 0px; margin: 0px; }
+	span { font-style: italic; }
+	.code, .code tr, .code th, .code td { border: none; border-collapse: collapse; }
+	.padd { padding-left: 5px; }
+	td.cov, th.cov { width: 50px; height: 20px; text-align: center; font-weight: bold; border-right: 2px solid black; cell-spacing: 0px; }
+	td.cov { vertical-align: top; }
+	td.black { color: #000000; font-weight: bold; padding-top: 4px; }
+	td.white { color: #FFFFFF; font-weight: bold; padding-top: 4px; }
+	.code th { font-weight: bold; border-bottom: 2px solid black; }
+</style>
+</head>
+<body>
+<h3>Generated on  2022-04-28 18:41:59</h3>
+<p>The following table shows fixed point instrumentation results</p>
+<h2>Fixed-Point Report <span>QGT_state<span></h2>
+<TABLE class="code">
+<TR>
+<TH class="cov padd">Simulation Coverage</TH>
+<TH>Code</TH>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>function [p00, p01, p10, p11] = QGT_state(rotAx1, rotAy2, rotAx3, rotBx1, rotBy2, rotBx3)
+
+auxAx1 = rotAx1 + 1;
+auxAy2 = rotAy2 + 1; 
+auxAx3 = rotAx3 + 1; 
+auxBx1 = rotBx1 + 1;
+auxBy2 = rotBy2 + 1; 
+auxBx3 = rotBx3 + 1; 
+
+cos_rot = [1 0.92388 0.707107 0.382683 0 -0.382683 -0.707107 -0.92388];
+sin_rot = [0 0.382683 0.707107 0.92388 1 0.92388 0.707107 0.382683];
+
+aux5 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*sin_rot(auxBy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxBy2)*cos_rot(auxAy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*cos_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*cos_rot(auxBy2));
+aux10 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*cos_rot(auxAy2)*cos_rot(auxBy2) - (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxBy2)*cos_rot(auxAy2) - (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*sin_rot(auxBy2));
+aux15 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxBy2)*cos_rot(auxAy2) - (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*sin_rot(auxBy2) - (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*cos_rot(auxAy2)*cos_rot(auxBy2));
+aux20 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*cos_rot(auxAy2)*cos_rot(auxBy2) - (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*sin_rot(auxBy2) - (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxBy2)*cos_rot(auxAy2));
+aux25 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*sin_rot(auxBy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxBy2)*cos_rot(auxAy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*cos_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*cos_rot(auxBy2));
+aux30 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*cos_rot(auxAy2)*cos_rot(auxBy2) - (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxBy2)*cos_rot(auxAy2) - (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*sin_rot(auxBy2));
+aux35 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxBy2)*cos_rot(auxAy2) - (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*sin_rot(auxBy2) - (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*cos_rot(auxAy2)*cos_rot(auxBy2));
+aux40 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*cos_rot(auxAy2)*cos_rot(auxBy2) - (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*sin_rot(auxBy2) - (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxBy2)*cos_rot(auxAy2));
+s_00 = 0.707107*aux5*cos_rot(auxAx1)*cos_rot(auxBx1) - 0.707107*1j*aux10*sin_rot(auxBx1)*cos_rot(auxAx1) - 0.707107*1j*aux15*sin_rot(auxAx1)*cos_rot(auxBx1) - 0.707107*aux20*sin_rot(auxAx1)*sin_rot(auxBx1) + 0.707107*1j*(-aux25*sin_rot(auxAx1)*sin_rot(auxBx1) - 1j*aux30*sin_rot(auxAx1)*cos_rot(auxBx1) - 1j*aux35*sin_rot(auxBx1)*cos_rot(auxAx1) + aux40*cos_rot(auxAx1)*cos_rot(auxBx1));
+
+aux45 = (-(-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*sin_rot(auxBy2) - (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxBy2)*cos_rot(auxAy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*cos_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*cos_rot(auxBy2));
+aux50 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*cos_rot(auxAy2)*cos_rot(auxBy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxBy2)*cos_rot(auxAy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*sin_rot(auxBy2));
+aux55 = (-(-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxBy2)*cos_rot(auxAy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*sin_rot(auxBy2) - (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*cos_rot(auxAy2)*cos_rot(auxBy2));
+aux60 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*cos_rot(auxAy2)*cos_rot(auxBy2) - (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*cos_rot(auxBy2) - (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*sin_rot(auxBy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxBy2)*cos_rot(auxAy2));
+aux65 = (-(-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*sin_rot(auxBy2) - (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxBy2)*cos_rot(auxAy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*cos_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*cos_rot(auxBy2));
+aux70 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*cos_rot(auxAy2)*cos_rot(auxBy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxBy2)*cos_rot(auxAy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*sin_rot(auxBy2));
+aux75 = (-(-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxBy2)*cos_rot(auxAy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*sin_rot(auxBy2) - (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*cos_rot(auxAy2)*cos_rot(auxBy2));
+aux80 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*cos_rot(auxAy2)*cos_rot(auxBy2) - (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*cos_rot(auxBy2) - (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*sin_rot(auxBy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxBy2)*cos_rot(auxAy2));
+s_01 = -0.707107*1j*aux45*sin_rot(auxBx1)*cos_rot(auxAx1) + 0.707107*aux50*cos_rot(auxAx1)*cos_rot(auxBx1) - 0.707107*aux55*sin_rot(auxAx1)*sin_rot(auxBx1) - 0.707107*1j*aux60*sin_rot(auxAx1)*cos_rot(auxBx1) + 0.707107*1j*(-1j*aux65*sin_rot(auxAx1)*cos_rot(auxBx1) - aux70*sin_rot(auxAx1)*sin_rot(auxBx1) + aux75*cos_rot(auxAx1)*cos_rot(auxBx1) - 1j*aux80*sin_rot(auxBx1)*cos_rot(auxAx1));
+
+aux85 = (-(-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*sin_rot(auxBy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxBy2)*cos_rot(auxAy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*cos_rot(auxAy2)*cos_rot(auxBy2) - (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*cos_rot(auxBy2));
+aux90 = (-(-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*cos_rot(auxAy2)*cos_rot(auxBy2) - (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxBy2)*cos_rot(auxAy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*sin_rot(auxBy2));
+aux95 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxBy2)*cos_rot(auxAy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*sin_rot(auxBy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*cos_rot(auxAy2)*cos_rot(auxBy2));
+aux100 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*cos_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*cos_rot(auxBy2) - (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*sin_rot(auxBy2) - (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxBy2)*cos_rot(auxAy2));
+aux105 = (-(-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*sin_rot(auxBy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxBy2)*cos_rot(auxAy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*cos_rot(auxAy2)*cos_rot(auxBy2) - (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*cos_rot(auxBy2));
+aux110 = (-(-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*cos_rot(auxAy2)*cos_rot(auxBy2) - (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxBy2)*cos_rot(auxAy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*sin_rot(auxBy2));
+aux115 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxBy2)*cos_rot(auxAy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*sin_rot(auxBy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*cos_rot(auxAy2)*cos_rot(auxBy2));
+aux120 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*cos_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*cos_rot(auxBy2) - (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*sin_rot(auxBy2) - (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxBy2)*cos_rot(auxAy2));
+s_10 = -0.707107*1j*aux85*sin_rot(auxAx1)*cos_rot(auxBx1) - 0.707107*aux90*sin_rot(auxAx1)*sin_rot(auxBx1) + 0.707107*aux95*cos_rot(auxAx1)*cos_rot(auxBx1) - 0.707107*1j*aux100*sin_rot(auxBx1)*cos_rot(auxAx1) + 0.707107*1j*(-1j*aux105*sin_rot(auxBx1)*cos_rot(auxAx1) + aux110*cos_rot(auxAx1)*cos_rot(auxBx1) - aux115*sin_rot(auxAx1)*sin_rot(auxBx1) - 1j*aux120*sin_rot(auxAx1)*cos_rot(auxBx1));
+
+aux125 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*sin_rot(auxBy2) - (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxBy2)*cos_rot(auxAy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*cos_rot(auxAy2)*cos_rot(auxBy2) - (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*cos_rot(auxBy2));
+aux130 = (-(-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*cos_rot(auxAy2)*cos_rot(auxBy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxBy2)*cos_rot(auxAy2) - (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*sin_rot(auxBy2));
+aux135 = (-(-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxBy2)*cos_rot(auxAy2) - (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*sin_rot(auxBy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*cos_rot(auxAy2)*cos_rot(auxBy2));
+aux140 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*cos_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*sin_rot(auxBy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxBy2)*cos_rot(auxAy2));
+aux145 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*sin_rot(auxBy2) - (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxBy2)*cos_rot(auxAy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*cos_rot(auxAy2)*cos_rot(auxBy2) - (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*cos_rot(auxBy2));
+aux150 = (-(-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*cos_rot(auxAy2)*cos_rot(auxBy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxBy2)*cos_rot(auxAy2) - (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*sin_rot(auxBy2));
+aux155 = (-(-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxBy2)*cos_rot(auxAy2) - (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*sin_rot(auxBy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*cos_rot(auxAy2)*cos_rot(auxBy2));
+aux160 = ((-0.707107*sin_rot(auxAx3)*sin_rot(auxBx3) - 0.707107*1j*cos_rot(auxAx3)*cos_rot(auxBx3))*cos_rot(auxAy2)*cos_rot(auxBy2) + (-0.707107*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*1j*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxAy2)*cos_rot(auxBy2) + (0.707107*1j*sin_rot(auxAx3)*sin_rot(auxBx3) + 0.707107*cos_rot(auxAx3)*cos_rot(auxBx3))*sin_rot(auxAy2)*sin_rot(auxBy2) + (-0.707107*1j*sin_rot(auxAx3)*cos_rot(auxBx3) - 0.707107*sin_rot(auxBx3)*cos_rot(auxAx3))*sin_rot(auxBy2)*cos_rot(auxAy2));
+s_11 = -0.707107*aux125*sin_rot(auxAx1)*sin_rot(auxBx1) - 0.707107*1j*aux130*sin_rot(auxAx1)*cos_rot(auxBx1) - 0.707107*1j*aux135*sin_rot(auxBx1)*cos_rot(auxAx1) + 0.707107*aux140*cos_rot(auxAx1)*cos_rot(auxBx1) + 0.707107*1j*(aux145*cos_rot(auxAx1)*cos_rot(auxBx1) - 1j*aux150*sin_rot(auxBx1)*cos_rot(auxAx1) - 1j*aux155*sin_rot(auxAx1)*cos_rot(auxBx1) - aux160*sin_rot(auxAx1)*sin_rot(auxBx1));
+
+p00 = real(s_00)^2 + imag(s_00)^2;
+p01 = real(s_01)^2 + imag(s_01)^2;
+p10 = real(s_10)^2 + imag(s_10)^2;
+p11 = real(s_11)^2 + imag(s_11)^2;
+
+end</pre></TD>
+</TR>
+</TABLE>
+<TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th><th>Static Min</th><th>Static Max</th><th>Whole Number</th><th>ProposedType <BR /> (Best For WL = 16)</th></TR><TR class="a">
+<TD class="left bold">aux10*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.500000575893665</TD><TD class="right">0.603554561704501</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">aux100*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.7071073768095423</TD><TD class="right">0.500000575893665</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">aux105*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.500000575893665</TD><TD class="right">0.7071073768095423</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">aux110*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.3535542067693561</TD><TD class="right">0.4267769930340307</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">aux115*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.3535542067693561</TD><TD class="right">0.4267769930340307</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">aux120*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.7071073768095423</TD><TD class="right">0.500000575893665</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">aux125*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.603554561704501</TD><TD class="right">0.707107</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">aux130*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.3535542067693561</TD><TD class="right">0.4999998428149486</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">aux135*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.3535542067693561</TD><TD class="right">0.4999998428149486</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">aux140*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.707107</TD><TD class="right">0.603554561704501</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">aux145*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.603554561704501</TD><TD class="right">0.707107</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">aux15*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.500000575893665</TD><TD class="right">0.603554561704501</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">aux150*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.3535542067693561</TD><TD class="right">0.4999998428149486</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">aux155*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.3535542067693561</TD><TD class="right">0.4999998428149486</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">aux160*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.707107</TD><TD class="right">0.603554561704501</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">aux20*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.707107</TD><TD class="right">0.7071073768095423</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">aux25*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.7071073768095423</TD><TD class="right">0.707107</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">aux30*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.500000575893665</TD><TD class="right">0.603554561704501</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">aux35*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.500000575893665</TD><TD class="right">0.603554561704501</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">aux40*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.707107</TD><TD class="right">0.7071073768095423</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">aux45*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.5000009995224995</TD><TD class="right">0.707107</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">aux5*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.7071073768095423</TD><TD class="right">0.707107</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">aux50*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.603554561704501</TD><TD class="right">0.500000575893665</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">aux55*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.603554561704501</TD><TD class="right">0.500000575893665</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">aux60*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.707107</TD><TD class="right">0.5000009995224995</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">aux65*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.5000009995224995</TD><TD class="right">0.707107</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">aux70*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.603554561704501</TD><TD class="right">0.500000575893665</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">aux75*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.603554561704501</TD><TD class="right">0.500000575893665</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">aux80*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.707107</TD><TD class="right">0.5000009995224995</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">aux85*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.500000575893665</TD><TD class="right">0.7071073768095423</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">aux90*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.3535542067693561</TD><TD class="right">0.4267769930340307</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">aux95*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.3535542067693561</TD><TD class="right">0.4267769930340307</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left">auxAx1</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">8</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 4, 0)</TD></TR>
+<TR class="b">
+<TD class="left">auxAx3</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">8</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 4, 0)</TD></TR>
+<TR class="a">
+<TD class="left">auxAy2</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">8</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 4, 0)</TD></TR>
+<TR class="b">
+<TD class="left">auxBx1</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">8</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 4, 0)</TD></TR>
+<TR class="a">
+<TD class="left">auxBx3</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">8</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 4, 0)</TD></TR>
+<TR class="b">
+<TD class="left">auxBy2</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">8</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 4, 0)</TD></TR>
+<TR class="a">
+<TD class="left">cos_rot</TD><TD class="left">double 1 x 8 </TD><TD class="right">-0.92388</TD><TD class="right">1</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left">p00</TD><TD class="left">double</TD><TD class="right">0.005361332205990708</TD><TD class="right">1.0000012377963834</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 15)</TD></TR>
+<TR class="a">
+<TD class="left bold">p01*</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">0.45802900348009856</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 15)</TD></TR>
+<TR class="b">
+<TD class="left bold">p10*</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">0.4580290034800983</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 15)</TD></TR>
+<TR class="a">
+<TD class="left bold">p11*</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">0.4267775565268244</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 15)</TD></TR>
+<TR class="b">
+<TD class="left">rotAx1</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">7</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 3, 0)</TD></TR>
+<TR class="a">
+<TD class="left">rotAx3</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">7</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 3, 0)</TD></TR>
+<TR class="b">
+<TD class="left">rotAy2</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">7</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 3, 0)</TD></TR>
+<TR class="a">
+<TD class="left">rotBx1</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">7</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 3, 0)</TD></TR>
+<TR class="b">
+<TD class="left">rotBx3</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">7</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 3, 0)</TD></TR>
+<TR class="a">
+<TD class="left">rotBy2</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">7</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 3, 0)</TD></TR>
+<TR class="b">
+<TD class="left">s_00</TD><TD class="left">doublecomplex </TD><TD class="right">-0.9238816359014215</TD><TD class="right">1.0000006188980002</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">s_01*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.2705996510643732</TD><TD class="right">0.6767784005714859</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">s_10*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.653282767601948</TD><TD class="right">0.6767784005714856</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">s_11*</TD><TD class="left">doublecomplex </TD><TD class="right">-0.28033033366443466</TD><TD class="right">0.6532821415949042</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">sin_rot*</TD><TD class="left">double 1 x 8 </TD><TD class="right">0</TD><TD class="right">1</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+</TABLE>
+
+</body>
+</html>

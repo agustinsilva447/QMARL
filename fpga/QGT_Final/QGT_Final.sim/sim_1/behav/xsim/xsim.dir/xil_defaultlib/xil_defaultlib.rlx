@@ -1,0 +1,21 @@
+0.7
+2020.2
+Oct 19 2021
+02:56:52
+/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd,1651339724,vhdl,,,,design_1_wrapper,,,,,,,,
+/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/ip/design_1_QGT_state_fixpt_0_0/sim/design_1_QGT_state_fixpt_0_0.vhd,1651339724,vhdl,,,,design_1_qgt_state_fixpt_0_0,,,,,,,,
+/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/ip/design_1_comblock_0_0/sim/design_1_comblock_0_0.vhd,1651257714,vhdl,,,,design_1_comblock_0_0,,,,,,,,
+/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0_sim_netlist.vhdl,1651258027,vhdl,,,,design_1_processing_system7_0_0;design_1_processing_system7_0_0_processing_system7_v5_5_processing_system7,,,,,,,,
+/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/ip/design_1_rst_ps7_0_100M_0/sim/design_1_rst_ps7_0_100M_0.vhd,1651257748,vhdl,,,,design_1_rst_ps7_0_100m_0,,,,,,,,
+/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/ipshared/2cb9/hdl/axi_comblock.vhdl,1651257714,vhdl,,,,axi_comblock,,,,,,,,
+/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/ipshared/2cb9/hdl/axif.vhdl,1651257714,vhdl,/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/ipshared/2cb9/hdl/axi_comblock.vhdl,,,axif,,,,,,,,
+/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/ipshared/2cb9/hdl/axil.vhdl,1651257714,vhdl,/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/ipshared/2cb9/hdl/axi_comblock.vhdl,,,axil,,,,,,,,
+/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl,1651257714,vhdl,/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/ipshared/2cb9/hdl/axi_comblock.vhdl,,,comblock,,,,,,,,
+/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/ipshared/2cb9/hdl/fifo.vhdl,1651257714,vhdl,/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl,,,fifo,,,,,,,,
+/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/ipshared/2cb9/hdl/graysync.vhdl,1651257714,vhdl,/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/ipshared/2cb9/hdl/fifo.vhdl,,,graysync,,,,,,,,
+/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/ipshared/2cb9/hdl/tdpram.vhdl,1651257714,vhdl,/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl;/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/ipshared/2cb9/hdl/fifo.vhdl,,,tdpram,,,,,,,,
+/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.ip_user_files/bd/design_1/sim/design_1.vhd,1651339724,vhdl,,,,design_1;design_1_ps7_0_axi_periph_0;s00_couplers_imp_uyskka,,,,,,,,
+/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.sim/sim_1/behav/xsim/glbl.v,1634335545,verilog,,,,glbl,,axi_vip_v1_1_11;processing_system7_vip_v1_0_13;xilinx_vip,,,,,,
+/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.srcs/sim_1/new/QGT_tb.vhd,1651622857,vhdl,,,,qgt_tb,,,,,,,,
+/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.srcs/sources_1/new/VQC.vhd,1651622706,vhdl,/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.srcs/sim_1/new/QGT_tb.vhd,,,qgt_state_fixpt,,,,,,,,
+/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.srcs/sources_1/new/fixed_pkg_2008.vhd,1634633847,vhdl,/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.srcs/sources_1/new/VQC.vhd,,,fixed_pkg,,,,,,,,

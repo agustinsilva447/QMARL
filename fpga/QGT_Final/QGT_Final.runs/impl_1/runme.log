@@ -1,0 +1,1269 @@
+
+*** Running vivado
+    with args -log design_1_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source design_1_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:08 . Memory (MB): peak = 2591.387 ; gain = 8.930 ; free physical = 6162 ; free virtual = 11585
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agustin/Escritorio/Github/QMARL/fpga/pynq-z2/docs/core-comblock-master'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/agustin/Xilinx/Vivado/2021.2/data/ip'.
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2607.402 ; gain = 16.016 ; free physical = 6142 ; free virtual = 11565
+Command: link_design -top design_1_wrapper -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint '/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ip/design_1_QGT_state_fixpt_0_0/design_1_QGT_state_fixpt_0_0.dcp' for cell 'design_1_i/QGT_state_fixpt_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ip/design_1_comblock_0_0/design_1_comblock_0_0.dcp' for cell 'design_1_i/comblock_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.dcp' for cell 'design_1_i/rst_ps7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint '/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.09 . Memory (MB): peak = 2607.461 ; gain = 0.000 ; free physical = 5833 ; free virtual = 11257
+INFO: [Netlist 29-17] Analyzing 758 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2631.496 ; gain = 0.000 ; free physical = 5722 ; free virtual = 11146
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+15 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 2631.496 ; gain = 24.094 ; free physical = 5722 ; free virtual = 11146
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2647.414 ; gain = 15.918 ; free physical = 5712 ; free virtual = 11136
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 987a17a5
+
+Time (s): cpu = 00:00:14 ; elapsed = 00:00:12 . Memory (MB): peak = 2739.227 ; gain = 91.812 ; free physical = 5268 ; free virtual = 10706
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/QGT_state_fixpt_0/U0/arg__2_i_748 into driver instance design_1_i/QGT_state_fixpt_0/U0/arg__2_i_846, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/QGT_state_fixpt_0/U0/arg__4_i_733 into driver instance design_1_i/QGT_state_fixpt_0/U0/arg__2_i_975, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/QGT_state_fixpt_0/U0/arg__4_i_734 into driver instance design_1_i/QGT_state_fixpt_0/U0/arg__2_i_976, which resulted in an inversion of 5 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/QGT_state_fixpt_0/U0/arg__4_i_741 into driver instance design_1_i/QGT_state_fixpt_0/U0/arg__4_i_826, which resulted in an inversion of 4 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/QGT_state_fixpt_0/U0/arg__4_i_761 into driver instance design_1_i/QGT_state_fixpt_0/U0/arg__2_i_989, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/QGT_state_fixpt_0/U0/arg__4_i_782 into driver instance design_1_i/QGT_state_fixpt_0/U0/arg__2_i_1000, which resulted in an inversion of 3 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/QGT_state_fixpt_0/U0/arg__4_i_783 into driver instance design_1_i/QGT_state_fixpt_0/U0/arg__2_i_1001, which resulted in an inversion of 7 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/QGT_state_fixpt_0/U0/arg__4_i_805 into driver instance design_1_i/QGT_state_fixpt_0/U0/arg__2_i_1013, which resulted in an inversion of 3 pins
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: ecd2b436
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.90 . Memory (MB): peak = 2980.273 ; gain = 0.000 ; free physical = 5057 ; free virtual = 10495
+INFO: [Opt 31-389] Phase Retarget created 4 cells and removed 37 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 185f5808d
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 2980.273 ; gain = 0.000 ; free physical = 5057 ; free virtual = 10495
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 72 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 13c8fa572
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2980.273 ; gain = 0.000 ; free physical = 5056 ; free virtual = 10494
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 231 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 13c8fa572
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2980.273 ; gain = 0.000 ; free physical = 5056 ; free virtual = 10495
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 13c8fa572
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2980.273 ; gain = 0.000 ; free physical = 5056 ; free virtual = 10495
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 13c8fa572
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2980.273 ; gain = 0.000 ; free physical = 5056 ; free virtual = 10495
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               4  |              37  |                                              0  |
+|  Constant propagation         |               0  |              72  |                                              0  |
+|  Sweep                        |               0  |             231  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2980.273 ; gain = 0.000 ; free physical = 5056 ; free virtual = 10495
+Ending Logic Optimization Task | Checksum: be4c8e4d
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2980.273 ; gain = 0.000 ; free physical = 5056 ; free virtual = 10495
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: be4c8e4d
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2980.273 ; gain = 0.000 ; free physical = 5056 ; free virtual = 10495
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: be4c8e4d
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2980.273 ; gain = 0.000 ; free physical = 5056 ; free virtual = 10495
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2980.273 ; gain = 0.000 ; free physical = 5056 ; free virtual = 10495
+Ending Netlist Obfuscation Task | Checksum: be4c8e4d
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2980.273 ; gain = 0.000 ; free physical = 5056 ; free virtual = 10495
+INFO: [Common 17-83] Releasing license: Implementation
+40 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:20 . Memory (MB): peak = 2980.273 ; gain = 348.777 ; free physical = 5056 ; free virtual = 10495
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.32 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3020.293 ; gain = 0.000 ; free physical = 5049 ; free virtual = 10489
+INFO: [Common 17-1381] The checkpoint '/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+Command: report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.runs/impl_1/design_1_wrapper_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 4 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4981 ; free virtual = 10424
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 526da78d
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4981 ; free virtual = 10424
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4981 ; free virtual = 10424
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: e9cc19c6
+
+Time (s): cpu = 00:00:00.95 ; elapsed = 00:00:00.75 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 5011 ; free virtual = 10453
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 7dadf385
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 5013 ; free virtual = 10456
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 7dadf385
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 5013 ; free virtual = 10456
+Phase 1 Placer Initialization | Checksum: 7dadf385
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 5012 ; free virtual = 10456
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: faf449b6
+
+Time (s): cpu = 00:00:10 ; elapsed = 00:00:05 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 5006 ; free virtual = 10450
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: bc8f5b81
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 5000 ; free virtual = 10445
+
+Phase 2.3 Post-Processing in Floorplanning
+Phase 2.3 Post-Processing in Floorplanning | Checksum: bc8f5b81
+
+Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 5000 ; free virtual = 10445
+
+Phase 2.4 Global Placement Core
+
+Phase 2.4.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 135 LUTNM shape to break, 15 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 2, two critical 133, total 135, new lutff created 2
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 141 nets or LUTs. Breaked 135 LUTs, combined 6 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-677] No candidate cells for Shift Register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4987 ; free virtual = 10434
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |          135  |              6  |                   141  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |          135  |              6  |                   141  |           0  |           9  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.1 Physical Synthesis In Placer | Checksum: 174c82405
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:17 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4987 ; free virtual = 10434
+Phase 2.4 Global Placement Core | Checksum: ca0d03b0
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:17 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4986 ; free virtual = 10434
+Phase 2 Global Placement | Checksum: ca0d03b0
+
+Time (s): cpu = 00:00:39 ; elapsed = 00:00:17 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4986 ; free virtual = 10434
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 15ad0cc02
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:18 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4988 ; free virtual = 10436
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 19dce0ca8
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:20 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4985 ; free virtual = 10433
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 185728cee
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:20 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4985 ; free virtual = 10433
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 14035fcef
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:20 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4985 ; free virtual = 10433
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 214782dc6
+
+Time (s): cpu = 00:00:51 ; elapsed = 00:00:24 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4983 ; free virtual = 10430
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 1f2fe5531
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:26 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4979 ; free virtual = 10427
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: fe37a802
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:26 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4978 ; free virtual = 10426
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 125bcaf9f
+
+Time (s): cpu = 00:00:53 ; elapsed = 00:00:26 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4978 ; free virtual = 10426
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 1a96f733d
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:37 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4989 ; free virtual = 10437
+Phase 3 Detail Placement | Checksum: 1a96f733d
+
+Time (s): cpu = 00:01:08 ; elapsed = 00:00:37 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4989 ; free virtual = 10437
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 2376f3023
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-36.278 | TNS=-568.747 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1f2ddaeac
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.31 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4976 ; free virtual = 10424
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 21c4f44a0
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.34 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4976 ; free virtual = 10424
+Phase 4.1.1.1 BUFG Insertion | Checksum: 2376f3023
+
+Time (s): cpu = 00:01:15 ; elapsed = 00:00:40 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4976 ; free virtual = 10424
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-35.909. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 18fae00f5
+
+Time (s): cpu = 00:01:53 ; elapsed = 00:01:05 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4973 ; free virtual = 10422
+
+Time (s): cpu = 00:01:53 ; elapsed = 00:01:05 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4974 ; free virtual = 10423
+Phase 4.1 Post Commit Optimization | Checksum: 18fae00f5
+
+Time (s): cpu = 00:01:53 ; elapsed = 00:01:05 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4974 ; free virtual = 10423
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 18fae00f5
+
+Time (s): cpu = 00:01:53 ; elapsed = 00:01:05 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4976 ; free virtual = 10424
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                2x2|
+|___________|___________________|___________________|
+|      South|                1x1|                2x2|
+|___________|___________________|___________________|
+|       East|                1x1|                1x1|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 18fae00f5
+
+Time (s): cpu = 00:01:53 ; elapsed = 00:01:06 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4976 ; free virtual = 10424
+Phase 4.3 Placer Reporting | Checksum: 18fae00f5
+
+Time (s): cpu = 00:01:53 ; elapsed = 00:01:06 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4976 ; free virtual = 10424
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4976 ; free virtual = 10424
+
+Time (s): cpu = 00:01:53 ; elapsed = 00:01:06 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4976 ; free virtual = 10424
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: d3b0f1ca
+
+Time (s): cpu = 00:01:53 ; elapsed = 00:01:06 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4976 ; free virtual = 10424
+Ending Placer Task | Checksum: 92996514
+
+Time (s): cpu = 00:01:53 ; elapsed = 00:01:06 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4976 ; free virtual = 10424
+INFO: [Common 17-83] Releasing license: Implementation
+80 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:01:58 ; elapsed = 00:01:07 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4990 ; free virtual = 10438
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:00.99 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4977 ; free virtual = 10438
+INFO: [Common 17-1381] The checkpoint '/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.runs/impl_1/design_1_wrapper_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file design_1_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.31 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4976 ; free virtual = 10427
+INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_placed.rpt -pb design_1_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file design_1_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.15 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4987 ; free virtual = 10439
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Vivado_Tcl 4-1435] PhysOpt_Tcl_Interface Runtime Before Starting Physical Synthesis Task | CPU: 10.43s |  WALL: 3.15s
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4938 ; free virtual = 10389
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 4 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.909 | TNS=-564.967 |
+Phase 1 Physical Synthesis Initialization | Checksum: 204a221f4
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4952 ; free virtual = 10403
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.909 | TNS=-564.967 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 204a221f4
+
+Time (s): cpu = 00:00:06 ; elapsed = 00:00:02 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4952 ; free virtual = 10403
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.909 | TNS=-564.967 |
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/AXIL_inst/axil_rdata[5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[5]. Critical path length was reduced through logic transformation on cell design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[5]_i_1_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[5]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.519 | TNS=-564.056 |
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/AXIL_inst/axil_rdata[9]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[9]. Critical path length was reduced through logic transformation on cell design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[9]_i_1_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[9]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.505 | TNS=-563.797 |
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/AXIL_inst/axil_rdata[15]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[15]. Critical path length was reduced through logic transformation on cell design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[15]_i_2_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[15]_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.491 | TNS=-563.572 |
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/AXIL_inst/axil_rdata[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[13]. Critical path length was reduced through logic transformation on cell design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[13]_i_1_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[13]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.462 | TNS=-563.381 |
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/AXIL_inst/axil_rdata[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[4]. Critical path length was reduced through logic transformation on cell design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[4]_i_1_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[4]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.450 | TNS=-562.613 |
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/AXIL_inst/axil_rdata[14]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[14]. Critical path length was reduced through logic transformation on cell design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[14]_i_1_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[14]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.368 | TNS=-562.267 |
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/AXIL_inst/axil_rdata[11]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[11]. Critical path length was reduced through logic transformation on cell design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[11]_i_1_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[11]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.357 | TNS=-562.149 |
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/AXIL_inst/axil_rdata[8]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[8]. Critical path length was reduced through logic transformation on cell design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[8]_i_1_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[8]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.348 | TNS=-561.994 |
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/AXIL_inst/axil_rdata[12]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[12]. Critical path length was reduced through logic transformation on cell design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[12]_i_1_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[12]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.300 | TNS=-561.879 |
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[8]_INST_0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[4]_INST_0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[0]_INST_0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[0]_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[0]_INST_0_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[0]_INST_0_i_14_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.298 | TNS=-561.847 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[0]_INST_0_i_15_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.110 | TNS=-558.839 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[13]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.096 | TNS=-558.754 |
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/AXIL_inst/axil_rdata[6]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-710] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[6]. Critical path length was reduced through logic transformation on cell design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[6]_i_1_comp.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/AXIL_inst/axi_rdata[6]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.090 | TNS=-558.437 |
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[15]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[15]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.070 | TNS=-558.176 |
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[9]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[9]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.060 | TNS=-558.014 |
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[11]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 18 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[11]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.043 | TNS=-557.711 |
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[12]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 12 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[12]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-35.025 | TNS=-557.539 |
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/A[20]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_8_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_51_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_81[31]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_53_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_109_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_153[28]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_116_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_202_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.961 | TNS=-556.515 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_201_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.948 | TNS=-556.307 |
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_7_n_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_8_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_44_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_81[35]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_47_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_99_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_153[32]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_106_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_191_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.944 | TNS=-556.243 |
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_138_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_234_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.864 | TNS=-554.963 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_190_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.845 | TNS=-554.659 |
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_38_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_81[40]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_40_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_87_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_153[36]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_96_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_179_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.839 | TNS=-554.563 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_199_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.836 | TNS=-554.515 |
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_201_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__36_6[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_312_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_420_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_n_87. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__34_n_102. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_i_13_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_i_32_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.814 | TNS=-554.163 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_i_33_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.740 | TNS=-552.979 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_i_30_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.722 | TNS=-552.691 |
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 10 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_i_28_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.720 | TNS=-552.659 |
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_i_32_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_n_106. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__32_n_84. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__31_n_106. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__28_n_89. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__5_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__27_n_91. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net design_1_i/comblock_0/U0/comblock_i/reg0_o[1]. Replicated 9 times.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/comblock_i/reg0_o[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.712 | TNS=-552.531 |
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_199_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__26_6[2]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_296_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__20_3[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_417_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_496_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__18_n_102. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__17_i_13_n_7. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__17_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__17_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__17_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__17_i_17_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-608] Optimized 1 net.  Swapped 9 pins.
+INFO: [Physopt 32-735] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__17_i_38_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.705 | TNS=-552.419 |
+INFO: [Physopt 32-663] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__5_i_3_n_0.  Re-placed instance design_1_i/QGT_state_fixpt_0/U0/arg__5_i_3
+INFO: [Physopt 32-735] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__5_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.703 | TNS=-552.387 |
+INFO: [Physopt 32-81] Processed net design_1_i/comblock_0/U0/comblock_i/reg0_o[0]. Replicated 10 times.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/comblock_i/reg0_o[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.693 | TNS=-552.227 |
+INFO: [Physopt 32-663] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__5_i_3_n_0.  Re-placed instance design_1_i/QGT_state_fixpt_0/U0/arg__5_i_3
+INFO: [Physopt 32-735] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__5_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.688 | TNS=-552.147 |
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__5_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net design_1_i/comblock_0/U0/comblock_i/reg0_o[3]. Replicated 4 times.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/comblock_i/reg0_o[3]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.673 | TNS=-551.907 |
+INFO: [Physopt 32-81] Processed net design_1_i/comblock_0/U0/comblock_i/reg0_o[3]_repN. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/comblock_i/reg0_o[3]_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.657 | TNS=-551.651 |
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__17_i_38_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__17_n_106. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__16_n_88. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__15_n_106. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__12_n_92. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-601] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__11_i_1_n_0. Net driver design_1_i/QGT_state_fixpt_0/U0/arg__11_i_1 was replaced.
+INFO: [Physopt 32-735] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__11_i_1_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.655 | TNS=-551.619 |
+INFO: [Physopt 32-663] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__5_i_6_n_0.  Re-placed instance design_1_i/QGT_state_fixpt_0/U0/arg__5_i_6
+INFO: [Physopt 32-735] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__5_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.654 | TNS=-551.603 |
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__5_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-81] Processed net design_1_i/comblock_0/U0/comblock_i/reg0_o[3]_repN. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net design_1_i/comblock_0/U0/comblock_i/reg0_o[3]_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.647 | TNS=-551.491 |
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/comblock_i/reg0_o[3]_repN_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/AXIL_inst/axil_rdata[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/A[20]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_8_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_51_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_81[31]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_109_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_153[28]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_201_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__36_6[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_420_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_n_87. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__34_n_102. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_i_13_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_i_32_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__32_n_84. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__28_n_89. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__5_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__27_n_91. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/comblock_i/reg0_o[3]_repN_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.647 | TNS=-551.491 |
+Phase 3 Critical Path Optimization | Checksum: 204a221f4
+
+Time (s): cpu = 00:02:13 ; elapsed = 00:00:50 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4950 ; free virtual = 10401
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.647 | TNS=-551.491 |
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/AXIL_inst/axil_rdata[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[8]_INST_0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[4]_INST_0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[0]_INST_0_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[0]_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[0]_INST_0_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/A[20]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_8_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_13_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_51_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_81[31]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_53_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_109_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_153[28]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_116_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_201_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__36_6[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_312_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_420_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_n_87. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__34_n_102. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_i_13_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_i_14_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_i_15_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_i_16_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_i_32_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_n_106. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__32_n_84. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__31_n_106. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__28_n_89. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__5_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__27_n_91. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/comblock_i/reg0_o[3]_repN_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/AXIL_inst/axil_rdata[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/p11[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/AXIL_inst/reg_rd_dat[13]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/A[20]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_12_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_8_n_4. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_51_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_81[31]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_109_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_153[28]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/arg__57_i_201_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__36_6[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_i_420_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__57_n_87. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__34_n_102. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_i_13_n_6. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__33_i_32_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__32_n_84. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__28_n_89. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__5_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/QGT_state_fixpt_0/U0/arg__27_n_91. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_1_i/comblock_0/U0/comblock_i/reg0_o[3]_repN_5. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-34.647 | TNS=-551.491 |
+Phase 4 Critical Path Optimization | Checksum: 204a221f4
+
+Time (s): cpu = 00:02:29 ; elapsed = 00:00:56 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4950 ; free virtual = 10401
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4950 ; free virtual = 10402
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-34.647 | TNS=-551.491 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          1.262  |         13.476  |           25  |              0  |                    38  |           0  |           2  |  00:00:54  |
+|  Total          |          1.262  |         13.476  |           25  |              0  |                    38  |           0  |           3  |  00:00:54  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4950 ; free virtual = 10402
+Ending Physical Synthesis Task | Checksum: 1edbbcc27
+
+Time (s): cpu = 00:02:29 ; elapsed = 00:00:56 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4950 ; free virtual = 10402
+INFO: [Common 17-83] Releasing license: Implementation
+382 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:02:39 ; elapsed = 00:00:59 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4954 ; free virtual = 10406
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3115.922 ; gain = 0.000 ; free physical = 4938 ; free virtual = 10402
+INFO: [Common 17-1381] The checkpoint '/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.runs/impl_1/design_1_wrapper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 4 CPUs
+
+Phase 1 Build RT Design
+Checksum: PlaceDB: 5d87941 ConstDB: 0 ShapeSum: e9c58afd RouteDB: 0
+Post Restoration Checksum: NetGraph: e3266e36 NumContArr: f2aac6a1 Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 1d5d134d7
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 3205.980 ; gain = 79.680 ; free physical = 4818 ; free virtual = 10273
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 1d5d134d7
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 3205.980 ; gain = 79.680 ; free physical = 4817 ; free virtual = 10273
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 1d5d134d7
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 3213.977 ; gain = 87.676 ; free physical = 4801 ; free virtual = 10257
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 1d5d134d7
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:32 . Memory (MB): peak = 3213.977 ; gain = 87.676 ; free physical = 4801 ; free virtual = 10257
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1b94730d9
+
+Time (s): cpu = 00:00:49 ; elapsed = 00:00:36 . Memory (MB): peak = 3242.859 ; gain = 116.559 ; free physical = 4774 ; free virtual = 10231
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-34.499| TNS=-548.715| WHS=-0.166 | THS=-11.526|
+
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 7733
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 7733
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 2 Router Initialization | Checksum: 230b1a2bc
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:38 . Memory (MB): peak = 3242.859 ; gain = 116.559 ; free physical = 4773 ; free virtual = 10229
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 230b1a2bc
+
+Time (s): cpu = 00:00:54 ; elapsed = 00:00:38 . Memory (MB): peak = 3242.859 ; gain = 116.559 ; free physical = 4773 ; free virtual = 10229
+Phase 3 Initial Routing | Checksum: 1f15153af
+
+Time (s): cpu = 00:01:00 ; elapsed = 00:00:40 . Memory (MB): peak = 3242.859 ; gain = 116.559 ; free physical = 4782 ; free virtual = 10238
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 890
+ Number of Nodes with overlaps = 154
+ Number of Nodes with overlaps = 97
+ Number of Nodes with overlaps = 40
+ Number of Nodes with overlaps = 17
+ Number of Nodes with overlaps = 6
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 4
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-35.389| TNS=-570.577| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 1c8cecebe
+
+Time (s): cpu = 00:01:26 ; elapsed = 00:00:58 . Memory (MB): peak = 3242.859 ; gain = 116.559 ; free physical = 4779 ; free virtual = 10235
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 19
+ Number of Nodes with overlaps = 20
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-35.561| TNS=-573.329| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 12e882f7a
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:00 . Memory (MB): peak = 3242.859 ; gain = 116.559 ; free physical = 4779 ; free virtual = 10236
+Phase 4 Rip-up And Reroute | Checksum: 12e882f7a
+
+Time (s): cpu = 00:01:28 ; elapsed = 00:01:00 . Memory (MB): peak = 3242.859 ; gain = 116.559 ; free physical = 4779 ; free virtual = 10236
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 1aaf7cf0f
+
+Time (s): cpu = 00:01:30 ; elapsed = 00:01:01 . Memory (MB): peak = 3242.859 ; gain = 116.559 ; free physical = 4779 ; free virtual = 10236
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-35.349| TNS=-569.887| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: f03c3ad8
+
+Time (s): cpu = 00:01:31 ; elapsed = 00:01:02 . Memory (MB): peak = 3266.859 ; gain = 140.559 ; free physical = 4768 ; free virtual = 10224
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: f03c3ad8
+
+Time (s): cpu = 00:01:31 ; elapsed = 00:01:02 . Memory (MB): peak = 3266.859 ; gain = 140.559 ; free physical = 4768 ; free virtual = 10224
+Phase 5 Delay and Skew Optimization | Checksum: f03c3ad8
+
+Time (s): cpu = 00:01:31 ; elapsed = 00:01:02 . Memory (MB): peak = 3266.859 ; gain = 140.559 ; free physical = 4768 ; free virtual = 10224
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: c4f812e5
+
+Time (s): cpu = 00:01:33 ; elapsed = 00:01:03 . Memory (MB): peak = 3266.859 ; gain = 140.559 ; free physical = 4768 ; free virtual = 10224
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-35.333| TNS=-563.061| WHS=0.121  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: c4f812e5
+
+Time (s): cpu = 00:01:33 ; elapsed = 00:01:03 . Memory (MB): peak = 3266.859 ; gain = 140.559 ; free physical = 4768 ; free virtual = 10224
+Phase 6 Post Hold Fix | Checksum: c4f812e5
+
+Time (s): cpu = 00:01:33 ; elapsed = 00:01:03 . Memory (MB): peak = 3266.859 ; gain = 140.559 ; free physical = 4768 ; free virtual = 10224
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 1.99591 %
+  Global Horizontal Routing Utilization  = 3.47321 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 54.0541%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 59.4595%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 67.6471%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 77.9412%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 12c262b6f
+
+Time (s): cpu = 00:01:33 ; elapsed = 00:01:03 . Memory (MB): peak = 3266.859 ; gain = 140.559 ; free physical = 4768 ; free virtual = 10224
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 12c262b6f
+
+Time (s): cpu = 00:01:33 ; elapsed = 00:01:03 . Memory (MB): peak = 3266.859 ; gain = 140.559 ; free physical = 4766 ; free virtual = 10222
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 18748ac94
+
+Time (s): cpu = 00:01:35 ; elapsed = 00:01:04 . Memory (MB): peak = 3298.875 ; gain = 172.574 ; free physical = 4765 ; free virtual = 10222
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-35.333| TNS=-563.061| WHS=0.121  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 18748ac94
+
+Time (s): cpu = 00:01:36 ; elapsed = 00:01:04 . Memory (MB): peak = 3298.875 ; gain = 172.574 ; free physical = 4765 ; free virtual = 10222
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:01:36 ; elapsed = 00:01:04 . Memory (MB): peak = 3298.875 ; gain = 172.574 ; free physical = 4801 ; free virtual = 10257
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+400 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:01:49 ; elapsed = 00:01:08 . Memory (MB): peak = 3298.875 ; gain = 182.953 ; free physical = 4802 ; free virtual = 10258
+INFO: [Common 17-600] The following parameters have non-default value.
+general.maxThreads
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:03 ; elapsed = 00:00:01 . Memory (MB): peak = 3298.875 ; gain = 0.000 ; free physical = 4784 ; free virtual = 10255
+INFO: [Common 17-1381] The checkpoint '/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.runs/impl_1/design_1_wrapper_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+Command: report_drc -file design_1_wrapper_drc_routed.rpt -pb design_1_wrapper_drc_routed.pb -rpx design_1_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.runs/impl_1/design_1_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 4 threads
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file /home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.runs/impl_1/design_1_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+Command: report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+413 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file design_1_wrapper_route_status.rpt -pb design_1_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file design_1_wrapper_timing_summary_routed.rpt -pb design_1_wrapper_timing_summary_routed.pb -rpx design_1_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file design_1_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file design_1_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file design_1_wrapper_bus_skew_routed.rpt -pb design_1_wrapper_bus_skew_routed.pb -rpx design_1_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 4 CPUs
+Command: write_bitstream -force design_1_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 4 threads
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg input design_1_i/QGT_state_fixpt_0/U0/arg/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg input design_1_i/QGT_state_fixpt_0/U0/arg/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__0 input design_1_i/QGT_state_fixpt_0/U0/arg__0/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__0 input design_1_i/QGT_state_fixpt_0/U0/arg__0/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__1 input design_1_i/QGT_state_fixpt_0/U0/arg__1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__1 input design_1_i/QGT_state_fixpt_0/U0/arg__1/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__10 input design_1_i/QGT_state_fixpt_0/U0/arg__10/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__10 input design_1_i/QGT_state_fixpt_0/U0/arg__10/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__11 input design_1_i/QGT_state_fixpt_0/U0/arg__11/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__11 input design_1_i/QGT_state_fixpt_0/U0/arg__11/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__12 input design_1_i/QGT_state_fixpt_0/U0/arg__12/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__12 input design_1_i/QGT_state_fixpt_0/U0/arg__12/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__13 input design_1_i/QGT_state_fixpt_0/U0/arg__13/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__13 input design_1_i/QGT_state_fixpt_0/U0/arg__13/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__14 input design_1_i/QGT_state_fixpt_0/U0/arg__14/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__14 input design_1_i/QGT_state_fixpt_0/U0/arg__14/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__15 input design_1_i/QGT_state_fixpt_0/U0/arg__15/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__15 input design_1_i/QGT_state_fixpt_0/U0/arg__15/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__16 input design_1_i/QGT_state_fixpt_0/U0/arg__16/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__16 input design_1_i/QGT_state_fixpt_0/U0/arg__16/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__17 input design_1_i/QGT_state_fixpt_0/U0/arg__17/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__17 input design_1_i/QGT_state_fixpt_0/U0/arg__17/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__18 input design_1_i/QGT_state_fixpt_0/U0/arg__18/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__18 input design_1_i/QGT_state_fixpt_0/U0/arg__18/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__19 input design_1_i/QGT_state_fixpt_0/U0/arg__19/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__19 input design_1_i/QGT_state_fixpt_0/U0/arg__19/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__2 input design_1_i/QGT_state_fixpt_0/U0/arg__2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__2 input design_1_i/QGT_state_fixpt_0/U0/arg__2/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__20 input design_1_i/QGT_state_fixpt_0/U0/arg__20/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__20 input design_1_i/QGT_state_fixpt_0/U0/arg__20/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__21 input design_1_i/QGT_state_fixpt_0/U0/arg__21/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__21 input design_1_i/QGT_state_fixpt_0/U0/arg__21/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__22 input design_1_i/QGT_state_fixpt_0/U0/arg__22/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__22 input design_1_i/QGT_state_fixpt_0/U0/arg__22/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__23 input design_1_i/QGT_state_fixpt_0/U0/arg__23/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__23 input design_1_i/QGT_state_fixpt_0/U0/arg__23/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__24 input design_1_i/QGT_state_fixpt_0/U0/arg__24/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__24 input design_1_i/QGT_state_fixpt_0/U0/arg__24/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__25 input design_1_i/QGT_state_fixpt_0/U0/arg__25/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__25 input design_1_i/QGT_state_fixpt_0/U0/arg__25/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__26 input design_1_i/QGT_state_fixpt_0/U0/arg__26/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__26 input design_1_i/QGT_state_fixpt_0/U0/arg__26/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__27 input design_1_i/QGT_state_fixpt_0/U0/arg__27/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__27 input design_1_i/QGT_state_fixpt_0/U0/arg__27/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__28 input design_1_i/QGT_state_fixpt_0/U0/arg__28/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__28 input design_1_i/QGT_state_fixpt_0/U0/arg__28/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__29 input design_1_i/QGT_state_fixpt_0/U0/arg__29/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__29 input design_1_i/QGT_state_fixpt_0/U0/arg__29/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__3 input design_1_i/QGT_state_fixpt_0/U0/arg__3/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__3 input design_1_i/QGT_state_fixpt_0/U0/arg__3/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__30 input design_1_i/QGT_state_fixpt_0/U0/arg__30/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__30 input design_1_i/QGT_state_fixpt_0/U0/arg__30/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__31 input design_1_i/QGT_state_fixpt_0/U0/arg__31/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__31 input design_1_i/QGT_state_fixpt_0/U0/arg__31/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__32 input design_1_i/QGT_state_fixpt_0/U0/arg__32/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__32 input design_1_i/QGT_state_fixpt_0/U0/arg__32/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__33 input design_1_i/QGT_state_fixpt_0/U0/arg__33/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__33 input design_1_i/QGT_state_fixpt_0/U0/arg__33/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__34 input design_1_i/QGT_state_fixpt_0/U0/arg__34/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__34 input design_1_i/QGT_state_fixpt_0/U0/arg__34/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__35 input design_1_i/QGT_state_fixpt_0/U0/arg__35/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__35 input design_1_i/QGT_state_fixpt_0/U0/arg__35/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__36 input design_1_i/QGT_state_fixpt_0/U0/arg__36/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__36 input design_1_i/QGT_state_fixpt_0/U0/arg__36/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__37 input design_1_i/QGT_state_fixpt_0/U0/arg__37/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__37 input design_1_i/QGT_state_fixpt_0/U0/arg__37/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__38 input design_1_i/QGT_state_fixpt_0/U0/arg__38/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__38 input design_1_i/QGT_state_fixpt_0/U0/arg__38/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__39 input design_1_i/QGT_state_fixpt_0/U0/arg__39/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__39 input design_1_i/QGT_state_fixpt_0/U0/arg__39/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__4 input design_1_i/QGT_state_fixpt_0/U0/arg__4/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__4 input design_1_i/QGT_state_fixpt_0/U0/arg__4/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__40 input design_1_i/QGT_state_fixpt_0/U0/arg__40/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__40 input design_1_i/QGT_state_fixpt_0/U0/arg__40/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__41 input design_1_i/QGT_state_fixpt_0/U0/arg__41/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__41 input design_1_i/QGT_state_fixpt_0/U0/arg__41/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__42 input design_1_i/QGT_state_fixpt_0/U0/arg__42/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__42 input design_1_i/QGT_state_fixpt_0/U0/arg__42/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__43 input design_1_i/QGT_state_fixpt_0/U0/arg__43/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__43 input design_1_i/QGT_state_fixpt_0/U0/arg__43/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__44 input design_1_i/QGT_state_fixpt_0/U0/arg__44/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__44 input design_1_i/QGT_state_fixpt_0/U0/arg__44/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__45 input design_1_i/QGT_state_fixpt_0/U0/arg__45/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__45 input design_1_i/QGT_state_fixpt_0/U0/arg__45/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__46 input design_1_i/QGT_state_fixpt_0/U0/arg__46/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__46 input design_1_i/QGT_state_fixpt_0/U0/arg__46/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__47 input design_1_i/QGT_state_fixpt_0/U0/arg__47/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__47 input design_1_i/QGT_state_fixpt_0/U0/arg__47/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__48 input design_1_i/QGT_state_fixpt_0/U0/arg__48/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__48 input design_1_i/QGT_state_fixpt_0/U0/arg__48/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__49 input design_1_i/QGT_state_fixpt_0/U0/arg__49/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__49 input design_1_i/QGT_state_fixpt_0/U0/arg__49/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__5 input design_1_i/QGT_state_fixpt_0/U0/arg__5/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__5 input design_1_i/QGT_state_fixpt_0/U0/arg__5/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__50 input design_1_i/QGT_state_fixpt_0/U0/arg__50/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__50 input design_1_i/QGT_state_fixpt_0/U0/arg__50/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__51 input design_1_i/QGT_state_fixpt_0/U0/arg__51/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__51 input design_1_i/QGT_state_fixpt_0/U0/arg__51/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__52 input design_1_i/QGT_state_fixpt_0/U0/arg__52/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+WARNING: [DRC DPIP-1] Input pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__52 input design_1_i/QGT_state_fixpt_0/U0/arg__52/B[17:0] is not pipelined. Pipelining DSP48 input will improve performance.
+INFO: [Common 17-14] Message 'DRC DPIP-1' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__0 output design_1_i/QGT_state_fixpt_0/U0/arg__0/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__10 output design_1_i/QGT_state_fixpt_0/U0/arg__10/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__11 output design_1_i/QGT_state_fixpt_0/U0/arg__11/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__12 output design_1_i/QGT_state_fixpt_0/U0/arg__12/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__13 output design_1_i/QGT_state_fixpt_0/U0/arg__13/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__14 output design_1_i/QGT_state_fixpt_0/U0/arg__14/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__15 output design_1_i/QGT_state_fixpt_0/U0/arg__15/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__16 output design_1_i/QGT_state_fixpt_0/U0/arg__16/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__17 output design_1_i/QGT_state_fixpt_0/U0/arg__17/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__18 output design_1_i/QGT_state_fixpt_0/U0/arg__18/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__19 output design_1_i/QGT_state_fixpt_0/U0/arg__19/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__2 output design_1_i/QGT_state_fixpt_0/U0/arg__2/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__20 output design_1_i/QGT_state_fixpt_0/U0/arg__20/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__21 output design_1_i/QGT_state_fixpt_0/U0/arg__21/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__22 output design_1_i/QGT_state_fixpt_0/U0/arg__22/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__23 output design_1_i/QGT_state_fixpt_0/U0/arg__23/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__24 output design_1_i/QGT_state_fixpt_0/U0/arg__24/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__25 output design_1_i/QGT_state_fixpt_0/U0/arg__25/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__26 output design_1_i/QGT_state_fixpt_0/U0/arg__26/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__27 output design_1_i/QGT_state_fixpt_0/U0/arg__27/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__28 output design_1_i/QGT_state_fixpt_0/U0/arg__28/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__29 output design_1_i/QGT_state_fixpt_0/U0/arg__29/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__30 output design_1_i/QGT_state_fixpt_0/U0/arg__30/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__31 output design_1_i/QGT_state_fixpt_0/U0/arg__31/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__32 output design_1_i/QGT_state_fixpt_0/U0/arg__32/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__33 output design_1_i/QGT_state_fixpt_0/U0/arg__33/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__34 output design_1_i/QGT_state_fixpt_0/U0/arg__34/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__35 output design_1_i/QGT_state_fixpt_0/U0/arg__35/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__36 output design_1_i/QGT_state_fixpt_0/U0/arg__36/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__37 output design_1_i/QGT_state_fixpt_0/U0/arg__37/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__38 output design_1_i/QGT_state_fixpt_0/U0/arg__38/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__39 output design_1_i/QGT_state_fixpt_0/U0/arg__39/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__4 output design_1_i/QGT_state_fixpt_0/U0/arg__4/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__40 output design_1_i/QGT_state_fixpt_0/U0/arg__40/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__41 output design_1_i/QGT_state_fixpt_0/U0/arg__41/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__42 output design_1_i/QGT_state_fixpt_0/U0/arg__42/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__43 output design_1_i/QGT_state_fixpt_0/U0/arg__43/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__44 output design_1_i/QGT_state_fixpt_0/U0/arg__44/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__45 output design_1_i/QGT_state_fixpt_0/U0/arg__45/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__46 output design_1_i/QGT_state_fixpt_0/U0/arg__46/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__47 output design_1_i/QGT_state_fixpt_0/U0/arg__47/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__48 output design_1_i/QGT_state_fixpt_0/U0/arg__48/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__49 output design_1_i/QGT_state_fixpt_0/U0/arg__49/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__5 output design_1_i/QGT_state_fixpt_0/U0/arg__5/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__50 output design_1_i/QGT_state_fixpt_0/U0/arg__50/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__51 output design_1_i/QGT_state_fixpt_0/U0/arg__51/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__52 output design_1_i/QGT_state_fixpt_0/U0/arg__52/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__53 output design_1_i/QGT_state_fixpt_0/U0/arg__53/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__54 output design_1_i/QGT_state_fixpt_0/U0/arg__54/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__55 output design_1_i/QGT_state_fixpt_0/U0/arg__55/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__56 output design_1_i/QGT_state_fixpt_0/U0/arg__56/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__57 output design_1_i/QGT_state_fixpt_0/U0/arg__57/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__6 output design_1_i/QGT_state_fixpt_0/U0/arg__6/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__7 output design_1_i/QGT_state_fixpt_0/U0/arg__7/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__8 output design_1_i/QGT_state_fixpt_0/U0/arg__8/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-1] PREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__9 output design_1_i/QGT_state_fixpt_0/U0/arg__9/P[47:0] is not pipelined (PREG=0). Pipelining the DSP48 output will improve performance and often saves power so it is suggested whenever possible to fully pipeline this function.  If this DSP48 function was inferred, it is suggested to describe an additional register stage after this function.  If the DSP48 was instantiated in the design, it is suggested to set the PREG attribute to 1.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__0 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__0/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__10 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__10/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__11 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__11/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__12 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__12/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__13 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__13/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__14 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__14/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__15 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__15/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__16 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__16/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__17 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__17/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__18 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__18/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__19 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__19/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__2 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__2/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__20 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__20/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__21 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__21/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__22 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__22/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__23 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__23/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__24 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__24/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__25 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__25/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__26 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__26/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__27 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__27/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__28 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__28/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__29 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__29/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__30 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__30/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__31 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__31/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__32 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__32/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__33 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__33/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__34 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__34/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__35 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__35/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__36 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__36/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__37 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__37/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__38 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__38/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__39 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__39/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__4 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__4/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__40 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__40/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__41 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__41/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__42 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__42/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__43 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__43/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__44 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__44/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__45 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__45/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__46 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__46/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__47 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__47/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__48 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__48/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__49 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__49/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__5 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__5/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__50 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__50/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__51 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__51/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__52 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__52/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__53 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__53/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__54 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__54/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__55 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__55/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__56 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__56/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__57 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__57/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__6 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__6/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__7 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__7/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__8 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__8/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+WARNING: [DRC DPOP-2] MREG Output pipelining: DSP design_1_i/QGT_state_fixpt_0/U0/arg__9 multiplier stage design_1_i/QGT_state_fixpt_0/U0/arg__9/P[47:0] is not pipelined (MREG=0). Pipelining the multiplier function will improve performance and will save significant power so it is suggested whenever possible to fully pipeline this function.  If this multiplier was inferred, it is suggested to describe an additional register stage after this function.  If there is no registered adder/accumulator following the multiply function, two pipeline stages are suggested to allow both the MREG and PREG registers to be used.  If the DSP48 was instantiated in the design, it is suggested to set both the MREG and PREG attributes to 1 when performing multiply functions.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 230 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 4 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./design_1_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Common 17-83] Releasing license: Implementation
+12 Infos, 212 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:38 ; elapsed = 00:00:24 . Memory (MB): peak = 3617.484 ; gain = 287.746 ; free physical = 4745 ; free virtual = 10218
+INFO: [Common 17-206] Exiting Vivado at Tue May  3 21:22:12 2022...

@@ -1,0 +1,115 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (lin64) Build 3367213 Tue Oct 19 02:47:39 MDT 2021
+| Date         : Tue May  3 21:21:42 2022
+| Host         : agustin-Lenovo-G50-80 running 64-bit Ubuntu 20.04.4 LTS
+| Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+| Design       : design_1_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 16
++-----------+----------+-----------------------+------------+
+| Rule      | Severity | Description           | Violations |
++-----------+----------+-----------------------+------------+
+| TIMING-16 | Warning  | Large setup violation | 16         |
++-----------+----------+-----------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -34.789 ns between design_1_i/comblock_0/U0/comblock_i/regs_out_reg[0][2]/C (clocked by clk_fpga_0) and design_1_i/comblock_0/U0/AXIL_inst/axi_rdata_reg[4]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -34.840 ns between design_1_i/comblock_0/U0/comblock_i/regs_out_reg[0][2]/C (clocked by clk_fpga_0) and design_1_i/comblock_0/U0/AXIL_inst/axi_rdata_reg[0]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -34.957 ns between design_1_i/comblock_0/U0/comblock_i/regs_out_reg[0][2]/C (clocked by clk_fpga_0) and design_1_i/comblock_0/U0/AXIL_inst/axi_rdata_reg[1]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -35.041 ns between design_1_i/comblock_0/U0/comblock_i/regs_out_reg[0][2]/C (clocked by clk_fpga_0) and design_1_i/comblock_0/U0/AXIL_inst/axi_rdata_reg[8]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -35.042 ns between design_1_i/comblock_0/U0/comblock_i/regs_out_reg[0][2]/C (clocked by clk_fpga_0) and design_1_i/comblock_0/U0/AXIL_inst/axi_rdata_reg[11]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -35.064 ns between design_1_i/comblock_0/U0/comblock_i/regs_out_reg[0][2]/C (clocked by clk_fpga_0) and design_1_i/comblock_0/U0/AXIL_inst/axi_rdata_reg[6]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -35.096 ns between design_1_i/comblock_0/U0/comblock_i/regs_out_reg[0][2]/C (clocked by clk_fpga_0) and design_1_i/comblock_0/U0/AXIL_inst/axi_rdata_reg[5]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -35.113 ns between design_1_i/comblock_0/U0/comblock_i/regs_out_reg[0][2]/C (clocked by clk_fpga_0) and design_1_i/comblock_0/U0/AXIL_inst/axi_rdata_reg[15]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -35.156 ns between design_1_i/comblock_0/U0/comblock_i/regs_out_reg[0][2]/C (clocked by clk_fpga_0) and design_1_i/comblock_0/U0/AXIL_inst/axi_rdata_reg[12]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -35.199 ns between design_1_i/comblock_0/U0/comblock_i/regs_out_reg[0][2]/C (clocked by clk_fpga_0) and design_1_i/comblock_0/U0/AXIL_inst/axi_rdata_reg[14]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -35.213 ns between design_1_i/comblock_0/U0/comblock_i/regs_out_reg[0][2]/C (clocked by clk_fpga_0) and design_1_i/comblock_0/U0/AXIL_inst/axi_rdata_reg[2]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -35.248 ns between design_1_i/comblock_0/U0/comblock_i/regs_out_reg[0][2]/C (clocked by clk_fpga_0) and design_1_i/comblock_0/U0/AXIL_inst/axi_rdata_reg[3]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#13 Warning
+Large setup violation  
+There is a large setup violation of -35.260 ns between design_1_i/comblock_0/U0/comblock_i/regs_out_reg[0][2]/C (clocked by clk_fpga_0) and design_1_i/comblock_0/U0/AXIL_inst/axi_rdata_reg[10]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#14 Warning
+Large setup violation  
+There is a large setup violation of -35.307 ns between design_1_i/comblock_0/U0/comblock_i/regs_out_reg[0][2]/C (clocked by clk_fpga_0) and design_1_i/comblock_0/U0/AXIL_inst/axi_rdata_reg[7]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#15 Warning
+Large setup violation  
+There is a large setup violation of -35.309 ns between design_1_i/comblock_0/U0/comblock_i/regs_out_reg[0][2]/C (clocked by clk_fpga_0) and design_1_i/comblock_0/U0/AXIL_inst/axi_rdata_reg[13]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#16 Warning
+Large setup violation  
+There is a large setup violation of -35.335 ns between design_1_i/comblock_0/U0/comblock_i/regs_out_reg[0][2]/C (clocked by clk_fpga_0) and design_1_i/comblock_0/U0/AXIL_inst/axi_rdata_reg[9]/D (clocked by clk_fpga_0). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+

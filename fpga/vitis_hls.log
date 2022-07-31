@@ -1,0 +1,217 @@
+INFO: [HLS 200-10] Running '/home/agustin/Xilinx/Vitis_HLS/2021.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'agustin' on host 'agustin-Lenovo-G50-80' (Linux_x86_64 version 5.13.0-40-generic) on Thu Apr 28 15:49:05 -03 2022
+INFO: [HLS 200-10] On os Ubuntu 20.04.4 LTS
+INFO: [HLS 200-10] In directory '/home/agustin/Escritorio/Github/QMARL/fpga'
+Sourcing Tcl script '/home/agustin/Escritorio/Github/QMARL/fpga/QGT/solution1/csynth.tcl'
+INFO: [HLS 200-1510] Running: open_project QGT 
+INFO: [HLS 200-10] Opening project '/home/agustin/Escritorio/Github/QMARL/fpga/QGT'.
+INFO: [HLS 200-1510] Running: set_top QGT 
+INFO: [HLS 200-1510] Running: add_files matlab/codegen/lib/QGT/QGT.c 
+INFO: [HLS 200-10] Adding design file 'matlab/codegen/lib/QGT/QGT.c' to the project
+INFO: [HLS 200-1510] Running: add_files matlab/codegen/lib/QGT/QGT.h 
+INFO: [HLS 200-10] Adding design file 'matlab/codegen/lib/QGT/QGT.h' to the project
+INFO: [HLS 200-1510] Running: add_files matlab/codegen/lib/QGT/QGT_data.c 
+INFO: [HLS 200-10] Adding design file 'matlab/codegen/lib/QGT/QGT_data.c' to the project
+INFO: [HLS 200-1510] Running: add_files matlab/codegen/lib/QGT/QGT_data.h 
+INFO: [HLS 200-10] Adding design file 'matlab/codegen/lib/QGT/QGT_data.h' to the project
+INFO: [HLS 200-1510] Running: add_files matlab/codegen/lib/QGT/QGT_initialize.c 
+INFO: [HLS 200-10] Adding design file 'matlab/codegen/lib/QGT/QGT_initialize.c' to the project
+INFO: [HLS 200-1510] Running: add_files matlab/codegen/lib/QGT/QGT_initialize.h 
+INFO: [HLS 200-10] Adding design file 'matlab/codegen/lib/QGT/QGT_initialize.h' to the project
+INFO: [HLS 200-1510] Running: add_files matlab/codegen/lib/QGT/QGT_terminate.c 
+INFO: [HLS 200-10] Adding design file 'matlab/codegen/lib/QGT/QGT_terminate.c' to the project
+INFO: [HLS 200-1510] Running: add_files matlab/codegen/lib/QGT/QGT_terminate.h 
+INFO: [HLS 200-10] Adding design file 'matlab/codegen/lib/QGT/QGT_terminate.h' to the project
+INFO: [HLS 200-1510] Running: add_files matlab/codegen/lib/QGT/QGT_types.h 
+INFO: [HLS 200-10] Adding design file 'matlab/codegen/lib/QGT/QGT_types.h' to the project
+INFO: [HLS 200-1510] Running: add_files matlab/codegen/lib/QGT/rtwtypes.h 
+INFO: [HLS 200-10] Adding design file 'matlab/codegen/lib/QGT/rtwtypes.h' to the project
+INFO: [HLS 200-1510] Running: add_files matlab/codegen/lib/QGT/tmwtypes.h 
+INFO: [HLS 200-10] Adding design file 'matlab/codegen/lib/QGT/tmwtypes.h' to the project
+INFO: [HLS 200-1510] Running: add_files -tb matlab/codegen/lib/QGT/main.c 
+INFO: [HLS 200-10] Adding test bench file 'matlab/codegen/lib/QGT/main.c' to the project
+INFO: [HLS 200-1510] Running: add_files -tb matlab/codegen/lib/QGT/main.h 
+INFO: [HLS 200-10] Adding test bench file 'matlab/codegen/lib/QGT/main.h' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/agustin/Escritorio/Github/QMARL/fpga/QGT/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg400-1'
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-1510] Running: set_part xc7z020clg400-1 
+INFO: [HLS 200-1510] Running: create_clock -period 10 -name default 
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 1.022 GB.
+INFO: [HLS 200-10] Analyzing design file 'matlab/codegen/lib/QGT/QGT_terminate.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'matlab/codegen/lib/QGT/QGT_initialize.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'matlab/codegen/lib/QGT/QGT_data.c' ... 
+INFO: [HLS 200-10] Analyzing design file 'matlab/codegen/lib/QGT/QGT.c' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 4.04 seconds. CPU system time: 2.02 seconds. Elapsed time: 3.17 seconds; current allocated memory: 109.887 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vivado' flow target.
+INFO: [HLS 214-284] Auto array partition mode is set into default.
+INFO: [HLS 214-270] Starting automatic array partition analysis...
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 5.45 seconds. CPU system time: 0.43 seconds. Elapsed time: 5.91 seconds; current allocated memory: 109.887 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 109.887 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.05 seconds; current allocated memory: 110.641 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 110.672 MB.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_187_1' (matlab/codegen/lib/QGT/QGT.c:132) in function 'QGT' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_258_3' (matlab/codegen/lib/QGT/QGT.c:132) in function 'QGT' automatically.
+INFO: [XFORM 203-510] Pipelining loop 'VITIS_LOOP_316_5' (matlab/codegen/lib/QGT/QGT.c:132) in function 'QGT' automatically.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_187_1' (matlab/codegen/lib/QGT/QGT.c:132) in function 'QGT' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_258_3' (matlab/codegen/lib/QGT/QGT.c:132) in function 'QGT' for pipelining.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_316_5' (matlab/codegen/lib/QGT/QGT.c:132) in function 'QGT' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_196_2' (matlab/codegen/lib/QGT/QGT.c:135) in function 'QGT' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_267_4' (matlab/codegen/lib/QGT/QGT.c:135) in function 'QGT' completely with a factor of 4.
+INFO: [HLS 200-489] Unrolling loop 'VITIS_LOOP_327_6' (matlab/codegen/lib/QGT/QGT.c:127) in function 'QGT' completely with a factor of 4.
+INFO: [XFORM 203-102] Partitioning array 'dcv.re' (matlab/codegen/lib/QGT/QGT.c:104) automatically.
+INFO: [XFORM 203-102] Partitioning array 'dcv.im' (matlab/codegen/lib/QGT/QGT.c:104) automatically.
+INFO: [XFORM 203-102] Automatically partitioning small array 'state.re' (matlab/codegen/lib/QGT/QGT.c:105) completely based on array size.
+INFO: [XFORM 203-102] Automatically partitioning small array 'state.im' (matlab/codegen/lib/QGT/QGT.c:105) completely based on array size.
+INFO: [XFORM 203-101] Partitioning array 'state.re' (matlab/codegen/lib/QGT/QGT.c:105) in dimension 1 completely.
+INFO: [XFORM 203-101] Partitioning array 'state.im' (matlab/codegen/lib/QGT/QGT.c:105) in dimension 1 completely.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.19 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.21 seconds; current allocated memory: 135.047 MB.
+INFO: [HLS 200-472] Inferring partial write operation for 'b_a.re' (matlab/codegen/lib/QGT/QGT.c:207:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'b_a.im' (matlab/codegen/lib/QGT/QGT.c:210:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'c_a.re' (matlab/codegen/lib/QGT/QGT.c:274:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'c_a.im' (matlab/codegen/lib/QGT/QGT.c:277:17)
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 155.176 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'QGT' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'QGT_Pipeline_VITIS_LOOP_187_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_187_1'.
+WARNING: [HLS 200-880] The II Violation in module 'QGT_Pipeline_VITIS_LOOP_187_1' (loop 'VITIS_LOOP_187_1'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('b_a_im_addr_6_write_ln210', matlab/codegen/lib/QGT/QGT.c:210) of variable 'conv24_3', matlab/codegen/lib/QGT/QGT.c:210 on array 'b_a_im' and 'store' operation ('b_a_im_addr_5_write_ln210', matlab/codegen/lib/QGT/QGT.c:210) of variable 'conv24_2', matlab/codegen/lib/QGT/QGT.c:210 on array 'b_a_im'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 32, loop 'VITIS_LOOP_187_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.87 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.91 seconds; current allocated memory: 158.418 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.24 seconds. CPU system time: 0 seconds. Elapsed time: 1.26 seconds; current allocated memory: 158.418 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'QGT_Pipeline_VITIS_LOOP_258_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_258_3'.
+WARNING: [HLS 200-880] The II Violation in module 'QGT_Pipeline_VITIS_LOOP_258_3' (loop 'VITIS_LOOP_258_3'): Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1) between 'store' operation ('c_a_im_addr_6_write_ln277', matlab/codegen/lib/QGT/QGT.c:277) of variable 'add23_3', matlab/codegen/lib/QGT/QGT.c:278 on array 'c_a_im' and 'store' operation ('c_a_im_addr_5_write_ln277', matlab/codegen/lib/QGT/QGT.c:277) of variable 'add23_2', matlab/codegen/lib/QGT/QGT.c:278 on array 'c_a_im'.
+Resolution: For help on HLS 200-880 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-880.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 43, loop 'VITIS_LOOP_258_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.36 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.4 seconds; current allocated memory: 161.332 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.87 seconds. CPU system time: 0 seconds. Elapsed time: 1.91 seconds; current allocated memory: 161.332 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'QGT_Pipeline_VITIS_LOOP_316_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_316_5'.
+WARNING: [HLS 200-885] The II Violation in module 'QGT_Pipeline_VITIS_LOOP_316_5' (loop 'VITIS_LOOP_316_5'): Unable to schedule 'load' operation ('c_a_re_load_1', matlab/codegen/lib/QGT/QGT.c:319) on array 'c_a_re' due to limited memory ports (II = 1). Please consider using a memory core with more ports or partitioning the array 'c_a_re'.
+Resolution: For help on HLS 200-885 see www.xilinx.com/cgi-bin/docs/rdoc?v=2021.2;t=hls+guidance;d=200-885.html
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 62, loop 'VITIS_LOOP_316_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 4.29 seconds. CPU system time: 0.04 seconds. Elapsed time: 4.85 seconds; current allocated memory: 164.574 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 2.88 seconds. CPU system time: 0.02 seconds. Elapsed time: 3.42 seconds; current allocated memory: 164.574 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'QGT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3.87 seconds. CPU system time: 0.02 seconds. Elapsed time: 4.24 seconds; current allocated memory: 166.320 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 1.67 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.76 seconds; current allocated memory: 166.320 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'QGT_Pipeline_VITIS_LOOP_187_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'QGT_Pipeline_VITIS_LOOP_187_1' pipeline 'VITIS_LOOP_187_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 18 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_5_full_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'QGT_Pipeline_VITIS_LOOP_187_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.57 seconds. CPU system time: 0 seconds. Elapsed time: 2.62 seconds; current allocated memory: 169.691 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'QGT_Pipeline_VITIS_LOOP_258_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'QGT_Pipeline_VITIS_LOOP_258_3' pipeline 'VITIS_LOOP_258_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-104] Estimated max fanout for 'QGT_Pipeline_VITIS_LOOP_258_3' is 7962 from HDL expression: ((1'b1 == ap_CS_fsm_pp0_stage0) & (1'b0 == ap_block_pp0_stage0_11001))
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_7_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dsub_64ns_64ns_64_7_full_dsp_1': 6 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 20 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'QGT_Pipeline_VITIS_LOOP_258_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.16 seconds; current allocated memory: 177.211 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'QGT_Pipeline_VITIS_LOOP_316_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'QGT_Pipeline_VITIS_LOOP_316_5' pipeline 'VITIS_LOOP_316_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 24 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 26 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_5_full_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'QGT_Pipeline_VITIS_LOOP_316_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3.27 seconds. CPU system time: 0.04 seconds. Elapsed time: 3.36 seconds; current allocated memory: 186.445 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'QGT' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'QGT/rotAx1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'QGT/rotAy2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'QGT/rotAx3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'QGT/rotBx1' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'QGT/rotBy2' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'QGT/rotBx3' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'QGT/p00' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'QGT/p01' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'QGT/p10' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'QGT/p11' to 'ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'QGT' to 'ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Generating core module 'dadd_64ns_64ns_64_7_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dadddsub_64ns_64ns_64_7_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'dmul_64ns_64ns_64_7_max_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fadd_32ns_32ns_32_5_full_dsp_1': 18 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'faddfsub_32ns_32ns_32_5_full_dsp_1': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fmul_32ns_32ns_32_4_max_dsp_1': 27 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fpext_32ns_64_2_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fptrunc_64ns_32_2_no_dsp_1': 4 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'fsub_32ns_32ns_32_5_full_dsp_1': 8 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'QGT'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.73 seconds. CPU system time: 0.08 seconds. Elapsed time: 2.89 seconds; current allocated memory: 196.031 MB.
+INFO: [RTMG 210-279] Implementing memory 'QGT_QGT_Pipeline_VITIS_LOOP_187_1_a_re_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'QGT_QGT_Pipeline_VITIS_LOOP_187_1_a_im_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'QGT_dv_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-279] Implementing memory 'QGT_dv1_ROM_AUTO_1R' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'QGT_b_a_re_RAM_AUTO_1R1W_ram (RAM)' using auto RAMs.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 6.08 seconds. CPU system time: 0.05 seconds. Elapsed time: 6.13 seconds; current allocated memory: 203.926 MB.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.73 seconds. CPU system time: 0.04 seconds. Elapsed time: 0.78 seconds; current allocated memory: 211.020 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for QGT.
+INFO: [VLOG 209-307] Generating Verilog RTL for QGT.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were NOT satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 137.04 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 46.52 seconds. CPU system time: 2.85 seconds. Elapsed time: 48.4 seconds; current allocated memory: -835.652 MB.
+INFO: [HLS 200-112] Total CPU user time: 48.8 seconds. Total CPU system time: 3.4 seconds. Total elapsed time: 50.51 seconds; peak allocated memory: 1.022 GB.

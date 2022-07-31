@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Fixed-Point Report for comp_mat_mult</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+	body { font-family: monospace; }
+	h2 { font-family: Arial, Helvetica, sans-serif; color: #990000; margin-top: 50px; }
+	table,th,td { border: 1px solid black; }
+	table { margin-top: 30px; }
+	th { align: center; font-weight: bold; }
+	tr.h { background-color: #99CCFF; }
+	tr.a { background-color: #EEEEFF; }
+	tr.b { background-color: #FFFFFF; }
+	tr.c { background-color: #FFA500; }
+	tr.a td, tr.b td { border-style: none; }
+	td.left { text-align: left; }
+	td.right { text-align: right; }
+	td.center { text-align: center; }
+	td.bold { font-weight: bold; }
+	pre { padding: 0px; margin: 0px; }
+	span { font-style: italic; }
+	.code, .code tr, .code th, .code td { border: none; border-collapse: collapse; }
+	.padd { padding-left: 5px; }
+	td.cov, th.cov { width: 50px; height: 20px; text-align: center; font-weight: bold; border-right: 2px solid black; cell-spacing: 0px; }
+	td.cov { vertical-align: top; }
+	td.black { color: #000000; font-weight: bold; padding-top: 4px; }
+	td.white { color: #FFFFFF; font-weight: bold; padding-top: 4px; }
+	.code th { font-weight: bold; border-bottom: 2px solid black; }
+</style>
+</head>
+<body>
+<h3>Generated on  2022-04-28 14:22:37</h3>
+<p>The following table shows fixed point instrumentation results</p>
+<h2>Fixed-Point Report <span>comp_mat_mult<span></h2>
+<TABLE class="code">
+<TR>
+<TH class="cov padd">Simulation Coverage</TH>
+<TH>Code</TH>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>function [result_re, result_im] = comp_mat_mult(a_re, a_im, b_re, b_im)
+result = (a_re + 1j * a_im) * (b_re + 1j * b_im);
+result_re = real(result);
+result_im = imag(result);
+end</pre></TD>
+</TR>
+</TABLE>
+<TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th><th>Static Min</th><th>Static Max</th><th>Whole Number</th><th>ProposedType <BR /> (Best For WL = 16)</th></TR><TR class="a">
+<TD class="left bold">a_im*</TD><TD class="left">double 4 x 4 </TD><TD class="right">-0.49639469549265547</TD><TD class="right">0.4949055171524245</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">a_re*</TD><TD class="left">double 4 x 4 </TD><TD class="right">-0.4787003758903323</TD><TD class="right">0.4726049321767207</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">b_im*</TD><TD class="left">double 4 x 4 </TD><TD class="right">-0.42529188510119</TD><TD class="right">0.47028899111212263</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">b_re*</TD><TD class="left">double 4 x 4 </TD><TD class="right">-0.4709124481493019</TD><TD class="right">0.488951251221728</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">result*</TD><TD class="left">double 4 x 4 complex </TD><TD class="right">-0.5711643183601864</TD><TD class="right">0.5652250248501982</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">result_im*</TD><TD class="left">double 4 x 4 </TD><TD class="right">-0.5711643183601864</TD><TD class="right">0.5652250248501982</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left bold">result_re*</TD><TD class="left">double 4 x 4 </TD><TD class="right">-0.4844385758183743</TD><TD class="right">0.35266381241051786</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+</TABLE>
+
+</body>
+</html>

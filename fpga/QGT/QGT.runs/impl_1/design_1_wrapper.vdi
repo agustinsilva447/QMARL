@@ -1,0 +1,195 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Apr 28 19:32:24 2022
+# Process ID: 6417
+# Current directory: /home/agustin/Escritorio/Github/QMARL/fpga/QGT/QGT.runs/impl_1
+# Command line: vivado -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
+# Log file: /home/agustin/Escritorio/Github/QMARL/fpga/QGT/QGT.runs/impl_1/design_1_wrapper.vdi
+# Journal file: /home/agustin/Escritorio/Github/QMARL/fpga/QGT/QGT.runs/impl_1/vivado.jou
+# Running On: agustin-Lenovo-G50-80, OS: Linux, CPU Frequency: 600.000 MHz, CPU Physical cores: 2, Host memory: 12463 MB
+#-----------------------------------------------------------
+source design_1_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 2588.414 ; gain = 5.961 ; free physical = 6790 ; free virtual = 11246
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agustin/Escritorio/Github/QMARL/fpga/pynq-z2/docs/core-comblock-master'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/agustin/Xilinx/Vivado/2021.2/data/ip'.
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 2604.430 ; gain = 16.016 ; free physical = 6768 ; free virtual = 11224
+Command: link_design -top design_1_wrapper -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint '/home/agustin/Escritorio/Github/QMARL/fpga/QGT/QGT.gen/sources_1/bd/design_1/ip/design_1_QGT_state_fixpt_0_0/design_1_QGT_state_fixpt_0_0.dcp' for cell 'design_1_i/QGT_state_fixpt_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/agustin/Escritorio/Github/QMARL/fpga/QGT/QGT.gen/sources_1/bd/design_1/ip/design_1_comblock_0_0/design_1_comblock_0_0.dcp' for cell 'design_1_i/comblock_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/agustin/Escritorio/Github/QMARL/fpga/QGT/QGT.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.dcp' for cell 'design_1_i/processing_system7_0'
+INFO: [Project 1-454] Reading design checkpoint '/home/agustin/Escritorio/Github/QMARL/fpga/QGT/QGT.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.dcp' for cell 'design_1_i/rst_ps7_0_100M'
+INFO: [Project 1-454] Reading design checkpoint '/home/agustin/Escritorio/Github/QMARL/fpga/QGT/QGT.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0.dcp' for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
+Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2604.488 ; gain = 0.000 ; free physical = 6231 ; free virtual = 10688
+INFO: [Netlist 29-17] Analyzing 35817 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+WARNING: [Netlist 29-43] Netlist 'design_1_wrapper' is not ideal for floorplanning, since the cellview 'design_1_QGT_state_fixpt_0_0' defined in file 'design_1_QGT_state_fixpt_0_0.edf' contains large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-479] Netlist was created with Vivado 2021.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/agustin/Escritorio/Github/QMARL/fpga/QGT/QGT.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Finished Parsing XDC File [/home/agustin/Escritorio/Github/QMARL/fpga/QGT/QGT.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc] for cell 'design_1_i/processing_system7_0/inst'
+Parsing XDC File [/home/agustin/Escritorio/Github/QMARL/fpga/QGT/QGT.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [/home/agustin/Escritorio/Github/QMARL/fpga/QGT/QGT.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Parsing XDC File [/home/agustin/Escritorio/Github/QMARL/fpga/QGT/QGT.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+Finished Parsing XDC File [/home/agustin/Escritorio/Github/QMARL/fpga/QGT/QGT.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc] for cell 'design_1_i/rst_ps7_0_100M/U0'
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2635.637 ; gain = 0.000 ; free physical = 6058 ; free virtual = 10515
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+15 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:01:57 ; elapsed = 00:01:53 . Memory (MB): peak = 2635.637 ; gain = 31.207 ; free physical = 6058 ; free virtual = 10515
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:05 ; elapsed = 00:00:02 . Memory (MB): peak = 2644.441 ; gain = 8.805 ; free physical = 6039 ; free virtual = 10498
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 945ffac6
+
+Time (s): cpu = 00:00:40 ; elapsed = 00:00:22 . Memory (MB): peak = 3313.504 ; gain = 669.062 ; free physical = 5305 ; free virtual = 9779
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/QGT_state_fixpt_0/QGT_state_fixpt_mul_temp_155__0_i_478 into driver instance design_1_i/QGT_state_fixpt_0/QGT_state_fixpt_mul_temp_159_i_137, which resulted in an inversion of 98 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/QGT_state_fixpt_0/QGT_state_fixpt_mul_temp_155__0_i_503 into driver instance design_1_i/QGT_state_fixpt_0/QGT_state_fixpt_mul_temp_281_i_258, which resulted in an inversion of 66 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/QGT_state_fixpt_0/QGT_state_fixpt_mul_temp_155__0_i_545 into driver instance design_1_i/QGT_state_fixpt_0/QGT_state_fixpt_mul_temp_159_i_136, which resulted in an inversion of 129 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/QGT_state_fixpt_0/QGT_state_fixpt_mul_temp_155_i_527 into driver instance design_1_i/QGT_state_fixpt_0/QGT_state_fixpt_mul_temp_281_i_223, which resulted in an inversion of 105 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/QGT_state_fixpt_0/QGT_state_fixpt_mul_temp_197__0_i_592 into driver instance design_1_i/QGT_state_fixpt_0/QGT_state_fixpt_mul_temp_155_i_239, which resulted in an inversion of 42 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/QGT_state_fixpt_0/QGT_state_fixpt_mul_temp_197__0_i_593 into driver instance design_1_i/QGT_state_fixpt_0/QGT_state_fixpt_mul_temp_14_i_237, which resulted in an inversion of 94 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/QGT_state_fixpt_0/QGT_state_fixpt_mul_temp_197__0_i_669 into driver instance design_1_i/QGT_state_fixpt_0/QGT_state_fixpt_mul_temp_14_i_238, which resulted in an inversion of 157 pins
+INFO: [Opt 31-1287] Pulled Inverter design_1_i/QGT_state_fixpt_0/QGT_state_fixpt_mul_temp_197_i_413 into driver instance design_1_i/QGT_state_fixpt_0/QGT_state_fixpt_mul_temp_14_i_277, which resulted in an inversion of 152 pins
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: f44ab718
+
+Time (s): cpu = 00:00:32 ; elapsed = 00:00:16 . Memory (MB): peak = 3553.426 ; gain = 0.000 ; free physical = 5405 ; free virtual = 9878
+INFO: [Opt 31-389] Phase Retarget created 4 cells and removed 52 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 18 inverter(s) to 19 load pin(s).
+Phase 2 Constant propagation | Checksum: 161e005dc
+
+Time (s): cpu = 00:00:55 ; elapsed = 00:00:39 . Memory (MB): peak = 3553.426 ; gain = 0.000 ; free physical = 5385 ; free virtual = 9859
+INFO: [Opt 31-389] Phase Constant propagation created 18717 cells and removed 40990 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 19b8f503d
+
+Time (s): cpu = 00:01:05 ; elapsed = 00:00:49 . Memory (MB): peak = 3553.426 ; gain = 0.000 ; free physical = 5377 ; free virtual = 9851
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 231 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 19b8f503d
+
+Time (s): cpu = 00:01:10 ; elapsed = 00:00:54 . Memory (MB): peak = 3553.426 ; gain = 0.000 ; free physical = 5372 ; free virtual = 9846
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 19b8f503d
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:54 . Memory (MB): peak = 3553.426 ; gain = 0.000 ; free physical = 5372 ; free virtual = 9846
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 19b8f503d
+
+Time (s): cpu = 00:01:11 ; elapsed = 00:00:55 . Memory (MB): peak = 3553.426 ; gain = 0.000 ; free physical = 5373 ; free virtual = 9847
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               4  |              52  |                                              0  |
+|  Constant propagation         |           18717  |           40990  |                                              0  |
+|  Sweep                        |               0  |             231  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00.61 ; elapsed = 00:00:00.61 . Memory (MB): peak = 3553.426 ; gain = 0.000 ; free physical = 5374 ; free virtual = 9848
+Ending Logic Optimization Task | Checksum: 1175e4a63
+
+Time (s): cpu = 00:01:33 ; elapsed = 00:01:15 . Memory (MB): peak = 3553.426 ; gain = 0.000 ; free physical = 5374 ; free virtual = 9848
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 1175e4a63
+
+Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.11 . Memory (MB): peak = 3553.426 ; gain = 0.000 ; free physical = 5375 ; free virtual = 9849
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 1175e4a63
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3553.426 ; gain = 0.000 ; free physical = 5375 ; free virtual = 9849
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3553.426 ; gain = 0.000 ; free physical = 5375 ; free virtual = 9849
+Ending Netlist Obfuscation Task | Checksum: 1175e4a63
+
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3553.426 ; gain = 0.000 ; free physical = 5375 ; free virtual = 9849
+INFO: [Common 17-83] Releasing license: Implementation
+40 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:02:23 ; elapsed = 00:01:44 . Memory (MB): peak = 3553.426 ; gain = 917.789 ; free physical = 5375 ; free virtual = 9849
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3593.445 ; gain = 0.000 ; free physical = 5370 ; free virtual = 9847
+INFO: [Common 17-1381] The checkpoint '/home/agustin/Escritorio/Github/QMARL/fpga/QGT/QGT.runs/impl_1/design_1_wrapper_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:51 ; elapsed = 00:00:37 . Memory (MB): peak = 3593.445 ; gain = 40.020 ; free physical = 5347 ; free virtual = 9845
+INFO: [runtcl-4] Executing : report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+Command: report_drc -file design_1_wrapper_drc_opted.rpt -pb design_1_wrapper_drc_opted.pb -rpx design_1_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file /home/agustin/Escritorio/Github/QMARL/fpga/QGT/QGT.runs/impl_1/design_1_wrapper_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:02:19 ; elapsed = 00:00:44 . Memory (MB): peak = 3755.746 ; gain = 162.301 ; free physical = 4952 ; free virtual = 9452
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 4 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 4 threads
+ERROR: [DRC UTLZ-1] Resource utilization: CARRY4 over-utilized in Top Level Design (This design requires more CARRY4 cells than are available in the target device. This design requires 29734 of such cell types but only 13300 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device.)
+ERROR: [DRC UTLZ-1] Resource utilization: LUT as Logic over-utilized in Top Level Design (This design requires more LUT as Logic cells than are available in the target device. This design requires 126791 of such cell types but only 53200 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device. Please set tcl parameter "drc.disableLUTOverUtilError" to 1 to change this error to warning.)
+ERROR: [DRC UTLZ-1] Resource utilization: Slice LUTs over-utilized in Top Level Design (This design requires more Slice LUTs cells than are available in the target device. This design requires 126839 of such cell types but only 53200 compatible sites are available in the target device. Please analyze your synthesis results and constraints to ensure the design is mapped to Xilinx primitives as expected. If so, please consider targeting a larger device. Please set tcl parameter "drc.disableLUTOverUtilError" to 1 to change this error to warning.)
+INFO: [Vivado_Tcl 4-198] DRC finished with 3 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+ERROR: [Vivado_Tcl 4-23] Error(s) found during DRC. Placer not run.
+INFO: [Common 17-83] Releasing license: Implementation
+55 Infos, 1 Warnings, 0 Critical Warnings and 4 Errors encountered.
+place_design failed
+place_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 3755.746 ; gain = 0.000 ; free physical = 4948 ; free virtual = 9448
+ERROR: [Common 17-39] 'place_design' failed due to earlier errors.
+
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 28 19:37:55 2022...

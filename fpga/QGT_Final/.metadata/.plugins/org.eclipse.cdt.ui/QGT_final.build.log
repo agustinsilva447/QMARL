@@ -1,0 +1,25 @@
+21:50:17 **** Incremental Build of configuration Debug for project QGT_final ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+ 
+make --no-print-directory main-build
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: QGT_final.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "QGT_final.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: QGT_final.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size QGT_final.elf  |tee "QGT_final.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  51103	   2548	  22640	  76291	  12a03	QGT_final.elf
+Finished building: QGT_final.elf.size
+ 
+
+21:50:19 Build Finished (took 1s.297ms)
+

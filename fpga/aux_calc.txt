@@ -1,0 +1,14 @@
+aux = 0.125*( cos_rot(-rotAx1 - rotAx3 + rotAy2 + rotBx1 + rotBx3 + rotBy2)             - cos_rot(-rotAx1 + rotAx3 - rotAy2 + rotBx1 + rotBx3 + rotBy2)             - cos_rot(-rotAx1 + rotAx3 + rotAy2 - rotBx1 + rotBx3 + rotBy2)             + cos_rot(-rotAx1 + rotAx3 + rotAy2 + rotBx1 - rotBx3 + rotBy2)             + cos_rot(-rotAx1 + rotAx3 + rotAy2 + rotBx1 + rotBx3 - rotBy2)             + cos_rot(-rotAx1 + rotAx3 + rotAy2 + rotBx1 + rotBx3 + rotBy2)             - cos_rot(+rotAx1 - rotAx3 - rotAy2 - rotBx1 + rotBx3 + rotBy2)             + cos_rot(+rotAx1 - rotAx3 - rotAy2 + rotBx1 - rotBx3 + rotBy2) 
+              cos_rot(+rotAx1 - rotAx3 + rotAy2 + rotBx1 + rotBx3 - rotBy2)             - cos_rot(+rotAx1 - rotAx3 - rotAy2 + rotBx1 + rotBx3 - rotBy2)             - cos_rot(+rotAx1 - rotAx3 - rotAy2 + rotBx1 + rotBx3 + rotBy2)             - cos_rot(+rotAx1 - rotAx3 + rotAy2 - rotBx1 - rotBx3 + rotBy2)             - cos_rot(+rotAx1 - rotAx3 + rotAy2 - rotBx1 + rotBx3 - rotBy2)             + cos_rot(+rotAx1 - rotAx3 + rotAy2 - rotBx1 + rotBx3 + rotBy2)             + cos_rot(+rotAx1 - rotAx3 + rotAy2 + rotBx1 - rotBx3 - rotBy2)             - cos_rot(+rotAx1 - rotAx3 + rotAy2 + rotBx1 - rotBx3 + rotBy2)            
+            + cos_rot(+rotAx1 - rotAx3 + rotAy2 + rotBx1 + rotBx3 + rotBy2)             + cos_rot(+rotAx1 + rotAx3 - rotAy2 - rotBx1 - rotBx3 + rotBy2)             - cos_rot(+rotAx1 + rotAx3 - rotAy2 - rotBx1 + rotBx3 - rotBy2)             + cos_rot(+rotAx1 + rotAx3 - rotAy2 - rotBx1 + rotBx3 + rotBy2)             - cos_rot(+rotAx1 + rotAx3 - rotAy2 + rotBx1 - rotBx3 - rotBy2)             + cos_rot(+rotAx1 + rotAx3 - rotAy2 + rotBx1 - rotBx3 + rotBy2)             + cos_rot(+rotAx1 + rotAx3 - rotAy2 + rotBx1 + rotBx3 - rotBy2)             + cos_rot(+rotAx1 + rotAx3 - rotAy2 + rotBx1 + rotBx3 + rotBy2) 
+            + cos_rot(+rotAx1 + rotAx3 + rotAy2 - rotBx1 - rotBx3 - rotBy2)             + cos_rot(+rotAx1 + rotAx3 + rotAy2 - rotBx1 - rotBx3 + rotBy2)             - cos_rot(+rotAx1 + rotAx3 + rotAy2 - rotBx1 + rotBx3 - rotBy2)             + cos_rot(+rotAx1 + rotAx3 + rotAy2 - rotBx1 + rotBx3 + rotBy2)             - cos_rot(+rotAx1 + rotAx3 + rotAy2 + rotBx1 - rotBx3 - rotBy2)             + cos_rot(+rotAx1 + rotAx3 + rotAy2 + rotBx1 - rotBx3 + rotBy2)             + cos_rot(+rotAx1 + rotAx3 + rotAy2 + rotBx1 + rotBx3 - rotBy2)             + cos_rot(+rotAx1 + rotAx3 + rotAy2 + rotBx1 + rotBx3 + rotBy2));
+
+c_rot = [1 0.92388 0.707107 0.382683 0 -0.382683 -0.707107 -0.92388 -1 -0.92388 -0.707107 -0.382683 0 0.382683 0.707107 0.92388];
+s_rot = [0 0.382683 0.707107 0.92388 1 0.92388 0.707107 0.382683 0 -0.382683 -0.707107 -0.92388 -1 -0.92388 -0.707107 -0.382683];
+
+rotAx1 <= "0001"; -- 1
+rotAy2 <= "0010"; -- 2
+rotAx3 <= "0011"; -- 3
+rotBx1 <= "1101"; -- 13
+rotBy2 <= "1110"; -- 14
+rotBx3 <= "1111"; -- 15

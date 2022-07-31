@@ -1,0 +1,7 @@
+Running: xsim.dir/QGT_tb_func_impl/xsimk -simmode gui -wdb QGT_tb_func_impl.wdb -simrunnum 0 -socket 34171
+Design successfully loaded
+Design Loading Memory Usage: 31728 KB (Peak: 31848 KB)
+Design Loading CPU Usage: 40 ms
+Simulation completed
+Simulation Memory Usage: 121664 KB (Peak: 170996 KB)
+Simulation CPU Usage: 50 ms

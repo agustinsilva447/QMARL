@@ -1,0 +1,14 @@
+G_Rx1 = [cos_rot(auxBx1)*cos_rot(auxAx1) -1i*sin_rot(auxAx1)*cos_rot(auxBx1) -1i*sin_rot(auxBx1)*cos_rot(auxAx1) -sin_rot(auxBx1)*sin_rot(auxAx1);
+         -1i*sin_rot(auxAx1)*cos_rot(auxBx1) cos_rot(auxBx1)*cos_rot(auxAx1) -sin_rot(auxBx1)*sin_rot(auxAx1) -1i*sin_rot(auxBx1)*cos_rot(auxAx1);
+         -1i*sin_rot(auxBx1)*cos_rot(auxAx1) -sin_rot(auxBx1)*sin_rot(auxAx1) cos_rot(auxBx1)*cos_rot(auxAx1) -1i*sin_rot(auxAx1)*cos_rot(auxBx1);
+         -sin_rot(auxBx1)*sin_rot(auxAx1) -1i*sin_rot(auxBx1)*cos_rot(auxAx1) -1i*sin_rot(auxAx1)*cos_rot(auxBx1) cos_rot(auxBx1)*cos_rot(auxAx1)];
+
+G_Ry2 = [cos_rot(auxBy2)*cos_rot(auxAy2) -sin_rot(auxAy2)*cos_rot(auxBy2) -sin_rot(auxBy2)*cos_rot(auxAy2) sin_rot(auxBy2)*sin_rot(auxAy2);
+         sin_rot(auxAy2)*cos_rot(auxBy2) cos_rot(auxBy2)*cos_rot(auxAy2) -sin_rot(auxBy2)*sin_rot(auxAy2) -sin_rot(auxBy2)*cos_rot(auxAy2);
+         sin_rot(auxBy2)*cos_rot(auxAy2) -sin_rot(auxBy2)*sin_rot(auxAy2) cos_rot(auxBy2)*cos_rot(auxAy2) -sin_rot(auxAy2)*cos_rot(auxBy2);
+         sin_rot(auxBy2)*sin_rot(auxAy2) sin_rot(auxBy2)*cos_rot(auxAy2) sin_rot(auxAy2)*cos_rot(auxBy2) cos_rot(auxBy2)*cos_rot(auxAy2)];     
+
+G_Rx3 = [cos_rot(auxBx3)*cos_rot(auxAx3) -1i*sin_rot(auxAx3)*cos_rot(auxBx3) -1i*sin_rot(auxBx3)*cos_rot(auxAx3) -sin_rot(auxBx3)*sin_rot(auxAx3);
+         -1i*sin_rot(auxAx3)*cos_rot(auxBx3) cos_rot(auxBx3)*cos_rot(auxAx3) -sin_rot(auxBx3)*sin_rot(auxAx3) -1i*sin_rot(auxBx3)*cos_rot(auxAx3);
+         -1i*sin_rot(auxBx3)*cos_rot(auxAx3) -sin_rot(auxBx3)*sin_rot(auxAx3) cos_rot(auxBx3)*cos_rot(auxAx3) -1i*sin_rot(auxAx3)*cos_rot(auxBx3);
+         -sin_rot(auxBx3)*sin_rot(auxAx3) -1i*sin_rot(auxBx3)*cos_rot(auxAx3) -1i*sin_rot(auxAx3)*cos_rot(auxBx3) cos_rot(auxBx3)*cos_rot(auxAx3)];                  

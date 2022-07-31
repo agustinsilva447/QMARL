@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Fixed-Point Report for QGT</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style>
+	body { font-family: monospace; }
+	h2 { font-family: Arial, Helvetica, sans-serif; color: #990000; margin-top: 50px; }
+	table,th,td { border: 1px solid black; }
+	table { margin-top: 30px; }
+	th { align: center; font-weight: bold; }
+	tr.h { background-color: #99CCFF; }
+	tr.a { background-color: #EEEEFF; }
+	tr.b { background-color: #FFFFFF; }
+	tr.c { background-color: #FFA500; }
+	tr.a td, tr.b td { border-style: none; }
+	td.left { text-align: left; }
+	td.right { text-align: right; }
+	td.center { text-align: center; }
+	td.bold { font-weight: bold; }
+	pre { padding: 0px; margin: 0px; }
+	span { font-style: italic; }
+	.code, .code tr, .code th, .code td { border: none; border-collapse: collapse; }
+	.padd { padding-left: 5px; }
+	td.cov, th.cov { width: 50px; height: 20px; text-align: center; font-weight: bold; border-right: 2px solid black; cell-spacing: 0px; }
+	td.cov { vertical-align: top; }
+	td.black { color: #000000; font-weight: bold; padding-top: 4px; }
+	td.white { color: #FFFFFF; font-weight: bold; padding-top: 4px; }
+	.code th { font-weight: bold; border-bottom: 2px solid black; }
+</style>
+</head>
+<body>
+<h3>Generated on  2022-04-28 11:29:41</h3>
+<p>The following table shows fixed point instrumentation results</p>
+<h2>Fixed-Point Report <span>QGT<span></h2>
+<TABLE class="code">
+<TR>
+<TH class="cov padd">Simulation Coverage</TH>
+<TH>Code</TH>
+</TR>
+<TR>
+<TD class="cov white" style="background-color: rgb(5,112,9);">100%</TD>
+<TD class="padd"><pre>function [p00, p01, p10, p11] = QGT(rotAx1, rotAy2, rotAx3, rotBx1, rotBy2, rotBx3)
+
+auxAx1 = rotAx1 + 1;
+auxAy2 = rotAy2 + 1; 
+auxAx3 = rotAx3 + 1; 
+auxBx1 = rotBx1 + 1;
+auxBy2 = rotBy2 + 1; 
+auxBx3 = rotBx3 + 1; 
+
+input = [0.707107; 0; 0; 1i * 0.707107];
+
+cos_rot = [1 0.92388 0.707107 0.382683 0 -0.382683 -0.707107 -0.92388];
+sin_rot = [0 0.382683 0.707107 0.92388 1 0.92388 0.707107 0.382683];
+
+G_Rx1 = [cos_rot(auxBx1)*cos_rot(auxAx1) -1i*sin_rot(auxAx1)*cos_rot(auxBx1) -1i*sin_rot(auxBx1)*cos_rot(auxAx1) -sin_rot(auxBx1)*sin_rot(auxAx1);
+         -1i*sin_rot(auxAx1)*cos_rot(auxBx1) cos_rot(auxBx1)*cos_rot(auxAx1) -sin_rot(auxBx1)*sin_rot(auxAx1) -1i*sin_rot(auxBx1)*cos_rot(auxAx1);
+         -1i*sin_rot(auxBx1)*cos_rot(auxAx1) -sin_rot(auxBx1)*sin_rot(auxAx1) cos_rot(auxBx1)*cos_rot(auxAx1) -1i*sin_rot(auxAx1)*cos_rot(auxBx1);
+         -sin_rot(auxBx1)*sin_rot(auxAx1) -1i*sin_rot(auxBx1)*cos_rot(auxAx1) -1i*sin_rot(auxAx1)*cos_rot(auxBx1) cos_rot(auxBx1)*cos_rot(auxAx1)];
+
+G_Ry2 = [cos_rot(auxBy2)*cos_rot(auxAy2) -sin_rot(auxAy2)*cos_rot(auxBy2) -sin_rot(auxBy2)*cos_rot(auxAy2) sin_rot(auxBy2)*sin_rot(auxAy2);
+         sin_rot(auxAy2)*cos_rot(auxBy2) cos_rot(auxBy2)*cos_rot(auxAy2) -sin_rot(auxBy2)*sin_rot(auxAy2) -sin_rot(auxBy2)*cos_rot(auxAy2);
+         sin_rot(auxBy2)*cos_rot(auxAy2) -sin_rot(auxBy2)*sin_rot(auxAy2) cos_rot(auxBy2)*cos_rot(auxAy2) -sin_rot(auxAy2)*cos_rot(auxBy2);
+         sin_rot(auxBy2)*sin_rot(auxAy2) sin_rot(auxBy2)*cos_rot(auxAy2) sin_rot(auxAy2)*cos_rot(auxBy2) cos_rot(auxBy2)*cos_rot(auxAy2)];     
+
+G_Rx3 = [cos_rot(auxBx3)*cos_rot(auxAx3) -1i*sin_rot(auxAx3)*cos_rot(auxBx3) -1i*sin_rot(auxBx3)*cos_rot(auxAx3) -sin_rot(auxBx3)*sin_rot(auxAx3);
+         -1i*sin_rot(auxAx3)*cos_rot(auxBx3) cos_rot(auxBx3)*cos_rot(auxAx3) -sin_rot(auxBx3)*sin_rot(auxAx3) -1i*sin_rot(auxBx3)*cos_rot(auxAx3);
+         -1i*sin_rot(auxBx3)*cos_rot(auxAx3) -sin_rot(auxBx3)*sin_rot(auxAx3) cos_rot(auxBx3)*cos_rot(auxAx3) -1i*sin_rot(auxAx3)*cos_rot(auxBx3);
+         -sin_rot(auxBx3)*sin_rot(auxAx3) -1i*sin_rot(auxBx3)*cos_rot(auxAx3) -1i*sin_rot(auxAx3)*cos_rot(auxBx3) cos_rot(auxBx3)*cos_rot(auxAx3)]; 
+
+
+J_dg =  [0.707107 0 0 (-1i * 0.707107);
+         0 0.707107 (-1i * 0.707107) 0;
+         0 (-1i * 0.707107) 0.707107 0;
+         (-1i * 0.707107) 0 0 0.707107];
+     
+state = J_dg * G_Rx3 * G_Ry2 * G_Rx1 * input;
+p00 = real(state(1))^2 + imag(state(1))^2;
+p01 = real(state(2))^2 + imag(state(2))^2;
+p10 = real(state(3))^2 + imag(state(3))^2;
+p11 = real(state(4))^2 + imag(state(4))^2;
+end</pre></TD>
+</TR>
+</TABLE>
+<TABLE><TR class="h"><th>Variable Name</th><th>Type</th><th>Sim Min</th><th>Sim Max</th><th>Static Min</th><th>Static Max</th><th>Whole Number</th><th>ProposedType <BR /> (Best For WL = 16)</th></TR><TR class="a">
+<TD class="left">G_Rx1</TD><TD class="left">double 4 x 4 complex </TD><TD class="right">-0.92388</TD><TD class="right">1</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left">G_Rx3</TD><TD class="left">double 4 x 4 complex </TD><TD class="right">-0.92388</TD><TD class="right">1</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left">G_Ry2</TD><TD class="left">double 4 x 4 </TD><TD class="right">-0.92388</TD><TD class="right">1</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">J_dg*</TD><TD class="left">double 4 x 4 complex </TD><TD class="right">-0.707107</TD><TD class="right">0.707107</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left">auxAx1</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">8</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 4, 0)</TD></TR>
+<TR class="b">
+<TD class="left">auxAx3</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">8</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 4, 0)</TD></TR>
+<TR class="a">
+<TD class="left">auxAy2</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">8</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 4, 0)</TD></TR>
+<TR class="b">
+<TD class="left">auxBx1</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">8</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 4, 0)</TD></TR>
+<TR class="a">
+<TD class="left">auxBx3</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">8</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 4, 0)</TD></TR>
+<TR class="b">
+<TD class="left">auxBy2</TD><TD class="left">double</TD><TD class="right">1</TD><TD class="right">8</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 4, 0)</TD></TR>
+<TR class="a">
+<TD class="left">cos_rot</TD><TD class="left">double 1 x 8 </TD><TD class="right">-0.92388</TD><TD class="right">1</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left bold">input*</TD><TD class="left">double 4 x 1 complex </TD><TD class="right">0</TD><TD class="right">0.707107</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+<TR class="a">
+<TD class="left">p00</TD><TD class="left">double</TD><TD class="right">0.005361332205990705</TD><TD class="right">1.0000012377963834</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 15)</TD></TR>
+<TR class="b">
+<TD class="left bold">p01*</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">0.45802900348009856</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 15)</TD></TR>
+<TR class="a">
+<TD class="left bold">p10*</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">0.45802900348009873</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 15)</TD></TR>
+<TR class="b">
+<TD class="left bold">p11*</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">0.4267775565268244</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 15)</TD></TR>
+<TR class="a">
+<TD class="left">rotAx1</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">7</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 3, 0)</TD></TR>
+<TR class="b">
+<TD class="left">rotAx3</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">7</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 3, 0)</TD></TR>
+<TR class="a">
+<TD class="left">rotAy2</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">7</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 3, 0)</TD></TR>
+<TR class="b">
+<TD class="left">rotBx1</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">7</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 3, 0)</TD></TR>
+<TR class="a">
+<TD class="left">rotBx3</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">7</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 3, 0)</TD></TR>
+<TR class="b">
+<TD class="left">rotBy2</TD><TD class="left">double</TD><TD class="right">0</TD><TD class="right">7</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">Yes</TD><TD class="left">numerictype(0, 3, 0)</TD></TR>
+<TR class="a">
+<TD class="left bold">sin_rot*</TD><TD class="left">double 1 x 8 </TD><TD class="right">0</TD><TD class="right">1</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(0, 16, 14)</TD></TR>
+<TR class="b">
+<TD class="left">state</TD><TD class="left">double 4 x 1 complex </TD><TD class="right">-0.9238816359014215</TD><TD class="right">1.0000006188980002</TD><TD class="right"></TD><TD class="right"></TD><TD class="left">No</TD><TD class="left">numerictype(1, 16, 14)</TD></TR>
+</TABLE>
+
+</body>
+</html>

@@ -1,0 +1,377 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:47:39 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Thu Jun 16 12:20:47 2022
+# Process ID: 41533
+# Current directory: /home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.runs/design_1_comblock_0_2_synth_1
+# Command line: vivado -log design_1_comblock_0_2.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_comblock_0_2.tcl
+# Log file: /home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.runs/design_1_comblock_0_2_synth_1/design_1_comblock_0_2.vds
+# Journal file: /home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.runs/design_1_comblock_0_2_synth_1/vivado.jou
+# Running On: agustin-Lenovo-G50-80, OS: Linux, CPU Frequency: 900.000 MHz, CPU Physical cores: 2, Host memory: 12463 MB
+#-----------------------------------------------------------
+source design_1_comblock_0_2.tcl -notrace
+create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:10 . Memory (MB): peak = 2588.414 ; gain = 5.961 ; free physical = 2074 ; free virtual = 5775
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/agustin/Escritorio/Github/QMARL/fpga/pynq-z2/docs/core-comblock-master'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/agustin/Xilinx/Vivado/2021.2/data/ip'.
+Command: synth_design -top design_1_comblock_0_2 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 41678
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 2588.484 ; gain = 0.000 ; free physical = 663 ; free virtual = 4373
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_comblock_0_2' [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ip/design_1_comblock_0_2/synth/design_1_comblock_0_2.vhd:92]
+	Parameter REGS_IN_ENA bound to: 1 - type: bool 
+	Parameter REGS_IN_DWIDTH bound to: 16 - type: integer 
+	Parameter REGS_IN_DEPTH bound to: 4 - type: integer 
+	Parameter REGS_OUT_ENA bound to: 1 - type: bool 
+	Parameter REGS_OUT_DWIDTH bound to: 4 - type: integer 
+	Parameter REGS_OUT_DEPTH bound to: 6 - type: integer 
+	Parameter DRAM_IO_ENA bound to: 0 - type: bool 
+	Parameter DRAM_IO_DWIDTH bound to: 16 - type: integer 
+	Parameter DRAM_IO_AWIDTH bound to: 16 - type: integer 
+	Parameter DRAM_IO_DEPTH bound to: 0 - type: integer 
+	Parameter FIFO_IN_ENA bound to: 0 - type: bool 
+	Parameter FIFO_IN_DWIDTH bound to: 16 - type: integer 
+	Parameter FIFO_IN_DEPTH bound to: 1024 - type: integer 
+	Parameter FIFO_IN_AFOFFSET bound to: 1 - type: integer 
+	Parameter FIFO_IN_AEOFFSET bound to: 1 - type: integer 
+	Parameter FIFO_OUT_ENA bound to: 0 - type: bool 
+	Parameter FIFO_OUT_DWIDTH bound to: 16 - type: integer 
+	Parameter FIFO_OUT_DEPTH bound to: 1024 - type: integer 
+	Parameter FIFO_OUT_AFOFFSET bound to: 1 - type: integer 
+	Parameter FIFO_OUT_AEOFFSET bound to: 1 - type: integer 
+	Parameter C_AXIF_ID_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIF_AWUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIF_ARUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIF_WUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIF_RUSER_WIDTH bound to: 1 - type: integer 
+	Parameter C_AXIF_BUSER_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'axi_comblock' declared at '/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/axi_comblock.vhdl:17' bound to instance 'U0' of component 'axi_comblock' [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ip/design_1_comblock_0_2/synth/design_1_comblock_0_2.vhd:288]
+INFO: [Synth 8-638] synthesizing module 'axi_comblock' [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/axi_comblock.vhdl:186]
+INFO: [Synth 8-638] synthesizing module 'AXIL' [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/axil.vhdl:91]
+INFO: [Synth 8-256] done synthesizing module 'AXIL' (1#1) [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/axil.vhdl:91]
+INFO: [Synth 8-638] synthesizing module 'AXIF' [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/axif.vhdl:173]
+INFO: [Synth 8-256] done synthesizing module 'AXIF' (2#1) [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/axif.vhdl:173]
+INFO: [Synth 8-638] synthesizing module 'ComBlock' [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl:125]
+WARNING: [Synth 8-421] mismatched array sizes in rhs and lhs of assignment [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl:365]
+WARNING: [Synth 8-6014] Unused sequential element fifo_out_clear_reg was removed.  [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl:360]
+WARNING: [Synth 8-6014] Unused sequential element fifo_in_clear_reg was removed.  [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl:361]
+WARNING: [Synth 8-6014] Unused sequential element fifo_in_under_r_reg was removed.  [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl:379]
+WARNING: [Synth 8-6014] Unused sequential element fifo_out_over_r_reg was removed.  [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl:382]
+WARNING: [Synth 8-3848] Net ram_data_o in module/entity ComBlock does not have driver. [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl:87]
+WARNING: [Synth 8-3848] Net fifo_in_full_o in module/entity ComBlock does not have driver. [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl:93]
+WARNING: [Synth 8-3848] Net fifo_in_afull_o in module/entity ComBlock does not have driver. [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl:94]
+WARNING: [Synth 8-3848] Net fifo_in_overflow_o in module/entity ComBlock does not have driver. [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl:95]
+WARNING: [Synth 8-3848] Net fifo_out_data_o in module/entity ComBlock does not have driver. [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl:100]
+WARNING: [Synth 8-3848] Net fifo_out_valid_o in module/entity ComBlock does not have driver. [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl:101]
+WARNING: [Synth 8-3848] Net fifo_out_empty_o in module/entity ComBlock does not have driver. [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl:102]
+WARNING: [Synth 8-3848] Net fifo_out_aempty_o in module/entity ComBlock does not have driver. [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl:103]
+WARNING: [Synth 8-3848] Net fifo_out_underflow_o in module/entity ComBlock does not have driver. [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl:104]
+WARNING: [Synth 8-3848] Net mem_data_o in module/entity ComBlock does not have driver. [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl:121]
+INFO: [Synth 8-256] done synthesizing module 'ComBlock' (3#1) [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/comblock.vhdl:125]
+INFO: [Synth 8-256] done synthesizing module 'axi_comblock' (4#1) [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ipshared/2cb9/hdl/axi_comblock.vhdl:186]
+INFO: [Synth 8-256] done synthesizing module 'design_1_comblock_0_2' (5#1) [/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.gen/sources_1/bd/design_1/ip/design_1_comblock_0_2/synth/design_1_comblock_0_2.vhd:92]
+WARNING: [Synth 8-7129] Port ram_data_o[15] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_o[14] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_o[13] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_o[12] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_o[11] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_o[10] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_o[9] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_o[8] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_o[7] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_o[6] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_o[5] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_o[4] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_o[3] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_o[2] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_o[1] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_o[0] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_in_full_o in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_in_afull_o in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_in_overflow_o in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_data_o[15] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_data_o[14] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_data_o[13] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_data_o[12] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_data_o[11] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_data_o[10] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_data_o[9] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_data_o[8] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_data_o[7] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_data_o[6] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_data_o[5] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_data_o[4] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_data_o[3] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_data_o[2] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_data_o[1] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_data_o[0] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_valid_o in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_empty_o in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_aempty_o in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_out_underflow_o in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_data_o[15] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_data_o[14] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_data_o[13] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_data_o[12] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_data_o[11] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_data_o[10] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_data_o[9] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_data_o[8] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_data_o[7] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_data_o[6] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_data_o[5] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_data_o[4] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_data_o[3] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_data_o[2] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_data_o[1] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port mem_data_o[0] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_clk_i in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_we_i in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_addr_i[15] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_addr_i[14] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_addr_i[13] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_addr_i[12] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_addr_i[11] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_addr_i[10] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_addr_i[9] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_addr_i[8] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_addr_i[7] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_addr_i[6] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_addr_i[5] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_addr_i[4] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_addr_i[3] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_addr_i[2] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_addr_i[1] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_addr_i[0] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_i[15] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_i[14] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_i[13] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_i[12] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_i[11] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_i[10] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_i[9] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_i[8] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_i[7] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_i[6] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_i[5] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_i[4] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_i[3] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_i[2] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_i[1] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ram_data_i[0] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_in_clk_i in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_in_clear_i in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_in_we_i in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_in_data_i[15] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_in_data_i[14] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_in_data_i[13] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_in_data_i[12] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_in_data_i[11] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_in_data_i[10] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_in_data_i[9] in module ComBlock is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_in_data_i[8] in module ComBlock is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:12 ; elapsed = 00:00:15 . Memory (MB): peak = 2588.484 ; gain = 0.000 ; free physical = 1612 ; free virtual = 5323
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2588.484 ; gain = 0.000 ; free physical = 1634 ; free virtual = 5346
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2588.484 ; gain = 0.000 ; free physical = 1634 ; free virtual = 5346
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2588.484 ; gain = 0.000 ; free physical = 1627 ; free virtual = 5339
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2620.430 ; gain = 0.000 ; free physical = 1593 ; free virtual = 5307
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2620.430 ; gain = 0.000 ; free physical = 1592 ; free virtual = 5306
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 2620.430 ; gain = 31.945 ; free physical = 1602 ; free virtual = 5321
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 2620.430 ; gain = 31.945 ; free physical = 1601 ; free virtual = 5320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 2620.430 ; gain = 31.945 ; free physical = 1602 ; free virtual = 5320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 2620.430 ; gain = 31.945 ; free physical = 1572 ; free virtual = 5301
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 1     
+	               18 Bit    Registers := 2     
+	                8 Bit    Registers := 6     
+	                4 Bit    Registers := 16    
+	                2 Bit    Registers := 6     
+	                1 Bit    Registers := 16    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	   2 Input   18 Bit        Muxes := 3     
+	   2 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 53    
+	   4 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 2620.430 ; gain = 31.945 ; free physical = 1541 ; free virtual = 5275
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 2620.430 ; gain = 31.945 ; free physical = 1386 ; free virtual = 5161
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 2620.430 ; gain = 31.945 ; free physical = 1383 ; free virtual = 5158
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 2620.430 ; gain = 31.945 ; free physical = 1402 ; free virtual = 5177
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2620.430 ; gain = 31.945 ; free physical = 1376 ; free virtual = 5125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2620.430 ; gain = 31.945 ; free physical = 1376 ; free virtual = 5125
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2620.430 ; gain = 31.945 ; free physical = 1375 ; free virtual = 5124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2620.430 ; gain = 31.945 ; free physical = 1375 ; free virtual = 5124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2620.430 ; gain = 31.945 ; free physical = 1375 ; free virtual = 5124
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2620.430 ; gain = 31.945 ; free physical = 1381 ; free virtual = 5130
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |     2|
+|3     |LUT3 |     2|
+|4     |LUT4 |     9|
+|5     |LUT5 |    21|
+|6     |LUT6 |    28|
+|7     |FDRE |    51|
+|8     |FDSE |     7|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2620.430 ; gain = 31.945 ; free physical = 1383 ; free virtual = 5132
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 39 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:49 ; elapsed = 00:00:55 . Memory (MB): peak = 2620.430 ; gain = 0.000 ; free physical = 1430 ; free virtual = 5184
+Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:00:59 . Memory (MB): peak = 2620.438 ; gain = 31.945 ; free physical = 1430 ; free virtual = 5184
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2620.438 ; gain = 0.000 ; free physical = 1433 ; free virtual = 5188
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2620.438 ; gain = 0.000 ; free physical = 1400 ; free virtual = 5202
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: 7d6f1fc1
+INFO: [Common 17-83] Releasing license: Synthesis
+27 Infos, 116 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:15 ; elapsed = 00:01:10 . Memory (MB): peak = 2620.438 ; gain = 32.023 ; free physical = 1765 ; free virtual = 5528
+INFO: [Common 17-1381] The checkpoint '/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.runs/design_1_comblock_0_2_synth_1/design_1_comblock_0_2.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_comblock_0_2, cache-ID = d2c1b0935ae87210
+INFO: [Coretcl 2-1174] Renamed 3 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_Final.runs/design_1_comblock_0_2_synth_1/design_1_comblock_0_2.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_comblock_0_2_utilization_synth.rpt -pb design_1_comblock_0_2_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Jun 16 12:22:30 2022...

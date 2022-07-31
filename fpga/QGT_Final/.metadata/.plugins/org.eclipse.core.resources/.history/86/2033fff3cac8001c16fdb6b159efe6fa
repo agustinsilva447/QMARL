@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include "comblock.h"
+#include "platform.h"
+#include "xil_printf.h"
+#include "sleep.h"
+#include "xparameters.h"
+
+
+int main()
+{
+	short int ax1, ay2, ax3, bx1, by2, bz3;
+
+	ax1 = 1;
+	ay2 = 2;
+	ax3 = 3;
+	bx1 = 13;
+	by2 = 14;
+	bx3 = 15;
+
+    init_platform();
+    print("Hello World\n");
+    cleanup_platform();
+    return 0;
+}

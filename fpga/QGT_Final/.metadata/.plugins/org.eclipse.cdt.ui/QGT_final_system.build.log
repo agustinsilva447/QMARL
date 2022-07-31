@@ -1,0 +1,10 @@
+18:32:34 **** Build of configuration Debug for project QGT_final_system ****
+make all 
+Generating bif file for the system project
+Executing command '::scw::generate_bif -xpfm /home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm -domains standalone_ps7_cortexa9_0 -bifpath /home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_final_system/Debug/system.bif' on XSCT
+sdcard_gen --xpfm /home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/design_1_wrapper/export/design_1_wrapper/design_1_wrapper.xpfm --sys_config design_1_wrapper --bif /home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_final_system/Debug/system.bif --bitstream /home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_final/_ide/bitstream/design_1_wrapper.bit --elf /home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_final/Debug/QGT_final.elf,ps7_cortexa9_0
+creating BOOT.BIN using /home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_final/_ide/bitstream/design_1_wrapper.bit
+Running /home/agustin/Xilinx/Vitis/2021.2/bin/bootgen  -image /home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_final_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+18:32:47 Build Finished (took 13s.18ms)
+

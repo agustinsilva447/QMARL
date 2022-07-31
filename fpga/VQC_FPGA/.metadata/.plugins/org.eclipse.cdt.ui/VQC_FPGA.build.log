@@ -1,0 +1,33 @@
+00:09:04 **** Incremental Build of configuration Debug for project VQC_FPGA ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+ 
+make --no-print-directory main-build
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/agustin/Escritorio/Github/QMARL/fpga/VQC_FPGA/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'float_to_int16':
+../src/helloworld.c:18:9: warning: 'result' is used uninitialized in this function [-Wuninitialized]
+   18 |  return result;
+      |         ^~~~~~
+../src/helloworld.c: In function 'int16_to_float':
+../src/helloworld.c:31:13: warning: 'data.val_float' is used uninitialized in this function [-Wuninitialized]
+   31 |  return data.val_float;
+      |         ~~~~^~~~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: VQC_FPGA.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/agustin/Escritorio/Github/QMARL/fpga/VQC_FPGA/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "VQC_FPGA.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: VQC_FPGA.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size VQC_FPGA.elf  |tee "VQC_FPGA.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  51127	   2548	  22640	  76315	  12a1b	VQC_FPGA.elf
+Finished building: VQC_FPGA.elf.size
+ 
+
+00:09:06 Build Finished (took 1s.291ms)
+

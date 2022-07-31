@@ -1,0 +1,12 @@
+
+{ 
+    crc :  1785660872162152864  , 
+    ccp_crc :  0  , 
+    cmdline : " --incr --debug typical --relax --mt 8 --maxdelay -L xil_defaultlib -L xilinx_vip -L simprims_ver -L secureip --snapshot QGT_tb_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.QGT_tb xil_defaultlib.glbl" , 
+    buildDate : "Oct 19 2021" , 
+    buildTime : "02:56:52" , 
+    linkCmd : "/usr/bin/gcc -Wa,-W  -O -fPIC  -m64  -Wl,--no-as-needed  -Wl,--unresolved-symbols=ignore-all  -o \"xsim.dir/QGT_tb_time_impl/xsimk\"   \"xsim.dir/QGT_tb_time_impl/obj/xsim_0.lnx64.o\" \"xsim.dir/QGT_tb_time_impl/obj/xsim_1.lnx64.o\" -L\"/home/agustin/Xilinx/Vivado/2021.2/lib/lnx64.o\" -lrdi_simulator_kernel   -lrdi_simbridge_kernel" , 
+    aggregate_nets : 
+    [ 
+    ] 
+} 

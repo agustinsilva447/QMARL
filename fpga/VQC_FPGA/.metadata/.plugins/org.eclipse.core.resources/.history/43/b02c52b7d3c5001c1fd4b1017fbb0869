@@ -1,0 +1,59 @@
+#include <stdio.h>
+#include "comblock.h"
+#include "platform.h"
+#include "xil_printf.h"
+#include "sleep.h"
+#include "xparameters.h"
+
+unsigned int float_to_u32(float val)
+{
+	unsigned int result;
+	union float_bytes{
+		float v;
+		unsigned char bytes[4];
+	} data;
+	data.v = val;
+	result = (data.bytes[3]<<24) + (data.bytes[2]<<16) + (data.bytes[1]<<8) + (data.bytes[0]);
+	return result;
+}
+
+float u32_to_float(unsigned int val)
+{
+	union{
+		float val_float;
+		unsigned char bytes[4];
+	} data;
+	data.bytes[3] = (val >> (8*3)) & 0xff;
+	data.bytes[2] = (val >> (8*2)) & 0xff;
+	data.bytes[1] = (val >> (8*1)) & 0xff;
+	data.bytes[0] = (val >> (8*0)) & 0xff;
+	return data.val_float;
+}
+
+int main()
+{
+    init_platform();
+    float a_re, a_im, b_re, b_im, c_re, c_im;
+
+    a_re = -0.2;
+    a_im = 0.31;
+    b_re = 0.25;
+    b_im = -0.7;
+
+
+    cbWrite(XPAR_COMBLOCK_0_AXIL_BASEADDR, CB_OREG0, float_to_u32(a_re));
+    cbWrite(XPAR_COMBLOCK_0_AXIL_BASEADDR, CB_OREG1, float_to_u32(a_im));
+    cbWrite(XPAR_COMBLOCK_0_AXIL_BASEADDR, CB_OREG2, float_to_u32(b_re));
+    cbWrite(XPAR_COMBLOCK_0_AXIL_BASEADDR, CB_OREG3, float_to_u32(b_im));
+
+    sleep(1);
+
+    c_re = u32_to_float(cbRead(XPAR_COMBLOCK_0_AXIL_BASEADDR, CB_IREG0));
+    c_im = u32_to_float(cbRead(XPAR_COMBLOCK_0_AXIL_BASEADDR, CB_IREG1));
+
+    sleep(1);
+
+    printf("(%f + i* %f) * (%f + i* %f) = (%f + i* %f)", a_re, a_im, b_re, b_im, c_re, c_im);
+    cleanup_platform();
+    return 0;
+}
