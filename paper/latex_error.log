@@ -1,7 +1,7 @@
 This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex)
  restricted \write18 enabled.
 entering extended mode
-(/tmp/tmplxr4uw_b/circuit.tex
+(/tmp/tmpt4n9_bms/circuit.tex
 LaTeX2e <2020-02-02> patch level 2
 L3 programming layer <2020-02-14>
 (/usr/share/texlive/texmf-dist/tex/latex/standalone/standalone.cls
@@ -63,15 +63,10 @@ No file circuit.aux.
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
 <xymatrix
-
-! Package inputenc Error: Unicode character  (U+000B)
-(inputenc)                not set up for use with LaTeX.
-
-See the inputenc package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
+! Misplaced \cr.
+<argument> \\
+             ,U\_{4}
 l.12 \\ }}
           
 !  ==> Fatal error occurred, no output PDF file produced!
-Transcript written on /tmp/tmplxr4uw_b/circuit.log.
+Transcript written on /tmp/tmpt4n9_bms/circuit.log.
