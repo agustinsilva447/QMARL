@@ -1,0 +1,8 @@
+Trabajos futuros:
+    - Self-regulate temperature
+    - Increase number of players
+    - Agents applying error correction
+    - Quantum stochastic games
+    - Study the role of entanglement
+        1) after J operator (before gates)
+        2) with random gates (before J dagger)
