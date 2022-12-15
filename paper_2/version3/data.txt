@@ -1,0 +1,49 @@
+2 players (100000) =>
+	Type = ['c']. Player 0 => Final avg reward = 0.10239795204095918.
+	Type = ['c']. Player 1 => Final avg reward = 0.09719805603887922.
+	Type = ['q', 1.5707963267948966, 0]. Player 0 => Final avg reward = 9.178216435671287.
+	Type = ['q', 1.5707963267948966, 0]. Player 1 => Final avg reward = 9.505409891802165.
+
+3 players (200000) =>
+	Type = ['c']. Player 0 => Final avg reward = 0.06959860802783945.
+	Type = ['c']. Player 1 => Final avg reward = 0.07319853602927942.
+	Type = ['c']. Player 2 => Final avg reward = 0.06359872802543949.
+	Type = ['q', 1.5707963267948966, 0]. Player 0 => Final avg reward = 5.549889002219955.
+	Type = ['q', 1.5707963267948966, 0]. Player 1 => Final avg reward = 10.460790784184317.
+	Type = ['q', 1.5707963267948966, 0]. Player 2 => Final avg reward = 1.3181736365272694.
+
+4 players (1000000) =>
+	Type = ['c']. Player 0 => Final avg reward = 0.003999920001599968.
+	Type = ['c']. Player 1 => Final avg reward = 0.009599808003839923.
+	Type = ['c']. Player 2 => Final avg reward = 0.007199856002879942.
+	Type = ['c']. Player 3 => Final avg reward = 0.007199856002879942.
+	Type = ['q', 1.5707963267948966, 0]. Player 0 => Final avg reward = 0.6079878402431952.
+	Type = ['q', 1.5707963267948966, 0]. Player 1 => Final avg reward = 2.780744385112298.
+	Type = ['q', 1.5707963267948966, 0]. Player 2 => Final avg reward = 3.5543289134217315.
+	Type = ['q', 1.5707963267948966, 0]. Player 3 => Final avg reward = 0.6551868962620747.
+
+5 players (1000000) =>
+	Type = ['c']. Player 0 => Final avg reward = 0.0.
+	Type = ['c']. Player 1 => Final avg reward = 0.020999580008399833.
+	Type = ['c']. Player 2 => Final avg reward = 0.0.
+	Type = ['c']. Player 3 => Final avg reward = 0.0.
+	Type = ['c']. Player 4 => Final avg reward = 0.023999520009599807.
+	Type = ['q', 1.5707963267948966, 0]. Player 0 => Final avg reward = 0.0249995000099998.
+	Type = ['q', 1.5707963267948966, 0]. Player 1 => Final avg reward = 4.159916801663967.
+	Type = ['q', 1.5707963267948966, 0]. Player 2 => Final avg reward = 0.04899902001959961.
+	Type = ['q', 1.5707963267948966, 0]. Player 3 => Final avg reward = 1.0919781604367913.
+	Type = ['q', 1.5707963267948966, 0]. Player 4 => Final avg reward = 0.05999880002399952.
+
+6 players (600000) =>
+	Type = ['c']. Player 0 => Final avg reward = 0.009599808003839923.
+	Type = ['c']. Player 1 => Final avg reward = 0.0.
+	Type = ['c']. Player 2 => Final avg reward = 0.0.
+	Type = ['c']. Player 3 => Final avg reward = 0.0.
+	Type = ['c']. Player 4 => Final avg reward = 0.015599688006239875.
+	Type = ['c']. Player 5 => Final avg reward = 0.0.
+	Type = ['q', 1.5707963267948966, 0]. Player 0 => Final avg reward = 2.1731565368692625.
+	Type = ['q', 1.5707963267948966, 0]. Player 1 => Final avg reward = 0.3227935441291174.
+	Type = ['q', 1.5707963267948966, 0]. Player 2 => Final avg reward = 0.019199616007679846.
+	Type = ['q', 1.5707963267948966, 0]. Player 3 => Final avg reward = 0.015599688006239875.
+	Type = ['q', 1.5707963267948966, 0]. Player 4 => Final avg reward = 0.0371992560148797.
+	Type = ['q', 1.5707963267948966, 0]. Player 5 => Final avg reward = 0.0491990160196796.
