@@ -198,10 +198,11 @@ def simulate(agents, time, all_actions, a_type, l):
 players = 5
 time = 200000
 epsilon = 0.1
-lamda = 0.5
+lamda = 1.5
 To = 0
 Tf = 0.125
 tau = 100000
+A_MAX  = 2*np.pi
 N_SIZE = 3
 a_types = [['c'],
            ['q', 8 *np.pi/16, 0]
@@ -231,7 +232,7 @@ a_types = [['c'],
            #['q', 8 *np.pi/16, 0.75],
            #['q', 8 *np.pi/16, 1],
            ] # ['c'] or ['q', gamma, lamda]
-print("Players = {}. Time = {}. Epsilon = {}. Lamda = {}. To = {}. Tf = {}. tau = {}. N_SIZE = {}. a_types = {}.".format(players, time, epsilon, lamda, To, Tf, tau, N_SIZE, a_types))
+print("Players = {}. Time = {}. Epsilon = {}. Lamda = {}. To = {}. Tf = {}. tau = {}. A_MAX = {}. N_SIZE = {}. a_types = {}.".format(players, time, epsilon, lamda, To, Tf, tau, A_MAX, N_SIZE, a_types))
 
 title_label = [""] * len(a_types)
 temperatures =      [None] * len(a_types)
@@ -244,7 +245,7 @@ act_pro =           [None] * len(a_types)
 
 for x, a_type in enumerate(a_types):
   if a_type[0] == 'q':
-    angulos = np.arange(0, 2 * np.pi, 2 * np.pi / np.power(2, N_SIZE))
+    angulos = np.arange(0, A_MAX, A_MAX / np.power(2, N_SIZE))
     all_actions = [(rx,ry,rz) for rx in angulos for ry in angulos for rz in angulos]
   elif a_type[0] == 'c':
     all_actions = [0, 1]
