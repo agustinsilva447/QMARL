@@ -1,7 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from tqdm import trange
-#from qiskit.quantum_info import entropy
 
 np.seterr(all='raise')
 
@@ -18,7 +17,7 @@ def opti_temperature(q_values, to, lamda = 0.5, threshold = 0.0001, max_it = 100
     z_values = eq_vector(q_values)
     i_amount = info_measure(z_values)
     for i in range(max_it):
-      if to>0.0015:
+      if to>=0.0015:
         t_opt = to
       else:
         t_opt = 0.0015
@@ -32,7 +31,7 @@ def opti_temperature(q_values, to, lamda = 0.5, threshold = 0.0001, max_it = 100
     return t_opt
 
 class Agent:
-    def __init__(self, n_anctions, epsilon_0=0, Tf=0.125, To=5, tau = 10000):
+    def __init__(self, n_anctions, epsilon_0=0, Tf=0.125, To=5, tau = 10000, algo = 0):
         self.Tf = Tf
         self.To = To
         self.Tb = To
@@ -48,8 +47,11 @@ class Agent:
         return np.random.choice(self.indices), self.To
 
     def act(self, t, l):
-        #self.Tb = self.Tf + (self.To - self.Tf) * np.power(np.e, -t/self.tau)
-        self.Tb = opti_temperature(self.q_estimation, self.Tb, l)
+        if algo == 0:
+          self.Tb = self.Tf + (self.To - self.Tf) * np.power(np.e, -t/self.tau)
+        else:
+          self.Tb = opti_temperature(self.q_estimation, self.Tb, l)
+
         if np.random.rand() < self.epsilon_0:
             return np.random.choice(self.indices), self.Tb
         try:
@@ -130,26 +132,34 @@ def Numpy_QGT_Nplayers(tipo, gamma = 8 *np.pi/16, lamda = 0):
       else:
         strategies_gate = np.kron(strategies_gate, players_gate)
 
-    outputstate = J_dg * strategies_gate * J * init_mat
-    #ent_of_formation = entropy(outputstate)
-    prob = np.power(np.abs(outputstate),2)
+    state = J_dg * strategies_gate * J * init_mat
+    prob = np.power(np.abs(state),2)
     outp = [int_to_binary(i,n_p) for i in range(2**n_p)]
     output = np.random.choice(outp, p=np.asarray(prob).reshape(-1))
-    return output, outputstate, prob #, ent_of_formation
+    return output, prob, state
 
-def minority_variant(output):
+def minority_variant(output): # one shot
     l =  len(output)
     reward = [0 for i in range(l)]
     if (output.count('1') == 1):
         reward[output.find('1')] = 10 * l
     return reward
 
+def minority_matrix(prob): # estimated value
+  n = int(np.log2(len(prob)))
+  mm = np.zeros([2**n,n])
+  for i in range(n):
+    mm[2**i][n-i-1] = 10 * n
+  payoff = prob.transpose() * mm
+  return payoff.tolist()[0]   
+
 def reward_game(rotat, a_type):
     if a_type[0] == 'q':
-      output, _s, _p = Numpy_QGT_Nplayers(rotat, a_type[1], a_type[2])
+      output, prob, state = Numpy_QGT_Nplayers(rotat, a_type[1], a_type[2])
+      return minority_matrix(prob)
     elif a_type[0] == 'c':
       output = classical_game_Nplayers(rotat)
-    return minority_variant(output) #, ent
+      return minority_variant(output)
 
 def game(all_actions, actions, a_type):
     if a_type[0] == 'q':
@@ -160,7 +170,7 @@ def game(all_actions, actions, a_type):
     for idx, action_i in enumerate(actions):
         rotat[idx] =  all_actions[action_i]
     reward = reward_game(rotat, a_type)
-    return reward #, ent
+    return reward 
 
 def simulate(agents, time, all_actions, a_type, l): 
     q_table =      [0 for i in range(len(agents))] 
@@ -171,8 +181,6 @@ def simulate(agents, time, all_actions, a_type, l):
     rewards_avg =  np.zeros(rewards.shape) 
     temp =         [0 for i in range(len(agents))]
     temperatures = [[0] for i in range(len(agents))]
-    #entanglements =     np.zeros(time)
-    #entanglements_avg = np.zeros(entanglements.shape) 
 
     for t in trange(time):
         for i, agent in enumerate(agents):
@@ -188,20 +196,19 @@ def simulate(agents, time, all_actions, a_type, l):
                 actions[i], temp[i] = agent.act(t,l)
             temperatures[i].append(temp[i])
         reward = game(all_actions, actions, a_type)
-        #entanglements[t] = entanglement
-        #entanglements_avg[t] = np.mean(entanglements[0:t+1])
 
     for i, agent in enumerate(agents):
       q_table[i], act_pro[i] = agent.end()
-    return rewards, rewards_avg, q_table, act_pro, temperatures #, entanglements, entanglements_avg
+    return rewards, rewards_avg, q_table, act_pro, temperatures 
 
-players = 5
-time = 200000
-epsilon = 0.1
-lamda = 1.5
-To = 0
+players = 2
+time = 100000
+epsilon = 0.01
+algo = 0 # 0 => exponential ; 1 => entropy
+lamda = 0.5
+To = 4
 Tf = 0.125
-tau = 100000
+tau = 15000
 A_MAX  = 2*np.pi
 N_SIZE = 3
 a_types = [['c'],
@@ -232,12 +239,10 @@ a_types = [['c'],
            #['q', 8 *np.pi/16, 0.75],
            #['q', 8 *np.pi/16, 1],
            ] # ['c'] or ['q', gamma, lamda]
-print("Players = {}. Time = {}. Epsilon = {}. Lamda = {}. To = {}. Tf = {}. tau = {}. A_MAX = {}. N_SIZE = {}. a_types = {}.".format(players, time, epsilon, lamda, To, Tf, tau, A_MAX, N_SIZE, a_types))
+print("Players = {}. Time = {}. Epsilon = {}. Algo = {}. Lamda = {}. To = {}. Tf = {}. tau = {}. A_MAX = {}. N_SIZE = {}. a_types = {}.".format(players, time, epsilon, algo, lamda, To, Tf, tau, A_MAX, N_SIZE, a_types))
 
 title_label = [""] * len(a_types)
 temperatures =      [None] * len(a_types)
-#entanglements =     [None] * len(a_types)
-#entanglements_avg = [None] * len(a_types)
 rewards =           [None] * len(a_types)
 rewards_avg =       [None] * len(a_types)
 q_table =           [None] * len(a_types)
@@ -253,7 +258,7 @@ for x, a_type in enumerate(a_types):
   title_label[x] = "Game type = {}.".format(a_type)
   agents = []
   for i in range(players):
-      agents.append(Agent(n_anctions=len(all_actions), epsilon_0=epsilon, Tf=Tf, To=To, tau=tau))
+      agents.append(Agent(n_anctions=len(all_actions), epsilon_0=epsilon, Tf=Tf, To=To, tau=tau, algo = algo))
   rewards[x], rewards_avg[x], q_table[x], act_pro[x], temperatures[x] = simulate(agents, time, all_actions, a_type, lamda)
 
   for i in range(players):
