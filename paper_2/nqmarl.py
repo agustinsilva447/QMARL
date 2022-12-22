@@ -153,15 +153,18 @@ def minority_matrix(prob): # estimated value
   payoff = prob.transpose() * mm
   return payoff.tolist()[0]   
 
-def reward_game(rotat, a_type):
+def reward_game(rotat, a_type, gtyp):
     if a_type[0] == 'q':
       output, prob, state = Numpy_QGT_Nplayers(rotat, a_type[1], a_type[2])
-      return minority_matrix(prob)
+      if gtyp == 0:
+        return minority_variant(output)
+      else:
+        return minority_matrix(prob)
     elif a_type[0] == 'c':
       output = classical_game_Nplayers(rotat)
       return minority_variant(output)
 
-def game(all_actions, actions, a_type):
+def game(all_actions, actions, a_type, gtyp):
     if a_type[0] == 'q':
       rotat = np.zeros([len(actions), 3])
     elif a_type[0] == 'c':
@@ -169,10 +172,10 @@ def game(all_actions, actions, a_type):
 
     for idx, action_i in enumerate(actions):
         rotat[idx] =  all_actions[action_i]
-    reward = reward_game(rotat, a_type)
+    reward = reward_game(rotat, a_type, gtyp)
     return reward 
 
-def simulate(agents, time, all_actions, a_type, l): 
+def simulate(agents, time, all_actions, a_type, l, gtyp): 
     q_table =      [0 for i in range(len(agents))] 
     act_pro =      [0 for i in range(len(agents))] 
     actions =      [0 for i in range(len(agents))] 
@@ -195,22 +198,24 @@ def simulate(agents, time, all_actions, a_type, l):
                 agent.step(actions[i], reward[i])
                 actions[i], temp[i] = agent.act(t,l)
             temperatures[i].append(temp[i])
-        reward = game(all_actions, actions, a_type)
+        reward = game(all_actions, actions, a_type, gtyp)
 
     for i, agent in enumerate(agents):
       q_table[i], act_pro[i] = agent.end()
     return rewards, rewards_avg, q_table, act_pro, temperatures 
 
-players = 2
-time = 100000
-epsilon = 0.01
-algo = 0 # 0 => exponential ; 1 => entropy
-lamda = 0.5
-To = 4
-Tf = 0.125
-tau = 15000
+players = 3       # number of players
+time    = 500000  # number of iteration
+epsilon = 0.01    # e-greedy exploration factor
+algo    = 0       # 0 => exponential ; 1 => entropy of Q
+gtyp    = 1       # 0 => single game ; 1 => expected value
+To      = 4       # initial temperature
+Tf      = 0.01    # final temperature             (only for algo=0)
+tau     = 100000  # descresing temperature factor (only for algo=0)
+lamda   = 0.5     # decreasing entropy factor     (only for algo=1)
+
+N_SIZE = 4        # action space size
 A_MAX  = 2*np.pi
-N_SIZE = 3
 a_types = [['c'],
            ['q', 8 *np.pi/16, 0]
            #['q', 7 *np.pi/16, 0],
@@ -239,7 +244,7 @@ a_types = [['c'],
            #['q', 8 *np.pi/16, 0.75],
            #['q', 8 *np.pi/16, 1],
            ] # ['c'] or ['q', gamma, lamda]
-print("Players = {}. Time = {}. Epsilon = {}. Algo = {}. Lamda = {}. To = {}. Tf = {}. tau = {}. A_MAX = {}. N_SIZE = {}. a_types = {}.".format(players, time, epsilon, algo, lamda, To, Tf, tau, A_MAX, N_SIZE, a_types))
+print("Players = {}. Time = {}. Epsilon = {}. Algo = {}. Gtyp = {}. To = {}. Tf = {}. tau = {}. Lamda = {}. N_SIZE = {}. A_MAX = {}. a_types = {}.".format(players, time, epsilon, algo, gtyp, To, Tf, tau, lamda, N_SIZE, A_MAX, a_types))
 
 title_label = [""] * len(a_types)
 temperatures =      [None] * len(a_types)
@@ -259,7 +264,7 @@ for x, a_type in enumerate(a_types):
   agents = []
   for i in range(players):
       agents.append(Agent(n_anctions=len(all_actions), epsilon_0=epsilon, Tf=Tf, To=To, tau=tau, algo = algo))
-  rewards[x], rewards_avg[x], q_table[x], act_pro[x], temperatures[x] = simulate(agents, time, all_actions, a_type, lamda)
+  rewards[x], rewards_avg[x], q_table[x], act_pro[x], temperatures[x] = simulate(agents, time, all_actions, a_type, lamda, gtyp)
 
   for i in range(players):
     print("Type = {}. Player {} => Final avg reward = {}.".format(a_types[x], i, rewards_avg[x][i][-1]))
