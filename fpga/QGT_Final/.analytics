@@ -23,3 +23,6 @@ timestamp=[2022-05-03 21:47:02], mode=BUILD, duration=0:00:01.438, duration_ms=1
 timestamp=[2022-05-03 21:48:32], mode=BUILD, duration=0:00:01.392, duration_ms=1392, data={name=QGT_final, configuration=Debug, clean_build=false}
 timestamp=[2022-05-03 21:49:38], mode=BUILD, duration=0:00:01.392, duration_ms=1392, data={name=QGT_final, configuration=Debug, clean_build=false}
 timestamp=[2022-05-03 21:50:19], mode=BUILD, duration=0:00:01.314, duration_ms=1314, data={name=QGT_final, configuration=Debug, clean_build=false}
+timestamp=[2022-11-21 14:23:13], mode=WORKBENCH_START, duration=0:00:16.998, duration_ms=16998, data={}
+timestamp=[2022-11-21 14:23:14], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.061, duration_ms=61, data={}
+timestamp=[2022-11-21 14:23:17], mode=WORKBENCH_UI_INIT, duration=0:00:03.638, duration_ms=3638, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=QGT_final,QGT_final_system,RemoteSystemsTempFiles,design_1_wrapper}

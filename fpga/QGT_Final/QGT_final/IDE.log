@@ -14,3 +14,19 @@
 17:10:36 INFO  : Successfully done setting XSCT server connection channel  
 17:10:36 INFO  : Successfully done query RDI_DATADIR 
 17:10:36 INFO  : Successfully done setting workspace for the tool. 
+14:20:51 INFO  : Launching XSCT server: xsct -n  -interactive /home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_final/temp_xsdb_launch_script.tcl
+14:20:51 INFO  : Platform repository initialization has completed.
+14:20:53 INFO  : Registering command handlers for Vitis TCF services
+14:21:00 INFO  : XSCT server has started successfully.
+14:21:00 INFO  : plnx-install-location is set to ''
+14:21:00 INFO  : Successfully done setting XSCT server connection channel  
+14:21:02 INFO  : Successfully done setting workspace for the tool. 
+14:21:02 INFO  : Successfully done query RDI_DATADIR 
+14:21:54 INFO  : Platform repository initialization has completed.
+14:21:54 INFO  : Launching XSCT server: xsct -n  -interactive /home/agustin/Escritorio/Github/QMARL/fpga/QGT_Final/QGT_final/temp_xsdb_launch_script.tcl
+14:21:54 INFO  : Registering command handlers for Vitis TCF services
+14:22:02 INFO  : XSCT server has started successfully.
+14:22:02 INFO  : Successfully done setting XSCT server connection channel  
+14:22:02 INFO  : Successfully done setting workspace for the tool. 
+14:22:02 INFO  : plnx-install-location is set to ''
+14:22:02 INFO  : Successfully done query RDI_DATADIR 
