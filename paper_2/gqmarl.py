@@ -2,6 +2,7 @@ import copy
 import numpy as np
 import matplotlib.pyplot as plt
 from tqdm import trange
+from math import sqrt
 
 def int_to_binary(n,m):
     if n == 0:
@@ -12,7 +13,7 @@ def int_to_binary(n,m):
         n = n // 2
     binary2 = "0" * (m - len(binary1)) + binary1
     return binary2
-
+    
 def rX_numpy(phi):
   rx = np.matrix([[    np.cos(phi/2), -1j*np.sin(phi/2)],
                   [-1j*np.sin(phi/2),     np.cos(phi/2)]])
@@ -39,6 +40,14 @@ def depolarization(lamda):
 def final_strategy(rx_1, ry_2, rx_3, depo):
   return depo * rx_3 * ry_2 * rx_1
 
+def minority_matrix(prob):
+  n = int(np.log2(len(prob)))
+  mm = np.zeros([2**n,n])
+  for i in range(n):
+    mm[2**i][n-i-1] = 10 * n
+  payoff = prob.transpose() * mm
+  return payoff.tolist()[0]
+
 def Numpy_QGT_Nplayers(tipo, gamma = 8 *np.pi/16, lamda = 0):
     n_p = len(tipo)
     init_mat = np.matrix([[1] if i==0 else [0] for i in range(2**n_p)])
@@ -54,78 +63,87 @@ def Numpy_QGT_Nplayers(tipo, gamma = 8 *np.pi/16, lamda = 0):
       else:
         strategies_gate = np.kron(strategies_gate, players_gate)
 
-    state = J_dg * strategies_gate * J * init_mat
-    prob = np.power(np.abs(state),2)
+    outputstate = J_dg * strategies_gate * J * init_mat
+    prob = np.power(np.abs(outputstate),2)
     outp = [int_to_binary(i,n_p) for i in range(2**n_p)]
     output = np.random.choice(outp, p=np.asarray(prob).reshape(-1))
-    return output, prob, state
-
-def minority_matrix(prob): # estimated value
-  n = int(np.log2(len(prob)))
-  mm = np.zeros([2**n,n])
-  for i in range(n):
-    mm[2**i][n-i-1] = 10 * n
-  payoff = prob.transpose() * mm
-  return payoff.tolist()[0]       
+    return output, prob, outputstate
 
 def matrix_reward(rotat, a_type):  
   output, prob, state = Numpy_QGT_Nplayers(rotat, a_type[1], a_type[2])
   reward_g = minority_matrix(prob)
-  return reward_g        
+  return reward_g
 
-def gradient_rotat(r,j,k,e,a,l):
+def gradient_rotat(r,j,k,e,a):
   r1 = copy.deepcopy(r)
   r1[j][k] -= e
   rew1 = matrix_reward(r1,a)
   r2 = copy.deepcopy(r)
   r2[j][k] += e  
   rew2 = matrix_reward(r2,a)
-  r_new = (r[j][k] + l * (rew2[j]-rew1[j])/(2*epsilon))
-  while (r_new < 0) or (2*np.pi <= r_new):
-    if (r_new>=2*np.pi):
-      r_new -= 2*np.pi
-    if (r_new<0):
-      r_new += 2*np.pi
-  return r_new  
+  g_new = (rew2[j]-rew1[j])/(2*epsilon)
+  return g_new
 
 n = 2
-max_it = 10000
-a_type = ['q', 8 *np.pi/16, 0]
-epsilon = 1e-4
-l_rate  = 1e-3
+max_it = 100000
+a_type = ['q', 8 *np.pi/16, 0.01]
+epsilon = 1e-5
+
+alpha1 = 0.01
+alpha2 = 1e-9
+beta1  = 0.9
+beta2  = 0.99
+
 rotat = [[np.pi * np.random.rand(), np.pi * np.random.rand(), np.pi * np.random.rand()] for i in range(n)]
 strategies = [[] for i in range(3*n)]
 feedback   = [[] for i in range(n)]
+rewards    = [[] for i in range(n)]
+m = [[0.0,0.0,0.0] for i in range(n)]
+v = [[0.0,0.0,0.0] for i in range(n)]
+avg_fair = []
+fairness = []
 
-for i in trange(max_it):
+for t in trange(max_it):
   reward = matrix_reward(rotat, a_type)
-  for h in range(n):
-    for g in range(3):
-      strategies[3*h+g].append(rotat[h][g])
-    feedback[h].append(reward[h])
-
   aux = copy.deepcopy(rotat)
-  for j in range(n):
-    for k in range(3):
-      rotat[j][k] = gradient_rotat(aux,j,k,epsilon,a_type,l_rate)  
-
-  diff = 0
+  f0 = 1
   for i in range(n):
+    feedback[i].append(reward[i])
+    if t<1000:
+      rewards[i].append(np.mean(feedback[i][0:t+1]))
+    else:
+      rewards[i].append(np.mean(feedback[i][t-1000:t+1]))
+    f0 *= rewards[i][-1]
     for j in range(3):
-      diff += np.abs(rotat[i][j] - aux[i][j])
-  if diff<1e-4:
-    break
+      strategies[3*i+j].append(rotat[i][j])
+      grad = gradient_rotat(aux,i,j,epsilon,a_type)
+      m[i][j] = beta1 * m[i][j] + (1.0 - beta1) * grad
+      v[i][j] = beta2 * v[i][j] + (1.0 - beta2) * grad**2
+      mhat = m[i][j] / (1.0 - beta1**(t+1))
+      vhat = v[i][j] / (1.0 - beta2**(t+1))      
+      rotat[i][j] = rotat[i][j] + alpha1 * mhat / (sqrt(vhat) + alpha2)
+      while (rotat[i][j]<0) or (2*np.pi<=rotat[i][j]):
+        if (rotat[i][j]<0):
+          rotat[i][j] += 2*np.pi
+        if (2*np.pi<=rotat[i][j]):
+          rotat[i][j] -= 2*np.pi
+  fairness.append(f0)
+  avg_fair.append(np.mean(fairness))
 
-print("Learning rate = {}. Epsilon = {}. Diff = {}".format(l_rate, epsilon, diff))
+print("A1 = {}. A2 = {}. B1 = {}. B2 = {}.".format(alpha1, alpha2, beta1, beta2))
 for i in range(n):
   print("Player {} => Strategy = {} and Reward = {}".format(i,rotat[i],reward[i]))
 
-fig0, axs = plt.subplots(1,2,figsize=(15,5))
+fig0, axs = plt.subplots(2,2,figsize=(20,15))
 for i in range(n):
-  axs[0].plot(feedback[i], label="Player {}".format(i))
-for i in range(n):
+  axs[0,0].plot(feedback[i], label="Player {}".format(i))
+  axs[0,1].plot(rewards[i],  label="Player {}".format(i))
   for j in range(3):
-    axs[1].plot(strategies[3*i+j], label="Player {}. Strategy {}.".format(i,j))
-#axs[0].legend()
-#axs[1].legend()
-plt.show()      
+    axs[1,0].plot(strategies[3*i+j], label="Player {}. Strategy {}.".format(i,j))
+axs[1,1].plot(fairness)
+axs[1,1].plot(avg_fair)
+#axs[0,0].legend()
+#axs[0,1].legend()
+#axs[1,0].legend()
+#axs[1,1].legend()
+plt.show()
