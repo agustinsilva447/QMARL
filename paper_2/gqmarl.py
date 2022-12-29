@@ -84,56 +84,66 @@ def gradient_rotat(r,j,k,e,a):
   g_new = (rew2[j]-rew1[j])/(2*epsilon)
   return g_new
 
-n = 2
+n = 3
 max_it = 100000
-a_type = ['q', 8 *np.pi/16, 0.01]
 epsilon = 1e-5
-
 alpha1 = 0.01
 alpha2 = 1e-9
 beta1  = 0.9
 beta2  = 0.99
-
 rotat = [[np.pi * np.random.rand(), np.pi * np.random.rand(), np.pi * np.random.rand()] for i in range(n)]
-strategies = [[] for i in range(3*n)]
-feedback   = [[] for i in range(n)]
-rewards    = [[] for i in range(n)]
-m = [[0.0,0.0,0.0] for i in range(n)]
-v = [[0.0,0.0,0.0] for i in range(n)]
-avg_fair = []
-fairness = []
+total_fair = []
+q_noise = [0, 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1, 0.125, 0.15, 0.175, 0.2, 0.3, 0.4, 0.5, 0.75, 1]
 
-for t in trange(max_it):
-  reward = matrix_reward(rotat, a_type)
-  aux = copy.deepcopy(rotat)
-  f0 = 1
+for q in q_noise:
+  a_type = ['q', 8 *np.pi/16, q]
+  m = [[0.0,0.0,0.0] for i in range(n)]
+  v = [[0.0,0.0,0.0] for i in range(n)]
+  strategies = [[] for i in range(3*n)]
+  feedback   = [[] for i in range(n)]
+  rewards    = [[] for i in range(n)]
+  fairness = []
+  avg_fair = []
+
+  for t in trange(max_it):
+    reward = matrix_reward(rotat, a_type)
+    aux = copy.deepcopy(rotat)
+    f0 = 1
+    for i in range(n):
+      feedback[i].append(reward[i])
+      if t<1000:
+        rewards[i].append(np.mean(feedback[i][0:t+1]))
+      else:
+        rewards[i].append(np.mean(feedback[i][t-1000:t+1]))
+      f0 *= rewards[i][-1]
+      for j in range(3):
+        strategies[3*i+j].append(rotat[i][j])
+        grad = gradient_rotat(aux,i,j,epsilon,a_type)
+        m[i][j] = beta1 * m[i][j] + (1.0 - beta1) * grad
+        v[i][j] = beta2 * v[i][j] + (1.0 - beta2) * grad**2
+        mhat = m[i][j] / (1.0 - beta1**(t+1))
+        vhat = v[i][j] / (1.0 - beta2**(t+1))      
+        rotat[i][j] = rotat[i][j] + alpha1 * mhat / (sqrt(vhat) + alpha2)
+        while (rotat[i][j]<0) or (2*np.pi<=rotat[i][j]):
+          if (rotat[i][j]<0):
+            rotat[i][j] += 2*np.pi
+          if (2*np.pi<=rotat[i][j]):
+            rotat[i][j] -= 2*np.pi
+    fairness.append(f0)
+    avg_fair.append(np.mean(fairness))
+
+  print("A1 = {}. A2 = {}. B1 = {}. B2 = {}.".format(alpha1, alpha2, beta1, beta2))
   for i in range(n):
-    feedback[i].append(reward[i])
-    if t<1000:
-      rewards[i].append(np.mean(feedback[i][0:t+1]))
-    else:
-      rewards[i].append(np.mean(feedback[i][t-1000:t+1]))
-    f0 *= rewards[i][-1]
-    for j in range(3):
-      strategies[3*i+j].append(rotat[i][j])
-      grad = gradient_rotat(aux,i,j,epsilon,a_type)
-      m[i][j] = beta1 * m[i][j] + (1.0 - beta1) * grad
-      v[i][j] = beta2 * v[i][j] + (1.0 - beta2) * grad**2
-      mhat = m[i][j] / (1.0 - beta1**(t+1))
-      vhat = v[i][j] / (1.0 - beta2**(t+1))      
-      rotat[i][j] = rotat[i][j] + alpha1 * mhat / (sqrt(vhat) + alpha2)
-      while (rotat[i][j]<0) or (2*np.pi<=rotat[i][j]):
-        if (rotat[i][j]<0):
-          rotat[i][j] += 2*np.pi
-        if (2*np.pi<=rotat[i][j]):
-          rotat[i][j] -= 2*np.pi
-  fairness.append(f0)
-  avg_fair.append(np.mean(fairness))
+    print("Player {} => Strategy = {} and Reward = {}".format(i,rotat[i],reward[i]))
+  print("Quantum Noise = {}. Final Average Fairness Factor = {}.".format(q, avg_fair[-1]))
+  total_fair.append(avg_fair[-1])
 
-print("A1 = {}. A2 = {}. B1 = {}. B2 = {}.".format(alpha1, alpha2, beta1, beta2))
-for i in range(n):
-  print("Player {} => Strategy = {} and Reward = {}".format(i,rotat[i],reward[i]))
-
+plt.title("Fairness/Performance vs Quantum Noise")
+plt.plot(q_noise, total_fair)
+plt.xlabel("Quantum Noise")
+plt.ylabel("Fairness/Performance")
+plt.show()
+"""
 fig0, axs = plt.subplots(2,2,figsize=(20,15))
 for i in range(n):
   axs[0,0].plot(feedback[i], label="Player {}".format(i))
@@ -142,8 +152,10 @@ for i in range(n):
     axs[1,0].plot(strategies[3*i+j], label="Player {}. Strategy {}.".format(i,j))
 axs[1,1].plot(fairness)
 axs[1,1].plot(avg_fair)
+axs[1,1].set_ylim(0, 100)
 #axs[0,0].legend()
 #axs[0,1].legend()
 #axs[1,0].legend()
 #axs[1,1].legend()
 plt.show()
+"""

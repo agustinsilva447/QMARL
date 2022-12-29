@@ -1,0 +1,17 @@
+n = 3
+max_it = 100000
+epsilon = 1e-5
+alpha1 = 0.01
+alpha2 = 1e-9
+beta1  = 0.9
+beta2  = 0.99
+
+Quantum Noise = 0.00. Final Average Fairness Factor = 0.5129055855485748.
+Quantum Noise = 0.01. Final Average Fairness Factor = 31.50331629570498.
+Quantum Noise = 0.02. Final Average Fairness Factor = 27.46798669926959.
+Quantum Noise = 0.03. Final Average Fairness Factor = 37.99789668741582.
+Quantum Noise = 0.04. Final Average Fairness Factor = 40.40986633883255.
+Quantum Noise = 0.05. Final Average Fairness Factor = 26.709672656337546.
+Quantum Noise = 0.06. Final Average Fairness Factor = 34.04732543921718.
+
+###############################################################################################
