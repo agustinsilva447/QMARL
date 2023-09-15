@@ -1,0 +1,21 @@
+battle_of_sexes_class
+Rewards: Player 0 = 7.5000. Player 1 = 7.5000.
+
+battle_of_sexes_quan
+Rewards: Player 0 = 7.5000. Player 1 = 7.5000.
+
+prisoners_game_class
+Rewards: Player 0 = 3.5774. Player 1 = 3.2113.
+
+prisoners_game_quan
+Rewards: Player 0 = 5.7113. Player 1 = 5.7113.
+
+platonia_game_class
+Rewards: Player 0 = 0.7322. Player 1 = 1.2500.
+
+platonia_game_quan
+Average Reward of Player 0 = 5.053716.
+Average Reward of Player 1 = 4.580174.
+
+Average Reward of Player 0 = 4.580355.
+Average Reward of Player 1 = 5.312414.
