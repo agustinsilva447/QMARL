@@ -1,17 +1,141 @@
-n = 3
-max_it = 100000
+max_it  = 100000
 epsilon = 1e-5
-alpha1 = 0.01
-alpha2 = 1e-9
-beta1  = 0.9
-beta2  = 0.99
-
-Quantum Noise = 0.00. Final Average Fairness Factor = 0.5129055855485748.
-Quantum Noise = 0.01. Final Average Fairness Factor = 31.50331629570498.
-Quantum Noise = 0.02. Final Average Fairness Factor = 27.46798669926959.
-Quantum Noise = 0.03. Final Average Fairness Factor = 37.99789668741582.
-Quantum Noise = 0.04. Final Average Fairness Factor = 40.40986633883255.
-Quantum Noise = 0.05. Final Average Fairness Factor = 26.709672656337546.
-Quantum Noise = 0.06. Final Average Fairness Factor = 34.04732543921718.
-
+alpha1  = 0.01
+alpha2  = 1e-9
+beta1   = 0.9
+beta2   = 0.99
 ###############################################################################################
+n = 2
+Quantum Noise = 0.     Final Average Fairness Factor = 52.96300761528861.
+Quantum Noise = 0.01.  Final Average Fairness Factor = 23.016544216901913.
+Quantum Noise = 0.02.  Final Average Fairness Factor = 13.459828661767384.
+Quantum Noise = 0.03.  Final Average Fairness Factor = 20.134303318690556.
+Quantum Noise = 0.04.  Final Average Fairness Factor = 12.210764935778801.
+Quantum Noise = 0.05.  Final Average Fairness Factor = 15.706632813286772.
+Quantum Noise = 0.06.  Final Average Fairness Factor = 17.34512589477281.
+Quantum Noise = 0.07.  Final Average Fairness Factor = 21.423806750389723.
+Quantum Noise = 0.08.  Final Average Fairness Factor = 13.946191696012944.
+Quantum Noise = 0.09.  Final Average Fairness Factor = 18.481998019351327.
+Quantum Noise = 0.1.   Final Average Fairness Factor = 23.116216613379695.
+Quantum Noise = 0.125. Final Average Fairness Factor = 22.142702050185502.
+Quantum Noise = 0.15.  Final Average Fairness Factor = 21.283288236850495.
+Quantum Noise = 0.175. Final Average Fairness Factor = 21.5098899783907.
+Quantum Noise = 0.2.   Final Average Fairness Factor = 22.507475905117396.
+Quantum Noise = 0.3.   Final Average Fairness Factor = 25.008135645370427.
+Quantum Noise = 0.4.   Final Average Fairness Factor = 25.47207720890065.
+Quantum Noise = 0.5.   Final Average Fairness Factor = 24.816844118801225.
+Quantum Noise = 0.75.  Final Average Fairness Factor = 25.082454081228487.
+Quantum Noise = 1.     Final Average Fairness Factor = 25.885798632036987.
+###############################################################################################
+n = 3
+Quantum Noise = 0.     Final Average Fairness Factor = 0.5129055855485748.
+Quantum Noise = 0.01.  Final Average Fairness Factor = 31.50331629570498.
+Quantum Noise = 0.02.  Final Average Fairness Factor = 27.46798669926959.
+Quantum Noise = 0.03.  Final Average Fairness Factor = 37.99789668741582.
+Quantum Noise = 0.04.  Final Average Fairness Factor = 40.40986633883255.
+Quantum Noise = 0.05.  Final Average Fairness Factor = 26.709672656337546.
+Quantum Noise = 0.06.  Final Average Fairness Factor = 34.04732543921718.
+Quantum Noise = 0.07.  Final Average Fairness Factor = 35.0413294673506.
+Quantum Noise = 0.08.  Final Average Fairness Factor = 34.240003628890946.
+Quantum Noise = 0.09.  Final Average Fairness Factor = 36.484360861569684.
+Quantum Noise = 0.1.   Final Average Fairness Factor = 28.752704121691316.
+Quantum Noise = 0.125. Final Average Fairness Factor = 48.82810853978891.
+Quantum Noise = 0.15.  Final Average Fairness Factor = 34.366560359919.
+Quantum Noise = 0.175. Final Average Fairness Factor = 44.69240161481322.
+Quantum Noise = 0.2.   Final Average Fairness Factor = 47.84163835554041.
+Quantum Noise = 0.3.   Final Average Fairness Factor = 49.09842220126937.
+Quantum Noise = 0.4.   Final Average Fairness Factor = 49.218765304623545.
+Quantum Noise = 0.5.   Final Average Fairness Factor = 51.3224764030079.
+Quantum Noise = 0.75.  Final Average Fairness Factor = 52.665633999313265.
+Quantum Noise = 1.     Final Average Fairness Factor = 55.246114549492944.
+###############################################################################################
+n = 4
+Quantum Noise = 0.     Final Average Fairness Factor = 65.60056264178274.
+Quantum Noise = 0.01.  Final Average Fairness Factor = 15.410940867512728.
+Quantum Noise = 0.02.  Final Average Fairness Factor = 17.588165944496495.
+Quantum Noise = 0.03.  Final Average Fairness Factor = 62.16329998685332.
+Quantum Noise = 0.04.  Final Average Fairness Factor = 10.617905813209417.
+Quantum Noise = 0.05.  Final Average Fairness Factor = 21.12216827617913.
+Quantum Noise = 0.06.  Final Average Fairness Factor = 19.408083457882142.
+Quantum Noise = 0.07.  Final Average Fairness Factor = 13.4776715906727.
+Quantum Noise = 0.08.  Final Average Fairness Factor = 30.958138953098995.
+Quantum Noise = 0.09.  Final Average Fairness Factor = 32.13665951948607.
+Quantum Noise = 0.1.   Final Average Fairness Factor = 28.201458737945785.
+Quantum Noise = 0.125. Final Average Fairness Factor = 25.899296250852775.
+Quantum Noise = 0.15.  Final Average Fairness Factor = 26.2815337854167.
+Quantum Noise = 0.175. Final Average Fairness Factor = 29.348453819102765.
+Quantum Noise = 0.2.   Final Average Fairness Factor = 27.965807003473433.
+Quantum Noise = 0.3.   Final Average Fairness Factor = 31.443704835190793.
+Quantum Noise = 0.4.   Final Average Fairness Factor = 36.9838735280104.
+Quantum Noise = 0.5.   Final Average Fairness Factor = 38.094738584803444.
+Quantum Noise = 0.75.  Final Average Fairness Factor = 38.71514998419399.
+Quantum Noise = 1.     Final Average Fairness Factor = 37.75312306712324.
+###############################################################################################
+n = 5
+Quantum Noise = 0.     Final Average Fairness Factor = 0.000328634575304917.
+Quantum Noise = 0.01.  Final Average Fairness Factor = 6.4695435056302735.
+Quantum Noise = 0.02.  Final Average Fairness Factor = 4.792008085719429.
+Quantum Noise = 0.03.  Final Average Fairness Factor = 3.1530096994429826.
+Quantum Noise = 0.04.  Final Average Fairness Factor = 2.0938775769056868.
+Quantum Noise = 0.05.  Final Average Fairness Factor = 4.92904778009198.
+Quantum Noise = 0.06.  Final Average Fairness Factor = 3.481374589723674.
+Quantum Noise = 0.07.  Final Average Fairness Factor = 3.575287038434546.
+Quantum Noise = 0.08.  Final Average Fairness Factor = 2.3519735614392205.
+Quantum Noise = 0.09.  Final Average Fairness Factor = 3.745732856845806.
+Quantum Noise = 0.1.   Final Average Fairness Factor = 3.7443445790766248.
+Quantum Noise = 0.125. Final Average Fairness Factor = 4.753723014127187.
+Quantum Noise = 0.15.  Final Average Fairness Factor = 4.804755552219835.
+Quantum Noise = 0.175. Final Average Fairness Factor = 4.542529551004154.
+Quantum Noise = 0.2.   Final Average Fairness Factor = 7.625816285218359.
+Quantum Noise = 0.3.   Final Average Fairness Factor = 6.212649082117629.
+Quantum Noise = 0.4.   Final Average Fairness Factor = 8.740736748718701.
+Quantum Noise = 0.5.   Final Average Fairness Factor = 8.498241938239603.
+Quantum Noise = 0.75.  Final Average Fairness Factor = 9.291623468987028.
+Quantum Noise = 1.     Final Average Fairness Factor = 8.545372811100028.
+###############################################################################################
+n = 6
+Quantum Noise = 0.     Final Average Fairness Factor = 0.047974107293466815.
+Quantum Noise = 0.01.  Final Average Fairness Factor = 0.20265841865604803.
+Quantum Noise = 0.02.  Final Average Fairness Factor = 3.084041100225973.
+Quantum Noise = 0.03.  Final Average Fairness Factor = 0.40609568692943315.
+Quantum Noise = 0.04.  Final Average Fairness Factor = 0.058698556810403126.
+Quantum Noise = 0.05.  Final Average Fairness Factor = 0.19255967194305867.
+Quantum Noise = 0.06.  Final Average Fairness Factor = 0.6811414794536472.
+Quantum Noise = 0.07.  Final Average Fairness Factor = 2.4139744765559503.
+Quantum Noise = 0.08.  Final Average Fairness Factor = 0.7188747479658578.
+Quantum Noise = 0.09.  Final Average Fairness Factor = 1.034278690254077.
+Quantum Noise = 0.1.   Final Average Fairness Factor = 0.5241104667401183.
+Quantum Noise = 0.125. Final Average Fairness Factor = 0.7613182128986067.
+Quantum Noise = 0.15.  Final Average Fairness Factor = 0.4337616567969913.
+Quantum Noise = 0.175. Final Average Fairness Factor = 0.2678420923806982.
+Quantum Noise = 0.2.   Final Average Fairness Factor = 0.4286100817193705.
+Quantum Noise = 0.3.   Final Average Fairness Factor = 0.8296674032486413.
+Quantum Noise = 0.4.   Final Average Fairness Factor = 0.6244355252486126.
+Quantum Noise = 0.5.   Final Average Fairness Factor = 0.6317628517059336.
+Quantum Noise = 0.75.  Final Average Fairness Factor = 0.6856599984843267.
+Quantum Noise = 1.     Final Average Fairness Factor = 0.7267786715152936.
+###############################################################################################
+n = 7
+Quantum Noise = 0.     Final Average Fairness Factor = 9.250198521721277e-10.
+Quantum Noise = 0.01.  Final Average Fairness Factor = 0.014804308743423394.
+Quantum Noise = 0.02.  Final Average Fairness Factor = 0.007179420807298379.
+Quantum Noise = 0.03.  Final Average Fairness Factor = 7.719223885507706.
+Quantum Noise = 0.04.  Final Average Fairness Factor = 0.006441500600501972.
+Quantum Noise = 0.05.  Final Average Fairness Factor = 0.007298261210497111.
+Quantum Noise = 0.06.  Final Average Fairness Factor = 0.029767950893064894.
+Quantum Noise = 0.07.  Final Average Fairness Factor = 1.9950120247519383.
+Quantum Noise = 0.08.  Final Average Fairness Factor = 0.20421760646050904.
+Quantum Noise = 0.09.  Final Average Fairness Factor = 0.054261148862662055.
+Quantum Noise = 0.1.   Final Average Fairness Factor = 0.0741831770639314.
+Quantum Noise = 0.125. Final Average Fairness Factor = 0.012927953221619123.
+Quantum Noise = 0.15.  Final Average Fairness Factor = 0.07641436524857184.
+Quantum Noise = 0.175. Final Average Fairness Factor = 0.0005517356314519115.
+Quantum Noise = 0.2.   Final Average Fairness Factor = 0.08781171922235723.
+Quantum Noise = 0.3.   Final Average Fairness Factor = 0.016906196226180333.
+Quantum Noise = 0.4.   Final Average Fairness Factor = 0.04981993420966936.
+Quantum Noise = 0.5.   Final Average Fairness Factor = 0.014536405399661839.
+Quantum Noise = 0.75.  Final Average Fairness Factor = 0.014717282105614697.
+Quantum Noise = 1.     Final Average Fairness Factor = 0.014047939807280896.
+###############################################################################################
+n = 8
+Quantum Noise = 0. Final Average Fairness Factor = 8.686490136591007e-08.

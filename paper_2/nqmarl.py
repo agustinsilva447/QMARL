@@ -42,7 +42,8 @@ class Agent:
     def reset(self, q_initial = None):
         if q_initial:
           self.q_estimation = q_initial
-        self.q_estimation = np.zeros(len(self.indices)) + 10
+        else:
+          self.q_estimation = np.zeros(len(self.indices)) + 10
         self.action_count = np.zeros(len(self.indices))
         return np.random.choice(self.indices), self.To
 

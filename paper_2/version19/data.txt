@@ -1,0 +1,122 @@
+N = 2
+avg_rew_n0.0 = [9.66310966802444, 9.636718399017713, 9.657424126336995, 9.547387172529213]
+far_fac_n0.0 = [0.9046842570678626, 0.9514204762052695, 0.9697807544480378, 0.633377167025043]
+avg_rew_n0.001 = [4.67012528629894, 4.443025402083643, 7.972603795391437, 4.871082406368538]
+far_fac_n0.001 = [0.9946432129679512, 0.9748637015327183, 0.7282477084115159, 0.9734929550044549]
+avg_rew_n0.003 = [4.517563265817544, 3.9695502837779233, 4.113859573435007, 3.7472123670268607]
+far_fac_n0.003 = [0.9799086555620572, 0.9154745004442427, 0.7063166236708422, 0.8426296951652626]
+avg_rew_n0.01 = [4.538869455189914, 3.587389048282963, 5.073761435540691, 1.9168670922077407]
+far_fac_n0.01 = [0.9970631645119978, 0.936068949086059, 0.9636124957659276, 0.582995809192392]
+avg_rew_n0.03 = [4.445988544727261, 4.851143442195549, 4.917327857576416, 6.359525811990425]
+far_fac_n0.03 = [0.9990177621837096, 0.9902977766996621, 0.9518607740184444, 0.9254958607011378]
+avg_rew_n0.1 = [4.560334322462407, 4.414253794337092, 5.019664381064091, 4.647096266111922]
+far_fac_n0.1 = [0.9889411224358053, 0.980363517867055, 0.9977916681724589, 0.6180083915459895]
+avg_rew_n0.3 = [4.563838768895651, 4.552214277636321, 4.791845634169624, 4.209250373897452]
+far_fac_n0.3 = [0.9968485581430011, 0.9860452558911964, 0.9912045554678839, 0.9366442991737804]
+avg_rew_n1.0 = [4.579392019683868, 4.675086466853627, 5.179787824724624, 3.2182437879511214]
+far_fac_n1.0 = [0.9975099934299229, 0.9752663064843753, 0.988042320516374, 0.8255251417920411]
+
+N = 3
+avg_rew_n0.0 = [9.50856643294017, 9.942337503643307, 9.900715538355852, 9.58089437908374]
+far_fac_n0.0 = [0.9019101032849145, 0.3383486296927282, 0.3877869232371146, 0.43063741216429124]
+avg_rew_n0.001 = [3.5518585150560793, 2.9694040474434464, 3.673057930055458, 4.167460837855885]
+far_fac_n0.001 = [0.9834975757096625, 0.9241943084952916, 0.7106680192375885, 0.49892115828529293]
+avg_rew_n0.003 = [3.323422104247015, 3.342714652053811, 2.5516455368052364, 4.321518721216666]
+far_fac_n0.003 = [0.9860790227639666, 0.9620395262222511, 0.7758941914281227, 0.6008001577947429]
+avg_rew_n0.01 = [3.329286504497625, 3.207908671349503, 2.4317192597451265, 4.28754246570101]
+far_fac_n0.01 = [0.9902832708847662, 0.9633178754566204, 0.8321947850054607, 0.4400369834254746]
+avg_rew_n0.03 = [3.349444311837985, 3.2534181855492954, 2.445950933094115, 2.8423036602109293]
+far_fac_n0.03 = [0.9956431226178282, 0.982479982955268, 0.925537859613567, 0.7252698388842136]
+avg_rew_n0.1 = [3.2991715318499755, 3.2371021144197987, 3.7532868034216187, 1.8590918941848582]
+far_fac_n0.1 = [0.9947314201468006, 0.9679224933600823, 0.9730569089928652, 0.7677124909147534]
+avg_rew_n0.3 = [3.3483331979954074, 3.375299836385329, 3.5667386041267464, 3.3810917614471308]
+far_fac_n0.3 = [0.9981377627970606, 0.9704981017899745, 0.9799578008405223, 0.9806079786638408]
+avg_rew_n1.0 = [3.3794370091350476, 3.3644993962564507, 3.7588802772272403, 3.653168129981926]
+far_fac_n1.0 = [0.9932340645708698, 0.9871265975495683, 0.9784586030692317, 0.9853126069994311]
+
+N = 4
+avg_rew_n0.0 = [3.64028985536128, 3.7758383161892115, 3.1457602562696865, 4.1557946834070325]
+far_fac_n0.0 = [0.8918305831617317, 0.9788354300824947, 0.8664409210786914, 0.7238067240380863]
+avg_rew_n0.001 = [2.3079242668612596, 1.7598114400800193, 2.4552646545466663, 3.023390291215122]
+far_fac_n0.001 = [0.9650637195226714, 0.9059965894925601, 0.5585331818867324, 0.3685718547322144]
+avg_rew_n0.003 = [2.2385057766601375, 1.9840254094787815, 1.627992498781599, 2.30171776885738]
+far_fac_n0.003 = [0.9663486198244772, 0.8537134585975173, 0.6991682853583658, 0.3211768522525888]
+avg_rew_n0.01 = [2.2328282914129005, 2.081101881692026, 1.4100247905291714, 4.5960720633071634]
+far_fac_n0.01 = [0.9944628555608369, 0.9472815826795012, 0.8303413529542487, 0.5195590441536554]
+avg_rew_n0.03 = [2.1686535318414593, 2.2688343943375804, 2.437570137490677, 0.9270709626060653]
+far_fac_n0.03 = [0.9765617566794073, 0.9561216004383324, 0.9075961968856471, 0.35851369971770725]
+avg_rew_n0.1 = [2.0815293092325273, 2.1156216610963385, 1.9865393823647637, 2.045510962551798]
+far_fac_n0.1 = [0.9907655509217463, 0.9509405864845998, 0.9610941752431266, 0.7591686785335018]
+avg_rew_n0.3 = [2.0997764045618665, 1.9860386591464132, 1.924507484380004, 2.4060413147269113]
+far_fac_n0.3 = [0.9823593813382757, 0.9753289594316074, 0.895125742911343, 0.7885684746548943]
+avg_rew_n1.0 = [2.1043392336537408, 2.0103915360450646, 2.3961230502830295, 2.819105945678693]
+far_fac_n1.0 = [0.9971772889137916, 0.9722374494124127, 0.9329679924641502, 0.8300505879858348]
+
+N = 5
+avg_rew_n0.0 = [0.0787529350386312, 0.08889349348321722, 0.5935645151240181, 0.2057937110943332]
+far_fac_n0.0 = [0.6891840553671872, 0.21474523204198176, 0.3230968515079344, 0.4150756964681562]
+avg_rew_n0.001 = [1.5996107439097147, 1.2429560749188104, 1.571194214063451, 1.581467558727799]
+far_fac_n0.001 = [0.9823651143826138, 0.8050915710981963, 0.7348637676824296, 0.3787408832435948]
+avg_rew_n0.003 = [1.6975342001425355, 1.4381837661144046, 1.4751580685252847, 3.895834617569245]
+far_fac_n0.003 = [0.9731593878537738, 0.9005861724516828, 0.8871299926474852, 0.32810301740974096]
+avg_rew_n0.01 = [1.6286004634385116, 1.4226894897761344, 1.5373044622284704, 2.1361182619515926]
+far_fac_n0.01 = [0.9719571038966882, 0.9557231247607775, 0.7451226808790852, 0.6112089287289738]
+avg_rew_n0.03 = [1.5976920266651675, 1.2387725035582655, 1.4414860188183254, 3.221233006850101]
+far_fac_n0.03 = [0.9866846147377174, 0.8556442983507617, 0.8614415618672013, 0.5966340831409883]
+avg_rew_n0.1 = [1.5599658985511458, 1.4594248432131138, 1.2109105933075277, 1.8146939302331901]
+far_fac_n0.1 = [0.9907085009861045, 0.9331785938130434, 0.9129411920099265, 0.8542941881389764]
+avg_rew_n0.3 = [1.4765360901107523, 1.3915585298688244, 1.6819882491415985, 1.7579714669109805]
+far_fac_n0.3 = [0.9949272045093823, 0.9467180373884916, 0.9133416636447641, 0.7638501977442441]
+avg_rew_n1.0 = [1.4449862204202826, 1.3965772584219867, 1.400567783394698, 1.9434317471898401]
+far_fac_n1.0 = [0.9895451283697739, 0.9400169029191031, 0.8315346098209327, 0.7298023890064516]
+
+N = 6
+avg_rew_n0.0 = [0.40019109760604393, 0.5389022757888209, 0.47161567317667746, 0.4962389273893276]
+far_fac_n0.0 = [0.9214315881479486, 0.860200491749001, 0.9224196887858231, 0.6398799103525326]
+avg_rew_n0.001 = [1.0517639675922332, 0.7373632402081933, 1.071750758641317, 0.5379946234559371]
+far_fac_n0.001 = [0.9651893688627012, 0.8294262749274645, 0.605277487737624, 0.5376887156168824]
+avg_rew_n0.003 = [1.1093793407582768, 0.728513044053738, 1.401327064622361, 1.0079653872444607]
+far_fac_n0.003 = [0.9803332541672293, 0.8964820572624472, 0.6554325076660112, 0.4041824883884735]
+avg_rew_n0.01 = [1.1810870260867883, 0.9473786308159768, 0.8320085622180619, 1.9005723693694232]
+far_fac_n0.01 = [0.972225288523984, 0.9166376919043591, 0.9639446540880577, 0.5150789110507072]
+avg_rew_n0.03 = [1.1538059332586048, 0.8126927430681009, 1.0969351131595422, 1.5449497338547173]
+far_fac_n0.03 = [0.9705532584197983, 0.8938745585520265, 0.8130174969579256, 0.3254276127378677]
+avg_rew_n0.1 = [1.1252993574682337, 0.8821586467965875, 1.19498197512556, 1.4915639715829763]
+far_fac_n0.1 = [0.9762194694214166, 0.8562516087089206, 0.8076523420303247, 0.45652318153062127]
+avg_rew_n0.3 = [1.013349727726311, 0.951118202454943, 1.367260242005059, 1.3070891893240235]
+far_fac_n0.3 = [0.982076568789813, 0.950061483779864, 0.8441215713245558, 0.6581733885652041]
+
+Abstract 1: Because of the sustained growth of information and mobile users transmitting a great amount of data packets, modern network performances are being seriously affected by congestion problems. In fact, congestion management is a challenging task that can be roughly summarized as a trade off between transmission latency and cost. In order to contribute to solve the congestion problem on communication networks, a novel framework based on a quantum game model is proposed, where network packets compete selfishly for their fastest route. Simulations show that final network routing and traveling times achieved with the quantum version outperform those obtained with a classical game model with the same options for packet transmission for both. Pareto optimality and Nash equilibrium are studied as well as the influence of simulated and real noise in the quantum protocol. This leads to the opportunity of developing full-stack protocols that may be capable of taking advantage of the quantum properties for optimizing communication systems. Due to its generality, this game approach can be applied both in classical complex networks and in future quantum networks in order to maximize the performance of the quantum internet.
+
+Introduction 1:
+Congestion is a significant issue in the more diverse environments, from supermarket queuing, urban traffic, transport, local networks to 5G and LTE-A networks. Congestion problems arise when users compete over a set of limited resources causing an increase in the latency to all contenders. Latency, for its part, depends on the number of agents that use a resource. A common example of congestion is at rush hour when the city’s vehicle flow is saturated due to excess demand for roads by drivers. When the number of vehicles surpass the capacity of the roads, there is a decrease in velocities that cause waste of time and excessive fuel consumption. Likewise, delays, loss of efficiency and increase of transmission time occur when networks are too demanded [1].
+At present, the constant increase in the number of packets sent over networks evidences the congestion problems and suggests that more research is needed when designing efficient communication systems. By their nature, the congestion problems become ap- propriate for being modeled by Game Theory [ 2,3 ], because selfish decisions of agents (packets on the network or vehicles in a city) cause the whole system performance to be adversely affected.
+In the case of Wireless Sensor Networks (WSN), a type of network that faces a more challenging environment compared to traditional networks, several works on the threat mitigation problem have recently been published. In [ 4], for instance, the authors present a survey of several game-theoretic defense strategies for Wireless Sensor Networks. Due to their dynamic nature, WSN are exposed to malicious intruders. Such a security situation involving an interaction between the defender(s) and attacker(s) is directly mapped to a game among players where each player strives to promote its own benefit.
+Besides, in [ 5], a game theory model to control congestion in wireless body sensor networks supported on intelligent drop packet mechanisms is proposed. Moreover, a repeated game approach is proposed to sensor nodes protection in a clustered WSN in [6 ], where the proposed model outperforms non-cooperative defense mechanism to prevent cluster members from dropping the high priority packets.
+Furthermore, today we know that if game theory models harness the capabilities of quantum computing [ 7 , 8] better outcomes can emerge. Moreover, the authors of [9 ] present an interesting work that address the Nash equilibria and correlated equilibria of classical and quantum games in the context of their Pareto efficiency. They focus their study in three classical games: the prisoner’s dilemma, battle of the sexes and the game of chicken and show that the Nash equilibria of these games in quantum mixed Pauli strategies are closer to Pareto optimal results than their classical counter-parts. Quantum routing games were first proposed in [ 10] where the Braess’ paradox was studied along with an analysis of the flow in a network with quantum resources, more exactly, networks that provide quantum entangled particles to the players before they play their strategies. In addition, in [ 11 ] a quantum game is applied to diminish spectrum allocation times and power consumption in quantum communication networks [12]. 
+In this work, we start by modeling a network that allows both classical and quantum packets and then propose a routing protocol designed using the Game Theory formalism. After that, different variables with information about the dynamics of the network were measured and we point out that the protocol that makes use of the quantum game theory rules [13 ] significantly outperforms its classical equivalent. We demonstrate how to avoid congestion in a network and decrease the traveling time per packet in a system with a high number of packets that selfishly decide which decision is the best for everyone of them.
+There have already been efforts to try to mitigate congestion in networks using quantum technologies (mainly coming from the automotive industry [ 14 –16 ]) but they focus on a centralized optimization approach using quantum annealing. In this work, we propose a decentralized self-organization approach using gate-based quantum computers. Finally, due to the absence of ideal quantum computers that we suffer today, the influence of noise in our system is studied. This is achieved by both doing simulations using quantum noise models and using current IBM noisy quantum computers available on the web [17].
+The work is organized as follows. In Section 2, the problem and the system are presented in detail. In Section 3, we explain the two possible strategies for modeling the network and develop in depth the quantum model. In Section 4, the results of each protocol are compared and their performance is graphically analyzed under different types of environment: ideal case, simulated noise and real devices. Finally, the work is concluded in Section 5 with a debate on its consequences.
+
+Conclusion 1: Communication networks are facing increasing congestion problems associated with the tremendous growth of the number of packets sent over the networks. In order to get an improvement on the communication network performance classical and quantum network protocols based on game theory are proposed in this work. Classical game protocols lead to a routing and traveling time constraint that deteriorates the network performance for an increasing number of packets.
+The quantum model is obtained with quantum strategies as proposed by the EWL protocol of quantum games. Quantum strategies are represented by a three-parameter one-qubit quantum gate model. Then, the players strategies are extended when passing from classical to quantum.
+The trade-off barrier between routing and traveling time present in the classic probabilistic protocol is surpassed by many quantum game strategies leading to an enhancement of the network performance for increasing packet number. The stability of the quantum strategies is associated with Nash equilibrium. As pure quantum strategies are not Nash equilibrium, mixed strategies have been studied. In this way, a mixed strategy that is Pareto optimal and seems to be Nash equilibrium was shown. Additionally, it was also shown that under the influence of simulated noise and real quantum devices the quantum protocol benefits still remain.
+We have shown that a quantum game formalism applied to the communication network enhances its efficiency when dealing with congestion problems. Consequently, a new world of opportunities could emerge in these types of complex systems when taking advantage of the possibilities offered by quantum computing. Moreover, they might bring with them solutions that create remarkably more efficient systems.
+
+---
+
+Abstract 2: The quantization of games expand the players strategy space, allowing the emergence of more equilibriums. However, finding these equilibriums is difficult, especially if players are allowed to use mixed strategies. The size of the exploration space expands so much for quantum games that makes far harder to find the player’s best strategy. In this work, we propose a method to learn and visualize mixed quantum strategies and compare them with their classical counterpart. In our model, players do not know in advance which game they are playing (pay-off matrix) neither the action selected nor the reward obtained by their competitors at each step, they only learn from an individual feedback reward signal. In addition, we study both the influence of entanglement and noise on the performance of various quantum games.
+
+Introduction 2: Quantum games have merged the properties of quantum mechanics with the formalism of game theory. Since its first formulation at the beginning of this millennium [1], physicists and mathematicians have developed a robust framework for describing how players behave when games are quantized [2]. Initially, changes in the equilibriums of many games were studied and it was observed how in many cases the rewards of quantum players in equilibrium surpass their classical counterparts [3]. Then, quantum games were extended from two to N players [4] and from two to M strategies [ 5 ]. Additionally, most types of games have also been quantized along with a description of their consequences [6, 7]. Furthermore, the advantages of quantum games have also been used to model different scenarios from economics [8 ,9] to systems sharing limited resources [10 ,11 ] to network routing design [12,13].
+The idea of learning in games is also becoming more and more relevant due to its applicability in scenarios, such as algorithms that learn from different self-interested data sources, economic systems that are optimized via machine learning, or even machine learning algorithms that work to find equilibria instead of minimizing a function. More broadly, the world is moving toward the coexistence of multiple AIs that learn from their interaction, which might be collaborative, strategic, or adversarial [14].
+When learning in games, the way individual agents use observations to change their behavior should be explicitly specified. The design should also be such that agents play out of self-interest and not by trying to find an equilibrium [ 15 ]. There are already long- established learning strategies in the field, such as fictitious play and no-regret learning. Fictitious play is a model-base algorithm where each player chooses the best response to their opponents’ average strategy, therefore players need to know the actions selected by their opponents [ 16 ]. No-regret learning, on the other hand, is a model-free approach that is based on the idea of minimizing the difference between the forecaster’s accumulated loss and that of an expert, so it requires players to know the reward function or payoffmatrix [ 17 ]. That said, we propose an algorithm to learn mixed strategies in quantum games
+where agents only have access to one feedback reward signal. Agents adjust their strategies without information about the payoff matrix of the game they are playing, the strategies selected by their opponents nor their rewards at each step, and even how many players they are playing against. The algorithm could also be easily adapted to be applied in systems where it is necessary to learn across games, that is, in situations where agents are playing different games that share an equivalent structure at the same time [18].
+The implementation of the players’ strategies in the quantum device will be done using parameterized quantum circuits (PQC). PQC are a type of hybrid algorithm, part classical part quantum, which are usually performed by selecting a fixed circuit structure, parameterizing it using rotation gates, then iteratively updating the parameters to minimize an objective function estimated from measurements [ 19 ]. PQC have also been one of the main methods to integrate quantum computing and machine learning [ 20 ] since they offer a concrete way to implement algorithms and potentially demonstrate quantum supremacy in the noisy intermediate-scale quantum (NISQ) era, where computers are neither fault-tolerant to noise nor big enough to be useful [21 ]. Moreover, PQC were also used to calculate policies in reinforcement learning algorithm with a single agent interacting with an environment [22].
+In the classical realm, there is an extensive bibliography exploring the consequences of agents learning in environments modeled using game theory. On the other hand, there have been little investigation on multiple agents learning strategies in quantum games, most of them coming from the field of quantum evolutionary game theory [23 ,24 ], which focus on pure strategies. To the best of the authors’ knowledge, this is the first time that a decentralized algorithm for learning mixed strategies in quantum games has been proposed. In terms of results, the main contributions of this work are: (a) designing an algorithm to find equilibria in games with mixed quantum strategies, (b) detecting that the equilibrium strategies not only depend on the game (e.g., Prisoner’s Dilemma) but also on the relation between the values of the payoff matrix, (c) verifying that entanglement is the only resource that allows games to be quantum, and (d) characterizing the sensitivity of the algorithm to find equilibriums against noise in the quantum channels.
+Finally, the same motivations that drove the investigation of reinforcement learning algorithms in situations modeled by classical game theory, where players are unaware of the complete structure of the game, such as finance [25 ] and network routing [26 ], encourage us to propose this algorithm for learning in quantum games. If the future of quantum computing allows us to create networks where quantum markets and the quantum internet become a reality, decentralized algorithms which support working with mixed quantum strategy and incomplete information will be absolutely useful for individuals to make the most out of the advantages of quantum systems [27].
+The rest of the work is organized as follows. In Section 2, a general description of classical and quantum games is presented. In Section 3, our learning algorithm is defined along with a detailed description of the entire model. In Section 4, the results of the application of the algorithm to classical and quantum games are presented and analyzed. In Sections 4.2 and 4.3, we include a study of the consequences of working with non-ideal entanglement and noise, respectively. Finally, the work is concluded in Section 5 with a debate on its consequences.
+
+Conclusion 2: An algorithm for finding mixed strategies in quantum games was successfully designed. This algorithm has the property of being decentralized and allows players to learn in games with imperfect information. The proposed algorithm allows to systematically find equilibriums in all types of games and compare the rewards obtained in the quantum versions versus the classical ones. 
+The proper performance of the algorithm is verified by the matching of the obtained equilibriums for the classical version of the games with their corresponding Nash equilibriums. The use of the algorithm to find equilibriums on quantum games showed that the advantage (or disadvantage) quantum players have depends not only on the game they are playing but also on the relationships between the values of the payoff matrix.
+The study of non-ideal scenarios to the proposed algorithm is accomplished by means of two parameters: γ and λ, that represent the degree of entanglement between players and the quantum channel noise of each player, respectively. Moreover, we observe that in order to distinguish changes between classical and quantum games, some level of entanglement must exist, without which there is no difference with respect to classical games. Furthermore, it was observed that the outcomes of the quantum system are very sensible to noise and after a threshold (λ ' 0.4), the algorithm can no longer learn. Finally, the probability density functions obtained with the proposed algorithm for some of the quantum games studied are visualized.
+In conclusion, this learning algorithm, despite the fact that players ignore most of the information related to the game (payoff matrix and other players actions), turned out to be flexible and efficient enough to pave the way to explore new ideas in the future about learning in quantum games, such as multiplayer arrangements or stochastic games. Finally, learning-based algorithms have proven useful enough in the classical world in the context of game theory. Our algorithm is a step towards extending its applications to the quantum.
