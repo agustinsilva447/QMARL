@@ -123,7 +123,10 @@ def unscrupulous_matrix(n): # https://en.wikipedia.org/wiki/Unscrupulous_diner%2
         mm[i][j] = b - np.sum(x) / n
       else:
         mm[i][j] = a - np.sum(x) / n
+<<<<<<< HEAD
 
+=======
+>>>>>>> 89c426bc2874484a12b6ba0b5ce0811ab69959e0
   mmin = np.min(mm)
   mmax = np.max(mm)
   mm = -10 * (mm - mmin)/(mmin - mmax)
@@ -150,14 +153,23 @@ rotat       = np.zeros([len(actions), 3])
 rewards     = np.zeros((players, t_max * (iterations + 1)))
 rewards_avg = np.zeros(rewards.shape)
 hist        = [[[0] * players, [0] * players] for i in range(players)]
+<<<<<<< HEAD
 game        = unscrupulous_matrix(players)
+=======
+game        = platonia_matrix(players)
+>>>>>>> 89c426bc2874484a12b6ba0b5ce0811ab69959e0
 
 N_SIZE = 3
 A_MAX  = 2*np.pi
 angulos = np.arange(0, A_MAX, A_MAX / np.power(2, N_SIZE))
 all_actions = [(rx,ry,rz) for rx in angulos for ry in angulos for rz in angulos]
+<<<<<<< HEAD
 gamma = 0
 #gamma = np.pi/2
+=======
+#gamma = 0
+gamma = np.pi/2
+>>>>>>> 89c426bc2874484a12b6ba0b5ce0811ab69959e0
 a_type = ['q', 0]
 
 print("Players = {}. Gamma = {:.6f}. Number of actions = {}. \n {}".format(players, gamma, len(all_actions), game))

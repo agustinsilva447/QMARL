@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from tqdm import trange
 
+<<<<<<< HEAD
 # UTILS
 def int_to_binary(s,m):
     if s == 0:
@@ -14,6 +15,8 @@ def int_to_binary(s,m):
     binary2 = "0 " * (m - len(binary1)//2) + binary1
     return binary2
 
+=======
+>>>>>>> 89c426bc2874484a12b6ba0b5ce0811ab69959e0
 # AGENTS
 class Agent:
     def __init__(self, n_anctions, alfa):
@@ -53,7 +56,21 @@ def matrix_reward(rotat, J_init, J_dg):
   reward_h = reward_g.tolist()[0]
   return reward_h
 
+<<<<<<< HEAD
 # GAMES
+=======
+# GAME
+def int_to_binary(s,m):
+    if s == 0:
+        return "0 " * m
+    binary1 = ""
+    while s > 0:
+        binary1 = str(s % 2) + " " + binary1
+        s = s // 2
+    binary2 = "0 " * (m - len(binary1)//2) + binary1
+    return binary2
+
+>>>>>>> 89c426bc2874484a12b6ba0b5ce0811ab69959e0
 def minority_matrix(n):
   mm = np.zeros([2**n,n])
   for i in range(2**n):
@@ -64,6 +81,7 @@ def minority_matrix(n):
       mm[i] = np.where(numpy_data == 0, 10, 0)
   return  mm
 
+<<<<<<< HEAD
 def platonia_matrix(n): 
   mm = np.zeros([2**n,n])
   for i in range(n):
@@ -72,6 +90,10 @@ def platonia_matrix(n):
 
 # MAIN
 players     = 11
+=======
+# MAIN
+players     = 7
+>>>>>>> 89c426bc2874484a12b6ba0b5ce0811ab69959e0
 alfa        =  0.0001
 t_max       = 1000000
 window1     = 1000
@@ -85,7 +107,10 @@ N_SIZE = 3
 A_MAX  = 2*np.pi
 angulos = np.arange(0, A_MAX, A_MAX / np.power(2, N_SIZE))
 all_actions = [(rx,ry,rz) for rx in angulos for ry in angulos for rz in angulos]
+<<<<<<< HEAD
 #gamma = 0
+=======
+>>>>>>> 89c426bc2874484a12b6ba0b5ce0811ab69959e0
 gamma = np.pi/2
 print("Players = {}. Learning Rate = {}. Gamma = {:.6f}. Number of actions = {}. \n {}".format(players, alfa, gamma, len(all_actions), game))
 
@@ -124,10 +149,14 @@ for i in range(players):
     plt.plot(rewards_avg[i], label="Player {}".format(i))
     print("Average Reward of Player {} = {:.6f}.".format(i, rewards_avg[i][-1]))
     cumsum += rewards_avg[i][-1]
+<<<<<<< HEAD
 if (game == minority_matrix(players)).all():
    print("Performance over all players = {:.2f}%.".format(10 * cumsum / (players // 2)))
 elif (game == platonia_matrix(players)).all():
    print("Performance over all players = {:.2f}%.".format(10 * cumsum))
+=======
+print("Performance over all players = {:.2f}%.".format(10 * cumsum / (players // 2)))
+>>>>>>> 89c426bc2874484a12b6ba0b5ce0811ab69959e0
 plt.ylim(-0.5,10.5)
 plt.xlabel("Iterations")
 plt.ylabel("Rewards")
