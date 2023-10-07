@@ -161,17 +161,18 @@ def volunteer_matrix(n): # https://en.wikipedia.org/wiki/Volunteer%27s_dilemma
 # Main program
 ######################################################
 
-n       = 4
-t1      = 1000000
-t2      = t1
-q_noise = [0]
-gamman  = [np.pi/2]
-alpha1n = [0.0001]
-alpha2n = [1e-8]
-beta1n  = [0.9]
-beta2n  = [0.999]
-epsilnn = [1e-8]
-mm      = unscrupulous_matrix(n)
+n       = 2             # Number of players
+t1      = 1000       # Number of iterations
+t2      = t1            # Reset system after t2
+q_noise = [0]           # Level of quantum noise
+gamman  = [np.pi/2]     # Level of entanglement
+alpha1n = [0.0001]      # Adam Parameter 1 
+alpha2n = [1e-8]        # Adam Parameter 2
+beta1n  = [0.9]         # Adam Parameter 3
+beta2n  = [0.999]       # Adam Parameter 4
+epsilnn = [1e-8]        # Epsilon for the gradient
+mm      = platonia_matrix(n) # Game to be played
+name    = "platonia_2q"      # Name of the file
 print(mm)
 
 t_fair = []
@@ -209,18 +210,19 @@ for ii,q in enumerate(q_noise):
                 #rotacion1.append(aux[1])
                 for i in range(n):  
                   for j in range(3):
+                    ### ADAM ALGORITHM
                     grad = gradient_rotat(reward,aux,i,j,epsilon,b_type,J_init,J_dg)
                     m[i][j] = beta1 * m[i][j] + (1.0 - beta1) * grad
                     v[i][j] = beta2 * v[i][j] + (1.0 - beta2) * grad**2
                     mhat = m[i][j] / (1.0 - beta1**(t+1))
                     vhat = v[i][j] / (1.0 - beta2**(t+1))      
                     rotat[i][j] = rotat[i][j] + alpha1 * mhat / (sqrt(vhat) + alpha2)
+                    ### BOUNDERIES CHECK
                     while (rotat[i][j]<0) or (2*np.pi<=rotat[i][j]):
                       if (rotat[i][j]<0):
                         rotat[i][j] += 2*np.pi
                       if (2*np.pi<=rotat[i][j]):
                         rotat[i][j] -= 2*np.pi
-                  #if (t%10==0):
                   feedback[i].append(reward[i])   
                 if (t%t2 == 0):
                   rotat = [[np.pi * np.random.rand(), np.pi * np.random.rand(), np.pi * np.random.rand()] for i in range(n)]
@@ -312,6 +314,9 @@ axs[0].legend()
 plt.show()
 """
 
+with open('{}.npy'.format(name), 'wb') as f:
+    np.save(f, feedback)
+    
 for i in range(n):
   plt.plot(feedback[i], label="Player {}".format(i))
 plt.ylim(0, 10)
