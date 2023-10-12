@@ -161,18 +161,19 @@ def volunteer_matrix(n): # https://en.wikipedia.org/wiki/Volunteer%27s_dilemma
 # Main program
 ######################################################
 
-n       = 2             # Number of players
-t1      = 1000       # Number of iterations
+n       = 5             # Number of players
+t1      = 1000000       # Number of iterations
 t2      = t1            # Reset system after t2
 q_noise = [0]           # Level of quantum noise
+#gamman  = [0]           # Level of entanglement
 gamman  = [np.pi/2]     # Level of entanglement
 alpha1n = [0.0001]      # Adam Parameter 1 
 alpha2n = [1e-8]        # Adam Parameter 2
 beta1n  = [0.9]         # Adam Parameter 3
 beta2n  = [0.999]       # Adam Parameter 4
 epsilnn = [1e-8]        # Epsilon for the gradient
-mm      = platonia_matrix(n) # Game to be played
-name    = "platonia_2q"      # Name of the file
+mm      = minority_matrix(n)  # Game to be played
+name    = "minority_5q_1"     # Name of the file
 print(mm)
 
 t_fair = []
@@ -314,12 +315,12 @@ axs[0].legend()
 plt.show()
 """
 
-with open('{}.npy'.format(name), 'wb') as f:
+with open('/home/lsccc/Escritorio/Github/QMARL/paper_2/npy_files/{}.npy'.format(name), 'wb') as f:
     np.save(f, feedback)
     
 for i in range(n):
   plt.plot(feedback[i], label="Player {}".format(i))
-plt.ylim(0, 10)
+#plt.ylim(0, 10)
 plt.xlabel("Iterations")
 plt.ylabel("Rewards")
 plt.legend()
