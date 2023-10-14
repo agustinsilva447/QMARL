@@ -161,7 +161,7 @@ def volunteer_matrix(n): # https://en.wikipedia.org/wiki/Volunteer%27s_dilemma
 # Main program
 ######################################################
 
-n       = 4              # Number of players
+n       = 2              # Number of players
 t1      = 1000000       # Number of iterations
 t2      = t1            # Reset system after t2
 q_noise = [0]           # Level of quantum noise
@@ -173,7 +173,7 @@ beta1n  = [0.9]         # Adam Parameter 3
 beta2n  = [0.999]       # Adam Parameter 4
 epsilnn = [1e-8]        # Epsilon for the gradient
 mm      = platonia_matrix(n)  # Game to be played
-name    = "platonia_4q_5"     # Name of the file
+name    = "platonia_2q_1"     # Name of the file
 print(mm)
 
 t_fair = []
